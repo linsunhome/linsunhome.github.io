@@ -1,0 +1,272 @@
+{
+  "Modeling semantic relevance for question-answer pairs in web social communities": {
+    "id": "paper-01",
+    "topic": "early",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Harness-Bench: Measuring harness effects across models in realistic agent workflows": {
+    "id": "paper-02",
+    "topic": "agents",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2605.27922"
+  },
+  "Extracting Chinese question-answer pairs from online forums": {
+    "id": "paper-03",
+    "topic": "early",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Chain-of-thought matters: improving long-context language models with reasoning path supervision": {
+    "id": "paper-04",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation": {
+    "id": "paper-05",
+    "topic": "foundation",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2025,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2503.04872"
+  },
+  "Longattn: Selecting long-context training data via token-level attention": {
+    "id": "paper-06",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Thread segmentation based answer detection in Chinese online forums": {
+    "id": "paper-07",
+    "topic": "early",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection": {
+    "id": "paper-08",
+    "topic": "safety",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2605.23723"
+  },
+  "Uncertainty under the curve: A sequence-level entropy area metric for reasoning llm": {
+    "id": "paper-09",
+    "topic": "foundation",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2025,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2508.20384"
+  },
+  "Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements": {
+    "id": "paper-10",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment": {
+    "id": "paper-11",
+    "topic": "safety",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "A study of features on Primary Question detection in Chinese online forums": {
+    "id": "paper-12",
+    "topic": "early",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design": {
+    "id": "paper-13",
+    "topic": "foundation",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2025,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2506.04734"
+  },
+  "When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation": {
+    "id": "paper-14",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Thinking with Reasoning Skills: Fewer Tokens, More Accuracy": {
+    "id": "paper-15",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training": {
+    "id": "paper-16",
+    "topic": "safety",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Expand VSR Benchmark for VLLM to Expertize in Spatial Rules": {
+    "id": "paper-17",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "VIP-Doc: Visual Prompts Guide Fine-Grained Document Understanding for Reader Friendly VLLM": {
+    "id": "paper-18",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "Router Upcycling: Leveraging Mixture-of-Routers in Mixture-of-Experts Upcycling": {
+    "id": "paper-19",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions": {
+    "id": "paper-20",
+    "topic": "agents",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "TextlessRAG: End-to-End Visual Document RAG by Speech Without Text": {
+    "id": "paper-21",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "A clustering based fast detection algorithm for large scale duplicate emails": {
+    "id": "paper-22",
+    "topic": "early",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "A Primer in Post-Training Reasoning Data: What We Know About How It Works": {
+    "id": "paper-23",
+    "topic": "foundation",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2606.02113"
+  },
+  "Beyond Static Alignment: Hierarchical Policy Control for LLM Safety via Risk-Aware Chain-of-Thought": {
+    "id": "paper-24",
+    "topic": "safety",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2602.06650"
+  },
+  "BEAR: Budgeted Evidence Allocation for Multi-Document Reasoning": {
+    "id": "paper-25",
+    "topic": "knowledge",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions": {
+    "id": "paper-26",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "ArborMem: Navigating Interaction States with Memory Forests": {
+    "id": "paper-27",
+    "topic": "agents",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2608.17534"
+  },
+  "When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment": {
+    "id": "paper-28",
+    "topic": "agents",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  },
+  "External Experience Serving in Production LLM Systems: A Deployment-Oriented Study of Quality-Cost Trade-offs": {
+    "id": "paper-29",
+    "topic": "agents",
+    "status": "preprint",
+    "role": null,
+    "preprintYear": 2026,
+    "publicationYear": null,
+    "paperUrl": "https://arxiv.org/abs/2606.11806"
+  },
+  "Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging": {
+    "id": "paper-30",
+    "topic": "foundation",
+    "status": "unverified",
+    "role": null,
+    "preprintYear": null,
+    "publicationYear": null,
+    "paperUrl": null
+  }
+}

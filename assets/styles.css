@@ -130,3 +130,13 @@ footer { padding: 45px 0 60px; border-top: 1px solid var(--line); color: var(--m
 }
 
 @media (prefers-reduced-motion: reduce) { *, html { scroll-behavior: auto !important; transition: none !important; } }
+
+@media print {
+  .site-header, .nav-tools, .menu-toggle, .hero-actions, .filters, .paper-link, .btn { display: none !important; }
+  body { background: #fff; color: #111; }
+  section { padding: 28px 0; break-inside: avoid; }
+  .wrap { width: 92%; }
+  .card, .hero-card, .callout { border: 1px solid #bbb; box-shadow: none; background: #fff; color: #111; }
+  .hero-card p, .callout p, .callout .eyebrow { color: #333; }
+  .paper-row, .media-item, .timeline-item { break-inside: avoid; }
+}
