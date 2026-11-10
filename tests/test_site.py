@@ -38,10 +38,13 @@ class SiteContractTests(unittest.TestCase):
         for route in ("publications/index.html", "en/publications/index.html"):
             content = (ROOT / route).read_text()
             self.assertEqual(content.count('class="paper-row"'), 30, route)
-            self.assertEqual(content.count('class="paper-summary"'), 30, route)
+            self.assertNotIn('class="paper-summary"', content)
+            for badge in ("共同作者", "第一作者", "已发表", "Co-author", "First author", "Published"):
+                self.assertNotIn(f'>{badge}</span>', content)
             self.assertNotIn("预印本", content)
             self.assertNotIn("preprint", content.lower())
         home = (ROOT / "index.html").read_text()
+        self.assertEqual(home.count('class="paper-row"'), 9)
         impact = (ROOT / "impact/index.html").read_text()
         about = (ROOT / "about/index.html").read_text()
         self.assertIn("BV1dA7Y6cEgX", home)
@@ -49,9 +52,20 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("CN120409549B", impact)
         self.assertIn("GB/T 45288.2", impact)
         self.assertEqual(impact.count("BV1"), 2)
-        self.assertEqual(impact.count('<details class="patent-group">'), 4)
-        self.assertLess(about.find("04 / Service"), about.find("CONTACT"))
-        self.assertIn("专利号", impact)
+        self.assertEqual(impact.count('class="patent-group"'), 4)
+        self.assertEqual(impact.count('class="patent-entry"'), 18)
+        self.assertIn("一种获取问答对的相关联程度的装置和方法", impact)
+        self.assertIn("百人规模", about)
+        research = (ROOT / "research/index.html").read_text()
+        self.assertNotIn("五层技术体系", research)
+        self.assertNotIn("thread-grid", research)
+        for route in ("index.html", "en/index.html", "impact/index.html", "en/impact/index.html"):
+            self.assertNotIn('class="paper-summary"', (ROOT / route).read_text())
+        self.assertNotIn("以公开奖项", impact)
+        for route in ("projects/tinyr1/index.html", "en/projects/tinyr1/index.html"):
+            content = (ROOT / route).read_text()
+            self.assertNotIn("公开边界", content)
+            self.assertNotIn("Public boundary", content)
         self.assertEqual(len(re.findall(r'<a href="https?://[^" ]+"[^>]*target="_blank"[^>]*rel="noopener"', home)), len(re.findall(r'<a href="https?://', home)))
 
 

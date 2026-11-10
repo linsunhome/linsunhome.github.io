@@ -25,11 +25,11 @@ def validate(root: Path) -> list[str]:
     metadata = load_json(data_dir / "publication-metadata.json", issues)
     media = load_json(data_dir / "media-links-2026-11-10.json", issues)
 
-    expected_areas = {"pretraining-data", "posttraining-reasoning", "safety", "rag-memory-agent", "delivery"}
+    expected_areas = {"foundation", "safety", "knowledge"}
     areas = site.get("areas", [])
     area_ids = {item.get("id") for item in areas}
     if area_ids != expected_areas:
-        issues.append(f"site-content.json: areas must be the five-layer set, got {sorted(area_ids)}")
+        issues.append(f"site-content.json: research areas mismatch: {sorted(area_ids)}")
     for item in areas:
         for field in ("title", "text"):
             if not isinstance(item.get(field), dict) or not item[field].get("zh") or not item[field].get("en"):
@@ -50,8 +50,10 @@ def validate(root: Path) -> list[str]:
         issues.append("site-content.json: patentThemes must contain four public categories")
     theme_ids = {item.get("id") for item in site.get("patentThemes", [])}
     for item in site.get("patents", []):
-        if item.get("number") and item.get("themeId") not in theme_ids:
+        if item.get("themeId") not in theme_ids:
             issues.append(f"patent {item.get('id')}: unknown themeId")
+        if not item.get("title") or not item.get("titleEn"):
+            issues.append(f"patent {item.get('id')}: missing bilingual title")
     for item in projects:
         for field in ("title", "summary"):
             if not isinstance(item.get(field), dict) or not item[field].get("zh") or not item[field].get("en"):
@@ -72,11 +74,8 @@ def validate(root: Path) -> list[str]:
     for title, item in metadata.items():
         if item.get("status") not in {"published", "accepted", "preprint", "technical-report", "submitted", "unverified"}:
             issues.append(f"publication {title}: unsupported status {item.get('status')}")
-        for field in ("summary", "evidence"):
-            if field == "summary" and (not isinstance(item.get(field), dict) or not item[field].get("zh") or not item[field].get("en")):
-                issues.append(f"publication {title}: missing bilingual summary")
-            if field == "evidence" and not item.get(field):
-                issues.append(f"publication {title}: missing evidence")
+        if not item.get("evidence"):
+            issues.append(f"publication {title}: missing evidence")
 
     expected_videos = {
         "BV1dA7Y6cEgX": "拆AI共识：Mythos被禁背后，为什么最强AI反而更危险！",

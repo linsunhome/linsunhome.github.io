@@ -7,10 +7,6 @@
     "preprintYear": null,
     "publicationYear": null,
     "paperUrl": null,
-    "summary": {
-      "zh": "搜索、问答与语义研究：Modeling semantic relevance for question-answer pairs in web social communities。",
-      "en": "search, question-answering, and semantic research: Modeling semantic relevance for question-answer pairs in web social communities."
-    },
     "evidence": [
       "scholar snapshot 2026-11-10"
     ]
@@ -23,10 +19,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2605.27922",
-    "summary": {
-      "zh": "记忆与 Agent 研究：Harness-Bench: Measuring harness effects across models in realistic agent workflows。",
-      "en": "memory and agent research: Harness-Bench: Measuring harness effects across models in realistic agent workflows."
-    },
     "evidence": [
       "https://arxiv.org/abs/2605.27922"
     ]
@@ -43,10 +35,6 @@
       "https://doi.org/10.1109/icsmc.2009.5345956"
     ],
     "officialUrl": "https://doi.org/10.1109/icsmc.2009.5345956",
-    "summary": {
-      "zh": "搜索、问答与语义研究：Extracting Chinese question-answer pairs from online forums。",
-      "en": "search, question-answering, and semantic research: Extracting Chinese question-answer pairs from online forums."
-    },
     "evidence": [
       "https://doi.org/10.1109/icsmc.2009.5345956"
     ]
@@ -63,10 +51,6 @@
       "https://doi.org/10.18653/v1/2025.findings-emnlp.170"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2025.findings-emnlp.170",
-    "summary": {
-      "zh": "基础模型与推理研究：Chain-of-thought matters: improving long-context language models with reasoning path supervision。",
-      "en": "foundation-model and reasoning research: Chain-of-thought matters: improving long-context language models with reasoning path supervision."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2025.findings-emnlp.170"
     ]
@@ -84,10 +68,6 @@
       "https://doi.org/10.48550/arxiv.2503.04872"
     ],
     "officialUrl": "https://arxiv.org/abs/2503.04872",
-    "summary": {
-      "zh": "基础模型与推理研究：Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation。",
-      "en": "foundation-model and reasoning research: Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation."
-    },
     "evidence": [
       "https://arxiv.org/abs/2503.04872"
     ]
@@ -104,10 +84,6 @@
       "https://doi.org/10.18653/v1/2025.findings-acl.991"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2025.findings-acl.991",
-    "summary": {
-      "zh": "基础模型与推理研究：Longattn: Selecting long-context training data via token-level attention。",
-      "en": "foundation-model and reasoning research: Longattn: Selecting long-context training data via token-level attention."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2025.findings-acl.991"
     ]
@@ -125,10 +101,6 @@
       "https://portal.issn.org/resource/ISSN/1874-1029"
     ],
     "officialUrl": "https://doi.org/10.1016/s1874-1029(13)60002-6",
-    "summary": {
-      "zh": "搜索、问答与语义研究：Thread segmentation based answer detection in Chinese online forums。",
-      "en": "search, question-answering, and semantic research: Thread segmentation based answer detection in Chinese online forums."
-    },
     "evidence": [
       "https://doi.org/10.1016/s1874-1029(13)60002-6"
     ]
@@ -141,10 +113,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2605.23723",
-    "summary": {
-      "zh": "大模型安全与对齐研究：MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection。",
-      "en": "LLM safety and alignment research: MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection."
-    },
     "evidence": [
       "https://arxiv.org/abs/2605.23723"
     ]
@@ -161,10 +129,6 @@
       "https://doi.org/10.48550/arxiv.2508.20384"
     ],
     "officialUrl": "https://doi.org/10.48550/arxiv.2508.20384",
-    "summary": {
-      "zh": "基础模型与推理研究：Uncertainty under the curve: A sequence-level entropy area metric for reasoning llm。",
-      "en": "foundation-model and reasoning research: Uncertainty under the curve: A sequence-level entropy area metric for reasoning llm."
-    },
     "evidence": [
       "https://doi.org/10.48550/arxiv.2508.20384"
     ]
@@ -181,10 +145,6 @@
       "https://doi.org/10.18653/v1/2025.emnlp-main.1362"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2025.emnlp-main.1362",
-    "summary": {
-      "zh": "基础模型与推理研究：Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements。",
-      "en": "foundation-model and reasoning research: Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2025.emnlp-main.1362"
     ]
@@ -201,10 +161,6 @@
       "https://doi.org/10.18653/v1/2026.acl-long.1216"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2026.acl-long.1216",
-    "summary": {
-      "zh": "大模型安全与对齐研究：TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment。",
-      "en": "LLM safety and alignment research: TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2026.acl-long.1216"
     ]
@@ -221,10 +177,6 @@
       "https://doi.org/10.1109/fskd.2010.5569298"
     ],
     "officialUrl": "https://doi.org/10.1109/fskd.2010.5569298",
-    "summary": {
-      "zh": "搜索、问答与语义研究：A study of features on Primary Question detection in Chinese online forums。",
-      "en": "search, question-answering, and semantic research: A study of features on Primary Question detection in Chinese online forums."
-    },
     "evidence": [
       "https://doi.org/10.1109/fskd.2010.5569298"
     ]
@@ -242,10 +194,6 @@
       "https://doi.org/10.48550/arxiv.2506.04734"
     ],
     "officialUrl": "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e",
-    "summary": {
-      "zh": "基础模型与推理研究：Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design。",
-      "en": "foundation-model and reasoning research: Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design."
-    },
     "evidence": [
       "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e"
     ]
@@ -262,10 +210,6 @@
       "https://doi.org/10.18653/v1/2026.acl-industry.60"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2026.acl-industry.60",
-    "summary": {
-      "zh": "RAG、文档智能与知识推理研究：When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation。",
-      "en": "RAG, document intelligence, and knowledge reasoning research: When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2026.acl-industry.60"
     ]
@@ -282,10 +226,6 @@
       "https://doi.org/10.18653/v1/2026.acl-industry.154"
     ],
     "officialUrl": "https://doi.org/10.18653/v1/2026.acl-industry.154",
-    "summary": {
-      "zh": "基础模型与推理研究：Thinking with Reasoning Skills: Fewer Tokens, More Accuracy。",
-      "en": "foundation-model and reasoning research: Thinking with Reasoning Skills: Fewer Tokens, More Accuracy."
-    },
     "evidence": [
       "https://doi.org/10.18653/v1/2026.acl-industry.154"
     ]
@@ -304,10 +244,6 @@
       "https://portal.issn.org/resource/ISSN/2159-5399"
     ],
     "officialUrl": "https://doi.org/10.1609/aaai.v40i44.41130",
-    "summary": {
-      "zh": "大模型安全与对齐研究：Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training。",
-      "en": "LLM safety and alignment research: Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training."
-    },
     "evidence": [
       "https://doi.org/10.1609/aaai.v40i44.41130"
     ]
@@ -326,10 +262,6 @@
       "https://portal.issn.org/resource/ISSN/2159-5399"
     ],
     "officialUrl": "https://doi.org/10.1609/aaai.v39i8.32945",
-    "summary": {
-      "zh": "RAG、文档智能与知识推理研究：Expand VSR Benchmark for VLLM to Expertize in Spatial Rules。",
-      "en": "RAG, document intelligence, and knowledge reasoning research: Expand VSR Benchmark for VLLM to Expertize in Spatial Rules."
-    },
     "evidence": [
       "https://doi.org/10.1609/aaai.v39i8.32945"
     ]
@@ -346,10 +278,6 @@
       "https://doi.org/10.1016/j.eswa.2026.131508"
     ],
     "officialUrl": "https://doi.org/10.1016/j.eswa.2026.131508",
-    "summary": {
-      "zh": "RAG、文档智能与知识推理研究：VIP-Doc: Visual Prompts Guide Fine-Grained Document Understanding for Reader Friendly VLLM。",
-      "en": "RAG, document intelligence, and knowledge reasoning research: VIP-Doc: Visual Prompts Guide Fine-Grained Document Understanding for Reader Friendly VLLM."
-    },
     "evidence": [
       "https://doi.org/10.1016/j.eswa.2026.131508"
     ]
@@ -369,10 +297,6 @@
       "https://portal.issn.org/resource/ISSN/1879-8314"
     ],
     "officialUrl": "https://doi.org/10.3233/faia251318",
-    "summary": {
-      "zh": "基础模型与推理研究：Router Upcycling: Leveraging Mixture-of-Routers in Mixture-of-Experts Upcycling。",
-      "en": "foundation-model and reasoning research: Router Upcycling: Leveraging Mixture-of-Routers in Mixture-of-Experts Upcycling."
-    },
     "evidence": [
       "https://doi.org/10.3233/faia251318"
     ]
@@ -389,10 +313,6 @@
       "https://doi.org/10.18653/2026.emnlp-main.1856"
     ],
     "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.1856",
-    "summary": {
-      "zh": "记忆与 Agent 研究：RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions。",
-      "en": "memory and agent research: RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions."
-    },
     "evidence": [
       "https://doi.org/10.18653/2026.emnlp-main.1856"
     ]
@@ -409,10 +329,6 @@
       "https://doi.org/10.1109/icassp55912.2026.11462642"
     ],
     "officialUrl": "https://doi.org/10.1109/icassp55912.2026.11462642",
-    "summary": {
-      "zh": "RAG、文档智能与知识推理研究：TextlessRAG: End-to-End Visual Document RAG by Speech Without Text。",
-      "en": "RAG, document intelligence, and knowledge reasoning research: TextlessRAG: End-to-End Visual Document RAG by Speech Without Text."
-    },
     "evidence": [
       "https://doi.org/10.1109/icassp55912.2026.11462642"
     ]
@@ -429,10 +345,6 @@
       "https://doi.org/10.1109/icmlc.2010.5580695"
     ],
     "officialUrl": "https://doi.org/10.1109/icmlc.2010.5580695",
-    "summary": {
-      "zh": "搜索、问答与语义研究：A clustering based fast detection algorithm for large scale duplicate emails。",
-      "en": "search, question-answering, and semantic research: A clustering based fast detection algorithm for large scale duplicate emails."
-    },
     "evidence": [
       "https://doi.org/10.1109/icmlc.2010.5580695"
     ]
@@ -445,10 +357,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2606.02113",
-    "summary": {
-      "zh": "基础模型与推理研究：A Primer in Post-Training Reasoning Data: What We Know About How It Works。",
-      "en": "foundation-model and reasoning research: A Primer in Post-Training Reasoning Data: What We Know About How It Works."
-    },
     "evidence": [
       "https://arxiv.org/abs/2606.02113"
     ]
@@ -461,10 +369,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2602.06650",
-    "summary": {
-      "zh": "大模型安全与对齐研究：Beyond Static Alignment: Hierarchical Policy Control for LLM Safety via Risk-Aware Chain-of-Thought。",
-      "en": "LLM safety and alignment research: Beyond Static Alignment: Hierarchical Policy Control for LLM Safety via Risk-Aware Chain-of-Thought."
-    },
     "evidence": [
       "https://arxiv.org/abs/2602.06650"
     ]
@@ -481,10 +385,6 @@
       "https://doi.org/10.18653/2026.emnlp-main.1348"
     ],
     "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.1348",
-    "summary": {
-      "zh": "RAG、文档智能与知识推理研究：BEAR: Budgeted Evidence Allocation for Multi-Document Reasoning。",
-      "en": "RAG, document intelligence, and knowledge reasoning research: BEAR: Budgeted Evidence Allocation for Multi-Document Reasoning."
-    },
     "evidence": [
       "https://doi.org/10.18653/2026.emnlp-main.1348"
     ]
@@ -501,10 +401,6 @@
       "https://doi.org/10.18653/2026.emnlp-main.2658"
     ],
     "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.2658",
-    "summary": {
-      "zh": "基础模型与推理研究：ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions。",
-      "en": "foundation-model and reasoning research: ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions."
-    },
     "evidence": [
       "https://doi.org/10.18653/2026.emnlp-main.2658"
     ]
@@ -517,10 +413,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2608.17534",
-    "summary": {
-      "zh": "记忆与 Agent 研究：ArborMem: Navigating Interaction States with Memory Forests。",
-      "en": "memory and agent research: ArborMem: Navigating Interaction States with Memory Forests."
-    },
     "evidence": [
       "https://arxiv.org/abs/2608.17534"
     ]
@@ -537,10 +429,6 @@
       "https://doi.org/10.18653/2026.emnlp-industry.251"
     ],
     "officialUrl": "https://doi.org/10.18653/2026.emnlp-industry.251",
-    "summary": {
-      "zh": "记忆与 Agent 研究：When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment。",
-      "en": "memory and agent research: When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment."
-    },
     "evidence": [
       "https://doi.org/10.18653/2026.emnlp-industry.251"
     ]
@@ -553,10 +441,6 @@
     "preprintYear": 2026,
     "publicationYear": null,
     "paperUrl": "https://arxiv.org/abs/2606.11806",
-    "summary": {
-      "zh": "记忆与 Agent 研究：External Experience Serving in Production LLM Systems: A Deployment-Oriented Study of Quality-Cost Trade-offs。",
-      "en": "memory and agent research: External Experience Serving in Production LLM Systems: A Deployment-Oriented Study of Quality-Cost Trade-offs."
-    },
     "evidence": [
       "https://arxiv.org/abs/2606.11806"
     ]
@@ -573,10 +457,6 @@
       "https://doi.org/10.48550/arxiv.2602.11717"
     ],
     "officialUrl": "https://doi.org/10.48550/arxiv.2602.11717",
-    "summary": {
-      "zh": "基础模型与推理研究：Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging。",
-      "en": "foundation-model and reasoning research: Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging."
-    },
     "evidence": [
       "https://doi.org/10.48550/arxiv.2602.11717"
     ]

@@ -14,8 +14,8 @@
       "en": "Senior algorithm researcher · Foundation-model team lead, 360"
     },
     "intro": {
-      "zh": "我从事基础模型、后训练、大模型安全、RAG、记忆与 Agent 系统的研究与工程工作。也关注技术路线、团队建设，以及研究成果如何在真实业务中长期发挥作用。",
-      "en": "I work on foundation models, post-training, LLM safety, RAG, memory, and agent systems. Alongside research and engineering, I care about technical direction, team building, and making research useful in real-world systems."
+      "zh": "孙林，360 算法高级研究员、基础大模型团队负责人。长期从事基础模型、后训练、大模型安全、可信生成、RAG、记忆与 Agent 系统的研究和工程实践。",
+      "en": "Lin Sun is a senior algorithm researcher and foundation-model team lead at 360. His research and engineering work spans foundation models, post-training, LLM safety, trustworthy generation, RAG, memory, and agent systems."
     },
     "education": {
       "zh": "哈尔滨工业大学",
@@ -83,127 +83,108 @@
           "en": "Personal supplementary source"
         }
       }
+    ],
+    "background": {
+      "zh": "2010 年起从事 AI 研发与管理，先后在腾讯、360、贝壳与如视负责推荐系统、搜索问答、数据智能和 AI 应用。工作涵盖研究问题定义、技术路线制定、模型训练、系统研发与跨职能团队管理。",
+      "en": "Since 2010, he has worked in AI research and management at Tencent, 360, Beike, and Rushi, across recommendation, search and question answering, data intelligence, and AI applications. His responsibilities span research problems, technical direction, model training, systems engineering, and cross-functional team leadership."
+    },
+    "educationEntries": [
+      {
+        "id": "hit-master",
+        "degree": {
+          "zh": "硕士",
+          "en": "MSc"
+        },
+        "field": {
+          "zh": "计算机科学与技术 · 智能技术与自然语言处理",
+          "en": "Computer Science and Technology · Intelligent Technology and Natural Language Processing"
+        }
+      },
+      {
+        "id": "hit-bachelor",
+        "degree": {
+          "zh": "本科",
+          "en": "BEng"
+        },
+        "field": {
+          "zh": "计算机科学与技术",
+          "en": "Computer Science and Technology"
+        }
+      }
+    ],
+    "leadership": [
+      {
+        "id": "beike-team",
+        "title": {
+          "zh": "贝壳 / 如视 · 跨职能团队管理",
+          "en": "Beike / Rushi · Cross-functional leadership"
+        },
+        "text": {
+          "zh": "曾带领百人规模跨职能团队，覆盖 NLP、搜索、知识图谱、语音、数据智能，以及工程、产品与测试。负责技术路线、团队建设与产品交付，代表工作包括小贝助手和 AI 讲房。",
+          "en": "Led a cross-functional team of around one hundred people across NLP, search, knowledge graphs, speech, data intelligence, engineering, product, and testing. Responsibilities included technical direction, team building, and product delivery, with work including Xiaobei Assistant and AI House Tour."
+        }
+      },
+      {
+        "id": "360-research-engineering",
+        "title": {
+          "zh": "360 · 研究与工程协同",
+          "en": "360 · Research and engineering"
+        },
+        "text": {
+          "zh": "负责基础大模型团队的技术路线与研发组织，围绕模型训练、后训练、安全治理、RAG 和记忆系统协调研究与工程工作，推进评测、系统设计与交付。",
+          "en": "Leads technical direction and R&D for the foundation-model team, coordinating research and engineering across model training, post-training, safety, RAG, and memory systems, including evaluation, system design, and delivery."
+        }
+      }
     ]
   },
   "areas": [
     {
-      "id": "pretraining-data",
+      "id": "foundation",
       "title": {
-        "zh": "预训练与数据工程",
-        "en": "Pre-training & data engineering"
+        "zh": "基础模型与后训练",
+        "en": "Foundation models & post-training"
       },
       "text": {
-        "zh": "长上下文数据、Dense/MoE、Router Upcycling 与 Continue Training。",
-        "en": "Long-context data, Dense/MoE systems, Router Upcycling, and continued training."
+        "zh": "研究长上下文数据选择、推理路径监督和模型融合，提升模型的推理效率与泛化能力。",
+        "en": "Research on long-context data selection, reasoning-path supervision, and model merging to improve reasoning efficiency and generalization."
       },
       "tags": [
         "Long context",
-        "MoE",
-        "Data engineering"
-      ],
-      "projects": [
-        "tinyr1"
-      ],
-      "papers": [
-        "Longattn",
-        "Router Upcycling"
-      ]
-    },
-    {
-      "id": "posttraining-reasoning",
-      "title": {
-        "zh": "后训练与推理",
-        "en": "Post-training & reasoning"
-      },
-      "text": {
-        "zh": "SFT、强化学习、蒸馏、推理路径、模型融合与高效推理。",
-        "en": "SFT, reinforcement learning, distillation, reasoning paths, model merging, and efficient inference."
-      },
-      "tags": [
-        "Reasoning",
         "Distillation",
-        "Evaluation"
-      ],
-      "projects": [
-        "tinyr1"
-      ],
-      "papers": [
-        "Tinyr1",
-        "Chain-of-thought matters",
-        "Thinking with Reasoning",
-        "Beyond Parameter Arithmetic"
+        "Model merging"
       ]
     },
     {
       "id": "safety",
       "title": {
-        "zh": "安全与可信治理",
-        "en": "Safety & trustworthy governance"
+        "zh": "安全与可信生成",
+        "en": "Safety & trustworthy generation"
       },
       "text": {
-        "zh": "动态攻防、安全对齐、闭环训练、在线防护与幻觉治理。",
-        "en": "Dynamic attacks, safety alignment, closed-loop training, online protection, and hallucination governance."
+        "zh": "研究动态攻防、安全对齐与分层策略控制，兼顾风险防护、正常任务体验与生成可靠性。",
+        "en": "Research on dynamic attacks, safety alignment, and hierarchical policy control, balancing risk protection, task utility, and generation reliability."
       },
       "tags": [
         "Alignment",
-        "Safety",
-        "Evaluation"
-      ],
-      "projects": [
-        "llm-safety"
-      ],
-      "papers": [
-        "TriPlay-RL",
-        "Efficient Switchable",
-        "Beyond Static Alignment"
+        "Safety control",
+        "Trustworthy generation"
       ]
     },
     {
-      "id": "rag-memory-agent",
+      "id": "knowledge",
       "title": {
         "zh": "RAG、记忆与 Agent",
         "en": "RAG, memory & agents"
       },
       "text": {
-        "zh": "OCR-RAG、证据分配、长期记忆、经验复用与 Agent 评测。",
-        "en": "OCR-RAG, evidence allocation, long-term memory, experience reuse, and agent evaluation."
+        "zh": "研究复杂文档中的证据损失、多文档证据分配、长期记忆和经验迁移，评估真实 Agent 工作流的效果。",
+        "en": "Research on evidence loss in complex documents, multi-document evidence allocation, long-term memory, and experience transfer in realistic agent workflows."
       },
       "tags": [
-        "RAG",
+        "Document AI",
         "Memory",
-        "Agents"
-      ],
-      "projects": [
-        "rag-knowledge",
-        "memory-agents"
-      ],
-      "papers": [
-        "When Good OCR",
-        "BEAR:",
-        "Harness-Bench",
-        "MemAudit"
+        "Agent evaluation"
       ]
-    },
-    {
-      "id": "delivery",
-      "title": {
-        "zh": "业务与组织交付",
-        "en": "Delivery & organization"
-      },
-      "text": {
-        "zh": "线上系统、产品化、跨职能协同、标准与行业服务。",
-        "en": "Production systems, productization, cross-functional delivery, standards, and industry service."
-      },
-      "tags": [
-        "Delivery",
-        "Leadership",
-        "Open research"
-      ],
-      "projects": [
-        "xiaobei-assistant",
-        "ai-house-tour"
-      ],
-      "papers": []
     }
   ],
   "career": [
@@ -262,7 +243,7 @@
         "en": "Search, semantics & dialogue"
       },
       "text": {
-        "zh": "围绕搜索问答、语义理解、人机对话与大数据智能进行研发，材料记录从 0 到 1 搭建人机对话系统并推动广告 CTR 预估落地。",
+        "zh": "围绕搜索问答、语义理解、人机对话与大数据智能进行研发，从 0 到 1 搭建人机对话系统并推动广告 CTR 预估落地。",
         "en": "Research and development in question answering, semantic understanding, dialogue, and data intelligence, including building a dialogue system from zero to one and shipping ad CTR prediction."
       },
       "management": {
@@ -302,8 +283,8 @@
       "area": "foundation",
       "period": "2025",
       "summary": {
-        "zh": "以 Branch-Merge Distillation 探索紧凑模型的推理能力。",
-        "en": "Exploring compact reasoning models through branch-merge distillation."
+        "zh": "负责 TinyR1-32B-Preview 模型训练与开源发布，以 Branch-Merge Distillation 提升数学、编程和科学推理表现。",
+        "en": "Led training and release of TinyR1-32B-Preview, using Branch-Merge Distillation to improve mathematics, coding, and science reasoning."
       },
       "problem": {
         "zh": "如何在较小模型规模下保留高质量的推理能力，并让方法可供研究者复用？",
@@ -385,8 +366,8 @@
       "area": "safety",
       "period": "2024–2026",
       "summary": {
-        "zh": "连接动态攻防、安全对齐与在线治理的研究和工程实践。",
-        "en": "Research and engineering connecting adversarial testing, safety alignment, and online governance."
+        "zh": "负责总体方案与关键算法，组织动态攻防、闭环训练和检测—代答分离；相关项目获北京市科学技术进步二等奖。",
+        "en": "Led the overall design and key algorithms for dynamic adversarial testing, closed-loop training, and detection–response separation. The related project received the Beijing Science and Technology Progress Award, Second Prize."
       },
       "problem": {
         "zh": "面对持续变化的越狱攻击、风险内容和幻觉问题，如何兼顾防护效果与正常任务体验？",
@@ -427,8 +408,8 @@
         "Trustworthy AI"
       ],
       "result": {
-        "zh": "形成 TriPlay-RL、Magic Token、检测—代答分离和可信生成等公开技术成果；相关项目获北京市科学技术进步二等奖，CAAI 鉴定证书确认成果《大模型安全关键技术及应用》。",
-        "en": "Public work includes TriPlay-RL, Magic Token, detection–response separation, and trustworthy generation. The related project received the Beijing Science and Technology Progress Award, and a CAAI certificate records the achievement “Key Technologies and Applications of Large-Model Safety.”"
+        "zh": "形成 TriPlay-RL、Magic Token、检测—代答分离和可信生成等技术成果；相关项目获北京市科学技术进步二等奖。成果《大模型安全关键技术及应用》获 CAAI 科技成果鉴定，证书编号：鉴字[2025]第008号，鉴定日期：2025-06-19。",
+        "en": "The work includes TriPlay-RL, Magic Token, detection–response separation, and trustworthy generation. The related project received the Beijing Science and Technology Progress Award, Second Prize. “Key Technologies and Applications of Large-Model Safety” received a CAAI technology achievement appraisal, certificate 鉴字[2025]第008号, dated 2025-06-19."
       },
       "kind": "project",
       "detail": true,
@@ -471,8 +452,8 @@
       "area": "knowledge",
       "period": "2024–2026",
       "summary": {
-        "zh": "从视觉文档、证据分配到复杂信息场景中的可靠问答。",
-        "en": "From visual documents and evidence allocation to reliable answers in complex information workflows."
+        "zh": "负责 InduOCRBench 研究与论文撰写，建立工业文档 OCR-RAG 评测；570 份文档覆盖 12 个行业。",
+        "en": "Led the InduOCRBench study and paper, establishing industrial-document OCR-RAG evaluation across 570 documents from 12 industries."
       },
       "problem": {
         "zh": "检索与 OCR 结果并不总能形成可靠答案。如何利用多份文档中的有效证据，并理解文档噪声的影响？",
@@ -548,8 +529,8 @@
       "area": "knowledge",
       "period": "2025–2026",
       "summary": {
-        "zh": "围绕长期状态、任务经验与真实 Agent 工作流的持续探索。",
-        "en": "Exploring long-term state, reusable experience, and realistic agent workflows."
+        "zh": "推进 Mem360 长期记忆与经验复用，围绕 Agent 工作流、记忆安全和经验服务开展研究。",
+        "en": "Advances Mem360 long-term memory and experience reuse, with research on agent workflows, memory safety, and experience serving."
       },
       "problem": {
         "zh": "如何跨对话保持状态、从任务反馈中复用经验，并理解 Agent 的效果与运行环境之间的关系？",
@@ -620,8 +601,8 @@
         "en": "Xiaobei Assistant"
       },
       "summary": {
-        "zh": "贝壳阶段的代表性智能交互工作，作为团队与产品交付经历的一部分呈现。",
-        "en": "A representative intelligent-interaction project from the Beike period, presented as part of team and product delivery."
+        "zh": "贝壳阶段的智能助手工作，结合搜索、问答与数据智能，服务房产经纪场景。",
+        "en": "Intelligent-assistant work at Beike, combining search, question answering, and data intelligence for real-estate brokerage."
       },
       "problem": {
         "zh": "面向房产经纪场景组织智能问答与交互能力。",
@@ -672,8 +653,8 @@
         "en": "AI House Tour"
       },
       "summary": {
-        "zh": "如视/贝壳阶段的代表性 AI+VR 工作，作为团队与产品交付经历的一部分呈现。",
-        "en": "A representative AI+VR project from the Rushi/Beike period, presented as part of team and product delivery."
+        "zh": "如视 / 贝壳阶段的 AI+VR 工作，将语音与智能交互用于房产讲解和看房场景。",
+        "en": "AI+VR work at Rushi/Beike, bringing speech and intelligent interaction to property narration and viewing."
       },
       "problem": {
         "zh": "把 AI 能力融入房产经纪和看房场景。",
@@ -1045,10 +1026,6 @@
       "title": {
         "zh": "大模型安全研究报告（2024 年）",
         "en": "Report on Large Language Model Safety (2024)"
-      },
-      "role": {
-        "zh": "相关技术报告",
-        "en": "Related technical report"
       }
     }
   ],
@@ -1063,7 +1040,8 @@
       "verification": "certificate-checked",
       "theme": "大模型安全与模型优化",
       "shortTitle": "大模型安全防护",
-      "themeId": "safety-optimization"
+      "themeId": "safety-optimization",
+      "titleEn": "Large-model safety protection method, apparatus, device, and storage medium"
     },
     {
       "id": "patent-02",
@@ -1073,9 +1051,10 @@
       "applicant": null,
       "inventorOrder": null,
       "verification": "author-provided-unverified",
-      "theme": "搜索问答与交互",
+      "theme": "大模型安全与模型优化",
       "shortTitle": "大模型优化方法、装置、设备及存储介质",
-      "themeId": "search-qa"
+      "themeId": "safety-optimization",
+      "titleEn": "Large-model optimization method, apparatus, device, and storage medium"
     },
     {
       "id": "patent-03",
@@ -1085,9 +1064,10 @@
       "applicant": null,
       "inventorOrder": null,
       "verification": "author-provided-unverified",
-      "theme": "搜索问答与交互",
+      "theme": "知识库与语料构建",
       "shortTitle": "语料构建方法、装置、设备、存储介质及产品",
-      "themeId": "search-qa"
+      "themeId": "knowledge-corpus",
+      "titleEn": "Corpus construction method, apparatus, device, storage medium, and product"
     },
     {
       "id": "patent-04",
@@ -1099,7 +1079,8 @@
       "verification": "certificate-checked",
       "theme": "大模型安全与模型优化",
       "shortTitle": "风险检测",
-      "themeId": "safety-optimization"
+      "themeId": "safety-optimization",
+      "titleEn": "Risk detection method, apparatus, device, storage medium, and product"
     },
     {
       "id": "patent-05",
@@ -1111,7 +1092,8 @@
       "verification": "certificate-checked",
       "theme": "知识库与语料构建",
       "shortTitle": "知识库构建",
-      "themeId": "knowledge-corpus"
+      "themeId": "knowledge-corpus",
+      "titleEn": "Knowledge-base construction method, apparatus, device, storage medium, and product"
     },
     {
       "id": "patent-06",
@@ -1123,7 +1105,8 @@
       "verification": "certificate-checked",
       "theme": "大模型安全与模型优化",
       "shortTitle": "模型优化",
-      "themeId": "safety-optimization"
+      "themeId": "safety-optimization",
+      "titleEn": "Model optimization method, apparatus, device, storage medium, and product"
     },
     {
       "id": "patent-07",
@@ -1133,9 +1116,10 @@
       "applicant": "北京奇虎科技有限公司",
       "inventorOrder": "第三发明人",
       "verification": "certificate-checked",
-      "theme": "搜索问答与交互",
+      "theme": "大模型安全与模型优化",
       "shortTitle": "回答生成",
-      "themeId": "search-qa"
+      "themeId": "safety-optimization",
+      "titleEn": "Answer generation method, apparatus, device, storage medium, and product"
     },
     {
       "id": "patent-08",
@@ -1145,9 +1129,10 @@
       "applicant": null,
       "inventorOrder": null,
       "verification": "author-provided-unverified",
-      "theme": "搜索问答与交互",
+      "theme": "智能交互与多媒体",
       "shortTitle": "基于剧本的视频展示方法、装置和存储介质",
-      "themeId": "search-qa"
+      "themeId": "multimedia",
+      "titleEn": "Script-based video presentation method, apparatus, and storage medium"
     },
     {
       "id": "patent-09",
@@ -1157,9 +1142,10 @@
       "applicant": null,
       "inventorOrder": null,
       "verification": "author-provided-unverified",
-      "theme": "搜索问答与交互",
+      "theme": "知识库与语料构建",
       "shortTitle": "数据召回方法与系统、交互方法及交互系统",
-      "themeId": "search-qa"
+      "themeId": "knowledge-corpus",
+      "titleEn": "Data recall method and system, interaction method and system"
     },
     {
       "id": "patent-10",
@@ -1169,9 +1155,10 @@
       "applicant": null,
       "inventorOrder": null,
       "verification": "author-provided-unverified",
-      "theme": "搜索问答与交互",
+      "theme": "智能交互与多媒体",
       "shortTitle": "一种基于自然语句句法分析的智能交互方法及装置",
-      "themeId": "search-qa"
+      "themeId": "multimedia",
+      "titleEn": "Intelligent interaction method and apparatus based on natural-language syntax analysis"
     },
     {
       "id": "patent-11",
@@ -1183,7 +1170,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "基于搜索获取问答专题数据的方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Method and apparatus for obtaining thematic QA data through search"
     },
     {
       "id": "patent-12",
@@ -1195,7 +1183,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "基于搜索词的问答类搜索结果呈现方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Method and apparatus for presenting QA search results based on search terms"
     },
     {
       "id": "patent-13",
@@ -1207,7 +1196,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "基于搜索的问题发布方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Search-based question publication method and apparatus"
     },
     {
       "id": "patent-14",
@@ -1219,7 +1209,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "搜索结果整合方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Search-result integration method and apparatus"
     },
     {
       "id": "patent-15",
@@ -1231,7 +1222,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "基于问答的搜索结果调整方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "QA-based search-result adjustment method and apparatus"
     },
     {
       "id": "patent-16",
@@ -1243,7 +1235,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "提供问答对数据搜索结果的方法和装置",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Method and apparatus for providing QA-pair search results"
     },
     {
       "id": "patent-17",
@@ -1255,7 +1248,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "一种确定网络资源点的抓取频率的装置和方法",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Apparatus and method for determining crawling frequency of web resources"
     },
     {
       "id": "patent-18",
@@ -1267,7 +1261,8 @@
       "verification": "author-provided-unverified",
       "theme": "搜索问答与交互",
       "shortTitle": "一种获取问答对的相关联程度的装置和方法",
-      "themeId": "search-qa"
+      "themeId": "search-qa",
+      "titleEn": "Apparatus and method for determining the relevance of QA pairs"
     }
   ],
   "news": [
@@ -1381,8 +1376,8 @@
         "en": "Chaoyang Phoenix Talent (2025)"
       },
       "detail": {
-        "zh": "北京市朝阳区凤凰人才（2025）公开称谓。",
-        "en": "Publicly recorded designation: Chaoyang Phoenix Talent (2025)."
+        "zh": "2025 年入选北京市朝阳区凤凰人才。",
+        "en": "Selected for the Chaoyang Phoenix Talent program in 2025."
       }
     },
     {
@@ -1396,8 +1391,8 @@
         "en": "TinyR1 open model and paper"
       },
       "detail": {
-        "zh": "TinyR1-32B-Preview 的论文、模型页面和团队新闻。",
-        "en": "The TinyR1-32B-Preview paper, model page, and team news."
+        "zh": "负责 TinyR1-32B-Preview 模型训练与开源发布。",
+        "en": "Led training and open release of TinyR1-32B-Preview."
       }
     },
     {

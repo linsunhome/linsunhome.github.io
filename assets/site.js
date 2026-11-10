@@ -1,4 +1,5 @@
 (() => {
+  document.documentElement.classList.add("js");
   const toggle = document.querySelector('[data-menu-toggle]');
   const nav = document.querySelector('[data-nav]');
   if (toggle && nav) {
