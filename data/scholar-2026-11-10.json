@@ -1,0 +1,261 @@
+{
+  "source": "User-provided Google Scholar publication list",
+  "sourceReceivedDate": "2026-11-10",
+  "profile": {
+    "name": "Lin Sun",
+    "affiliation": "Qihoo 360",
+    "verifiedEmailDomain": "360.cn",
+    "researchInterest": "large language model",
+    "url": "https://scholar.google.com/citations?user=b8yMN1MAAAAJ"
+  },
+  "publicationCount": 30,
+  "aggregateMetrics": null,
+  "notes": [
+    "Source capture date was not supplied; sourceReceivedDate records receipt in this conversation.",
+    "Blank citation fields remain null.",
+    "The source citation marker 9* is preserved without interpretation.",
+    "Author lists ending in ... remain truncated; contributor roles are not inferred."
+  ],
+  "papers": [
+    {
+      "title": "Modeling semantic relevance for question-answer pairs in web social communities",
+      "authors": "B Wang, X Wang, CJ Sun, B Liu, L Sun",
+      "venue": "ACL 2010, 1230-1238",
+      "scholarYear": 2010,
+      "citations": 78,
+      "citationLabel": "78"
+    },
+    {
+      "title": "Harness-Bench: Measuring harness effects across models in realistic agent workflows",
+      "authors": "Y Yao, X Tan, CH Liu, Y Li, Z Wang, W Yu, Z Tan, Y Tian, G Zhao, L Sun, ...",
+      "venue": "arXiv preprint arXiv:2605.27922",
+      "scholarYear": 2026,
+      "citations": 66,
+      "citationLabel": "66"
+    },
+    {
+      "title": "Extracting Chinese question-answer pairs from online forums",
+      "authors": "B Wang, B Liu, C Sun, X Wang, L Sun",
+      "venue": "SMC 2009, 1159-1164",
+      "scholarYear": 2009,
+      "citations": 30,
+      "citationLabel": "30"
+    },
+    {
+      "title": "Chain-of-thought matters: improving long-context language models with reasoning path supervision",
+      "authors": "D Zhu, X Wei, G Zhao, W Wu, H Zou, J Ran, X Wang, L Sun, X Zhang, S Li",
+      "venue": "EMNLP 2025 findings",
+      "scholarYear": 2025,
+      "citations": 26,
+      "citationLabel": "26"
+    },
+    {
+      "title": "Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation",
+      "authors": "L Sun, G Zhao, X Jian, Y Wu, W Lin, Y Zhu, Q Shi, C Jia, A Yuan, Y Tian, ...",
+      "venue": "arXiv preprint arXiv:2503.04872",
+      "scholarYear": 2025,
+      "citations": 15,
+      "citationLabel": "15"
+    },
+    {
+      "title": "Longattn: Selecting long-context training data via token-level attention",
+      "authors": "L Wu, D Zhu, G Zhao, Z Yu, J Ran, X Wong, L Sun, S Li",
+      "venue": "ACL 2025 findings, 19367–19380",
+      "scholarYear": 2025,
+      "citations": 15,
+      "citationLabel": "15"
+    },
+    {
+      "title": "Thread segmentation based answer detection in Chinese online forums",
+      "authors": "W Bao-Xun, L Bing-Quan, S Cheng-Jie, W Xiao-Long, S Lin",
+      "venue": "Acta Automatica Sinica 39 (1), 11-20",
+      "scholarYear": 2013,
+      "citations": 11,
+      "citationLabel": "11"
+    },
+    {
+      "title": "MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection",
+      "authors": "Z Tan, Y Yao, H Jin, W Yu, G Wang, M Fan, F Liu, X Zhang, D Ma, T Yang, ...",
+      "venue": "arXiv preprint arXiv:2605.23723",
+      "scholarYear": 2026,
+      "citations": 10,
+      "citationLabel": "10"
+    },
+    {
+      "title": "Uncertainty under the curve: A sequence-level entropy area metric for reasoning llm",
+      "authors": "Y Zhu, L Sun, G Zhao, W Lin, X Zhang",
+      "venue": "arXiv preprint arXiv:2508.20384",
+      "scholarYear": 2025,
+      "citations": 9,
+      "citationLabel": "9"
+    },
+    {
+      "title": "Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements",
+      "authors": "G Zhao, S Hu, X Jian, J Wu, Y Wu, L Sun, X Zhang",
+      "venue": "EMNLP 2025",
+      "scholarYear": 2025,
+      "citations": 9,
+      "citationLabel": "9*"
+    },
+    {
+      "title": "TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment",
+      "authors": "Z Tan, W Yu, J Si, T Liu, K Guan, H Jin, J Tao, X Yuan, D Ma, X Zhang, ...",
+      "venue": "ACL 2026",
+      "scholarYear": 2026,
+      "citations": 7,
+      "citationLabel": "7"
+    },
+    {
+      "title": "A study of features on Primary Question detection in Chinese online forums",
+      "authors": "L Sun, B Liu, B Wang, D Zhang, X Wang",
+      "venue": "FSKD 2010 5, 2422-2427",
+      "scholarYear": 2010,
+      "citations": 7,
+      "citationLabel": "7"
+    },
+    {
+      "title": "Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design",
+      "authors": "L Sun, W Lin, J Wu, Y Zhu, X Jian, G Zhao, C Jia, L Zhang, S Hu, Y Wu, ...",
+      "venue": "arXiv preprint arXiv:2506.04734",
+      "scholarYear": 2025,
+      "citations": 6,
+      "citationLabel": "6"
+    },
+    {
+      "title": "When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation",
+      "authors": "L Sun, W Dexian, J Huang, L Zhang, Z Cheng, X Zhang",
+      "venue": "ACL 2026",
+      "scholarYear": 2026,
+      "citations": 5,
+      "citationLabel": "5"
+    },
+    {
+      "title": "Thinking with Reasoning Skills: Fewer Tokens, More Accuracy",
+      "authors": "G Zhao, Q Shi, X Xiao, X Zhang, T Yang, L Sun",
+      "venue": "ACL 2026 (oral)",
+      "scholarYear": 2026,
+      "citations": 5,
+      "citationLabel": "5"
+    },
+    {
+      "title": "Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training",
+      "authors": "J Si, L Sun, Z Tan, X Zhang",
+      "venue": "AAAI 2026",
+      "scholarYear": 2025,
+      "citations": 5,
+      "citationLabel": "5"
+    },
+    {
+      "title": "Expand VSR Benchmark for VLLM to Expertize in Spatial Rules",
+      "authors": "P Xie, L Sun, B Liu, D Wang, X Zhang, C Sun, J Zhang",
+      "venue": "AAAI 2025 39 (8), 8745-8752",
+      "scholarYear": 2025,
+      "citations": 5,
+      "citationLabel": "5"
+    },
+    {
+      "title": "VIP-Doc: Visual Prompts Guide Fine-Grained Document Understanding for Reader Friendly VLLM",
+      "authors": "P Xie, D Wang, L Sun, X Zhang, Y Xie, S Qian, C Sun, B Liu",
+      "venue": "Expert Systems with Applications, 131508",
+      "scholarYear": 2026,
+      "citations": 3,
+      "citationLabel": "3"
+    },
+    {
+      "title": "Router Upcycling: Leveraging Mixture-of-Routers in Mixture-of-Experts Upcycling",
+      "authors": "J Ran, G Zhao, Y Wu, D Zhu, L Wu, Y Zhao, T Yang, L Sun, X Zhang, S Li",
+      "venue": "ECAI 2025",
+      "scholarYear": 2025,
+      "citations": 3,
+      "citationLabel": "3"
+    },
+    {
+      "title": "RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions",
+      "authors": "Z Lv, Z Tan, Y Li, Y Yao, Y Tian, L Sun, X Zhang, W Lin, T Yang, G Zhao",
+      "venue": "EMNLP 2026",
+      "scholarYear": 2026,
+      "citations": 2,
+      "citationLabel": "2"
+    },
+    {
+      "title": "TextlessRAG: End-to-End Visual Document RAG by Speech Without Text",
+      "authors": "P Xie, S Qian, B Liu, D Wang, L Sun, X Zhang",
+      "venue": "ICASSP 2026",
+      "scholarYear": 2025,
+      "citations": 2,
+      "citationLabel": "2"
+    },
+    {
+      "title": "A clustering based fast detection algorithm for large scale duplicate emails",
+      "authors": "L Sun, BQ Liu, BX Wang, XL Wang",
+      "venue": "ICMLC 2010 6, 3270-3274",
+      "scholarYear": 2010,
+      "citations": 2,
+      "citationLabel": "2"
+    },
+    {
+      "title": "A Primer in Post-Training Reasoning Data: What We Know About How It Works",
+      "authors": "Y Li, G Zhao, Q Shi, L Sun, X Zhang, T Yang",
+      "venue": "arXiv preprint arXiv:2606.02113",
+      "scholarYear": 2026,
+      "citations": 1,
+      "citationLabel": "1"
+    },
+    {
+      "title": "Beyond Static Alignment: Hierarchical Policy Control for LLM Safety via Risk-Aware Chain-of-Thought",
+      "authors": "J Si, L Sun, W Lin, X Zhang",
+      "venue": "arXiv preprint arXiv:2602.06650",
+      "scholarYear": 2026,
+      "citations": 1,
+      "citationLabel": "1"
+    },
+    {
+      "title": "BEAR: Budgeted Evidence Allocation for Multi-Document Reasoning",
+      "authors": "L Sun, L Zhang, J Huang, Z Cheng, X Zhang",
+      "venue": "EMNLP 2026",
+      "scholarYear": 2026,
+      "citations": 1,
+      "citationLabel": "1"
+    },
+    {
+      "title": "ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions",
+      "authors": "G Zhao, Q Shi, X Xiao, W Liu, Y Li, L Hao, S Hou, Z Guo, X Zhang, Y Zhao, ...",
+      "venue": "EMNLP 2026",
+      "scholarYear": 2026,
+      "citations": null,
+      "citationLabel": null
+    },
+    {
+      "title": "ArborMem: Navigating Interaction States with Memory Forests",
+      "authors": "Z Lv, Y Xu, Y Yao, S Ding, X Tan, Y Li, G Zhao, W Lin, L Sun, X Zhang, ...",
+      "venue": "arXiv preprint arXiv:2608.17534",
+      "scholarYear": 2026,
+      "citations": null,
+      "citationLabel": null
+    },
+    {
+      "title": "When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment",
+      "authors": "W Lin, X Zhang, L Sun",
+      "venue": "EMNLP 2026",
+      "scholarYear": 2026,
+      "citations": null,
+      "citationLabel": null
+    },
+    {
+      "title": "External Experience Serving in Production LLM Systems: A Deployment-Oriented Study of Quality-Cost Trade-offs",
+      "authors": "L Sun, H Zhang",
+      "venue": "arXiv preprint arXiv:2606.11806",
+      "scholarYear": 2026,
+      "citations": null,
+      "citationLabel": null
+    },
+    {
+      "title": "Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging",
+      "authors": "W Lin, L Sun, Q Shi, A Yuan, Y Tian, Z Wang, G Zhao, X Zhang, T Yang",
+      "venue": "NeurIPS 2026",
+      "scholarYear": 2026,
+      "citations": null,
+      "citationLabel": null
+    }
+  ]
+}
