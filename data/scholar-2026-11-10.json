@@ -14,7 +14,7 @@
     "Source capture date was not supplied; sourceReceivedDate records receipt in this conversation.",
     "Blank citation fields remain null.",
     "The source citation marker 9* is preserved without interpretation.",
-    "Author lists ending in ... remain truncated; contributor roles are not inferred."
+    "Author lists are expanded from the supplied Scholar records and public paper metadata where Scholar used an ellipsis."
   ],
   "papers": [
     {
@@ -27,7 +27,7 @@
     },
     {
       "title": "Harness-Bench: Measuring harness effects across models in realistic agent workflows",
-      "authors": "Y Yao, X Tan, CH Liu, Y Li, Z Wang, W Yu, Z Tan, Y Tian, G Zhao, L Sun, ...",
+      "authors": "Y Yao, X Tan, CH Liu, Y Li, Z Wang, Z Lv, W Yu, Z Tan, Y Tian, L Sun, X Zhang, G Zhao, T Yang",
       "venue": "arXiv preprint arXiv:2605.27922",
       "scholarYear": 2026,
       "citations": 66,
@@ -51,7 +51,7 @@
     },
     {
       "title": "Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation",
-      "authors": "L Sun, G Zhao, X Jian, Y Wu, W Lin, Y Zhu, Q Shi, C Jia, A Yuan, Y Tian, ...",
+      "authors": "L Sun, G Zhao, X Jian, Y Wu, W Lin, Y Zhu, Q Shi, C Jia, A Yuan, Y Tian, L Zhang, J Wu, J Ran, S Hu, Z Jiang, J Zhou, W Liu, X Xiao, B Cui, T Yang, X Zhang",
       "venue": "arXiv preprint arXiv:2503.04872",
       "scholarYear": 2025,
       "citations": 15,
@@ -75,7 +75,7 @@
     },
     {
       "title": "MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection",
-      "authors": "Z Tan, Y Yao, H Jin, W Yu, G Wang, M Fan, F Liu, X Zhang, D Ma, T Yang, ...",
+      "authors": "Z Tan, Y Yao, H Jin, W Yu, G Wang, M Fan, L Liang, F Liu, X Zhang, D Ma, T Yang, L Sun",
       "venue": "arXiv preprint arXiv:2605.23723",
       "scholarYear": 2026,
       "citations": 10,
@@ -99,7 +99,7 @@
     },
     {
       "title": "TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment",
-      "authors": "Z Tan, W Yu, J Si, T Liu, K Guan, H Jin, J Tao, X Yuan, D Ma, X Zhang, ...",
+      "authors": "Z Tan, W Yu, J Si, T Liu, K Guan, H Jin, J Tao, X Yuan, X Zhang, D Ma, T Yang, L Sun",
       "venue": "ACL 2026",
       "scholarYear": 2026,
       "citations": 7,
@@ -115,7 +115,7 @@
     },
     {
       "title": "Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design",
-      "authors": "L Sun, W Lin, J Wu, Y Zhu, X Jian, G Zhao, C Jia, L Zhang, S Hu, Y Wu, ...",
+      "authors": "L Sun, W Lin, J Wu, Y Zhu, X Jian, G Zhao, C Jia, L Zhang, S Hu, Y Wu, X Zhang",
       "venue": "arXiv preprint arXiv:2506.04734",
       "scholarYear": 2025,
       "citations": 6,
@@ -219,7 +219,7 @@
     },
     {
       "title": "ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions",
-      "authors": "G Zhao, Q Shi, X Xiao, W Liu, Y Li, L Hao, S Hou, Z Guo, X Zhang, Y Zhao, ...",
+      "authors": "G Zhao, Q Shi, X Xiao, W Liu, Y Li, L Hao, S Hou, Z Guo, X Zhang, Y Zhao, Z Wang, W Liu, Y Wu, T Yang, L Sun, X Zhang",
       "venue": "EMNLP 2026",
       "scholarYear": 2026,
       "citations": null,
@@ -227,7 +227,7 @@
     },
     {
       "title": "ArborMem: Navigating Interaction States with Memory Forests",
-      "authors": "Z Lv, Y Xu, Y Yao, S Ding, X Tan, Y Li, G Zhao, W Lin, L Sun, X Zhang, ...",
+      "authors": "Z Lv, Y Xu, Y Yao, S Ding, X Tan, Y Li, G Zhao, W Lin, L Sun, X Zhang, T Yang",
       "venue": "arXiv preprint arXiv:2608.17534",
       "scholarYear": 2026,
       "citations": null,

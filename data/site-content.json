@@ -20,6 +20,10 @@
     "education": {
       "zh": "哈尔滨工业大学",
       "en": "Harbin Institute of Technology"
+    },
+    "educationDetails": {
+      "zh": "哈尔滨工业大学 · 计算机科学与技术本科（2004.09–2008.07）；计算机科学与技术（智能技术与自然语言处理方向）硕士（2008.09–2010.07）。",
+      "en": "Harbin Institute of Technology · BEng in Computer Science and Technology (2004.09–2008.07); MSc in Computer Science and Technology, intelligent technology and natural language processing (2008.09–2010.07)."
     }
   },
   "areas": [
@@ -176,16 +180,12 @@
         "en": "How can compact models retain strong reasoning ability while making the method accessible to other researchers?"
       },
       "role": {
-        "zh": "模型训练与发布；论文作者列表以 L Sun 开头。具体共同一作、通讯作者身份另行核验。",
-        "en": "Model training and release; the supplied author list begins with L Sun. Equal-contribution and corresponding-author designations are not inferred."
+        "zh": "负责模型训练与发布。",
+        "en": "Model training and release."
       },
       "approach": {
-        "zh": "围绕推理路径与蒸馏展开，采用 Branch-Merge Distillation。Preview 推理模型与后续安全模型分别记录。",
-        "en": "The work explores reasoning paths and branch-merge distillation. The preview reasoning model is kept distinct from later safety-model releases."
-      },
-      "result": {
-        "zh": "形成 TinyR1-32B-Preview 技术报告与公开团队发布记录。北京大学计算机学院的报道明确列出孙林为 360 团队成员。",
-        "en": "A TinyR1-32B-Preview technical report and public team-release record. PKU’s institutional article explicitly names Lin Sun as a 360 team member."
+        "zh": "采用 Branch-Merge Distillation，通过分支蒸馏与模型融合提升推理能力。",
+        "en": "Branch-Merge Distillation combines branch-specific distillation with model merging to improve reasoning."
       },
       "paperQueries": [
         "Tinyr1-32b-preview"
@@ -210,7 +210,11 @@
         "Distillation",
         "Reasoning",
         "Open research"
-      ]
+      ],
+      "result": {
+        "zh": "TinyR1-32B-Preview 技术报告与团队发布。",
+        "en": "TinyR1-32B-Preview technical report and team release."
+      }
     },
     {
       "id": "llm-safety",
@@ -229,16 +233,12 @@
         "en": "How can protection against evolving jailbreaks, harmful content, and hallucinations preserve useful task performance?"
       },
       "role": {
-        "zh": "材料记录的职责包括技术路线、关键算法、模型训练、系统设计与落地推进。论文以公开作者列表为准，不把团队评测成绩表述为个人独立成果。",
-        "en": "The supplied professional history records responsibility for technical direction, methods, model training, system design, and delivery. Paper attribution follows the author lists, and team evaluation results remain team outcomes."
+        "zh": "负责技术路线、关键算法、模型训练、系统设计与落地推进。",
+        "en": "Technical direction, methods, model training, system design, and delivery."
       },
       "approach": {
-        "zh": "攻击生成 → 自动评测 → 安全训练 → 在线防护 → 经验回流。相关研究包括 TriPlay-RL 与 Magic-Token 安全控制；公开分享讨论场景化的幻觉与可信治理。",
-        "en": "Attack generation → evaluation → safety training → online protection → experience feedback. Related work includes TriPlay-RL and Magic-Token safety control, with public discussions of scenario-specific hallucination governance."
-      },
-      "result": {
-        "zh": "公开材料覆盖安全训练方法、团队内容安全方案与个人技术分享。业务调用量尚未建立可公开追溯口径，暂不展示。",
-        "en": "Public records cover safety-training methods, the team’s content-safety solution, and personal technical talks."
+        "zh": "攻击生成 → 自动评测 → 安全训练 → 在线防护 → 经验回流。相关研究包括 TriPlay-RL 与 Magic-Token 安全控制。",
+        "en": "Attack generation → evaluation → safety training → online protection → experience feedback. Related work includes TriPlay-RL and Magic-Token safety control."
       },
       "paperQueries": [
         "TriPlay-RL",
@@ -265,7 +265,11 @@
         "Alignment",
         "Safety",
         "Trustworthy AI"
-      ]
+      ],
+      "result": {
+        "zh": "TriPlay-RL、Magic-Token 与内容安全方案。",
+        "en": "TriPlay-RL, Magic-Token, and content-safety systems."
+      }
     },
     {
       "id": "rag-knowledge",
@@ -284,16 +288,12 @@
         "en": "Retrieval and OCR quality alone do not guarantee reliable answers. How can systems allocate evidence across documents and account for document noise?"
       },
       "role": {
-        "zh": "技术路线、系统方案、评测与业务落地推进。具体论文角色保留待核验状态；正文与作者列表分别提供证据。",
-        "en": "Technical direction, system design, evaluation, and delivery. Paper-specific author roles are verified separately from the project responsibilities."
+        "zh": "负责技术路线、系统方案、评测与业务落地推进。",
+        "en": "Technical direction, system design, evaluation, and delivery."
       },
       "approach": {
         "zh": "结合知识检索、文档结构、证据分配与生成评测。相关论文覆盖 OCR-RAG 鲁棒性、BEAR 多文档证据分配和 TextlessRAG 视觉文档问答。",
         "en": "Combining retrieval, document structure, evidence allocation, and generation evaluation. Related papers cover OCR robustness for RAG, budgeted multi-document evidence allocation, and visual-document RAG."
-      },
-      "result": {
-        "zh": "形成多个公开研究条目与 360 智脑 RAG 团队技术文章。团队榜单成绩、系统能力与个人研究贡献分别表述。",
-        "en": "Public research records and a team technical article on 360’s RAG system. Benchmark outcomes, product capabilities, and personal research contributions are attributed separately."
       },
       "paperQueries": [
         "When Good OCR",
@@ -313,7 +313,11 @@
         "RAG",
         "Document AI",
         "Evidence reasoning"
-      ]
+      ],
+      "result": {
+        "zh": "RAG 研究与 360 智脑团队技术方案。",
+        "en": "RAG research and the 360 Zhibrain team system."
+      }
     },
     {
       "id": "memory-agents",
@@ -332,16 +336,12 @@
         "en": "How can agents preserve state, reuse experience from feedback, and account for the effect of runtime environments on performance?"
       },
       "role": {
-        "zh": "推进长期记忆与经验复用方向的技术工作，参与相关研究。完整作者顺序和个人署名角色按原论文核验，不由截断列表推断。",
-        "en": "Technical work on long-term memory and experience reuse, with participation in related research. Complete author order and role designations are checked against the papers rather than inferred from truncated lists."
+        "zh": "推进长期记忆与经验复用方向的技术工作，参与相关研究。",
+        "en": "Technical work on long-term memory and experience reuse."
       },
       "approach": {
         "zh": "Mem360 面向长期用户状态与个性化；经验服务面向任务复盘与反馈复用。关联研究包括 Harness-Bench、MemAudit、ArborMem 与经验服务。",
         "en": "Mem360 concerns long-term user state and personalization; experience serving concerns task reflection and reusable feedback. Related research includes Harness-Bench, MemAudit, ArborMem, and experience serving."
-      },
-      "result": {
-        "zh": "公开条目覆盖 Agent 工作流评测、记忆安全和经验服务。产品记忆、研究基准与部署研究分别说明。",
-        "en": "Public records span agent-workflow evaluation, memory security, and experience serving, with clear distinctions between product memory, research benchmarks, and deployment studies."
       },
       "paperQueries": [
         "Harness-Bench",
@@ -352,8 +352,8 @@
       "links": [
         {
           "label": {
-            "zh": "Harness-Bench 预印本",
-            "en": "Harness-Bench preprint"
+            "zh": "Harness-Bench",
+            "en": "Harness-Bench"
           },
           "url": "https://arxiv.org/abs/2605.27922"
         },
@@ -369,7 +369,11 @@
         "Memory",
         "Agents",
         "Evaluation"
-      ]
+      ],
+      "result": {
+        "zh": "Agent 工作流评测、记忆安全与经验服务。",
+        "en": "Agent-workflow evaluation, memory security, and experience serving."
+      }
     }
   ],
   "media": [
@@ -605,8 +609,8 @@
         "en": "Artificial intelligence — Knowledge graph technology framework"
       },
       "role": {
-        "zh": "参与相关标准工作；具体起草角色待核验",
-        "en": "Participation reported by the author; drafting role remains unverified"
+        "zh": "参与相关标准工作",
+        "en": "Participation reported by the author"
       }
     },
     {
@@ -620,8 +624,8 @@
         "en": "Artificial intelligence — Large models, Part 2: Evaluation indicators and methods"
       },
       "role": {
-        "zh": "标准项目记录；不作为已发布标准",
-        "en": "A standards-project record, not a published standard"
+        "zh": "标准项目",
+        "en": "Standards project"
       }
     },
     {
@@ -635,8 +639,8 @@
         "en": "Competency requirements for virtual-reality professionals"
       },
       "role": {
-        "zh": "参与相关标准工作；具体起草角色待核验",
-        "en": "Participation reported by the author; drafting role remains unverified"
+        "zh": "参与相关标准工作",
+        "en": "Participation reported by the author"
       }
     },
     {
@@ -650,8 +654,8 @@
         "en": "Report on Large Language Model Safety (2024)"
       },
       "role": {
-        "zh": "材料列为相关成果；个人角色待核验",
-        "en": "Included in the supplied professional history; personal role remains unverified"
+        "zh": "相关技术报告",
+        "en": "Related technical report"
       }
     }
   ],
@@ -827,8 +831,8 @@
         "en": "On hallucinations and scenario-specific trustworthy AI"
       },
       "text": {
-        "zh": "南方都市报 / 南方网采访中引用了我的相关观点。",
-        "en": "An interview published by Southern Metropolis Daily / Southcn quotes my views on trustworthy AI."
+        "zh": "孙林谈 AI 幻觉与场景化可信治理。",
+        "en": "Lin Sun on hallucinations and scenario-specific trustworthy AI."
       },
       "url": "https://news.southcn.com/node_17a07e5926/e1570938be.shtml"
     },
@@ -839,8 +843,8 @@
         "en": "A talk at COSCon’25"
       },
       "text": {
-        "zh": "主题：360 大模型安全治理的探索与实践。",
-        "en": "Topic: Exploring LLM safety governance at 360."
+        "zh": "360 大模型安全治理。",
+        "en": "LLM safety governance at 360."
       },
       "path": "impact/#talks"
     },
@@ -851,8 +855,8 @@
         "en": "TinyR1 team release"
       },
       "text": {
-        "zh": "北京大学计算机学院发布了团队相关研究新闻。",
-        "en": "PKU’s School of Computer Science published news of the team’s work."
+        "zh": "TinyR1 团队发布。",
+        "en": "TinyR1 team release."
       },
       "url": "https://cs.pku.edu.cn/info/1263/3601.htm"
     }

@@ -24,7 +24,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1109/icsmc.2009.5345956"
+    ],
+    "officialUrl": "https://doi.org/10.1109/icsmc.2009.5345956"
   },
   "Chain-of-thought matters: improving long-context language models with reasoning path supervision": {
     "id": "paper-04",
@@ -33,7 +37,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2025.findings-emnlp.170"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2025.findings-emnlp.170"
   },
   "Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation": {
     "id": "paper-05",
@@ -42,7 +50,12 @@
     "role": null,
     "preprintYear": 2025,
     "publicationYear": null,
-    "paperUrl": "https://arxiv.org/abs/2503.04872"
+    "paperUrl": "https://arxiv.org/abs/2503.04872",
+    "officialUrls": [
+      "https://www.base-search.net/Record/d6c90becbbb04d84c92367cfbc7e4914d16aa95a84bcd0d1325791ce3941a135",
+      "https://doi.org/10.48550/arxiv.2503.04872"
+    ],
+    "officialUrl": "https://www.base-search.net/Record/d6c90becbbb04d84c92367cfbc7e4914d16aa95a84bcd0d1325791ce3941a135"
   },
   "Longattn: Selecting long-context training data via token-level attention": {
     "id": "paper-06",
@@ -51,7 +64,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2025.findings-acl.991"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2025.findings-acl.991"
   },
   "Thread segmentation based answer detection in Chinese online forums": {
     "id": "paper-07",
@@ -60,7 +77,12 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1016/s1874-1029(13)60002-6",
+      "https://portal.issn.org/resource/ISSN/1874-1029"
+    ],
+    "officialUrl": "https://doi.org/10.1016/s1874-1029(13)60002-6"
   },
   "MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection": {
     "id": "paper-08",
@@ -78,7 +100,11 @@
     "role": null,
     "preprintYear": 2025,
     "publicationYear": null,
-    "paperUrl": "https://arxiv.org/abs/2508.20384"
+    "paperUrl": "https://arxiv.org/abs/2508.20384",
+    "officialUrls": [
+      "https://doi.org/10.48550/arxiv.2508.20384"
+    ],
+    "officialUrl": "https://doi.org/10.48550/arxiv.2508.20384"
   },
   "Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements": {
     "id": "paper-10",
@@ -87,7 +113,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2025.emnlp-main.1362"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2025.emnlp-main.1362"
   },
   "TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment": {
     "id": "paper-11",
@@ -96,7 +126,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2026.acl-long.1216"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2026.acl-long.1216"
   },
   "A study of features on Primary Question detection in Chinese online forums": {
     "id": "paper-12",
@@ -105,7 +139,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1109/fskd.2010.5569298"
+    ],
+    "officialUrl": "https://doi.org/10.1109/fskd.2010.5569298"
   },
   "Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities through evaluation design": {
     "id": "paper-13",
@@ -114,7 +152,12 @@
     "role": null,
     "preprintYear": 2025,
     "publicationYear": null,
-    "paperUrl": "https://arxiv.org/abs/2506.04734"
+    "paperUrl": "https://arxiv.org/abs/2506.04734",
+    "officialUrls": [
+      "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e",
+      "https://doi.org/10.48550/arxiv.2506.04734"
+    ],
+    "officialUrl": "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e"
   },
   "When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation": {
     "id": "paper-14",
@@ -123,7 +166,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2026.acl-industry.60"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2026.acl-industry.60"
   },
   "Thinking with Reasoning Skills: Fewer Tokens, More Accuracy": {
     "id": "paper-15",
@@ -132,7 +179,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/v1/2026.acl-industry.154"
+    ],
+    "officialUrl": "https://doi.org/10.18653/v1/2026.acl-industry.154"
   },
   "Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training": {
     "id": "paper-16",
@@ -141,7 +192,13 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1609/aaai.v40i44.41130",
+      "https://portal.issn.org/resource/ISSN/2374-3468",
+      "https://portal.issn.org/resource/ISSN/2159-5399"
+    ],
+    "officialUrl": "https://doi.org/10.1609/aaai.v40i44.41130"
   },
   "Expand VSR Benchmark for VLLM to Expertize in Spatial Rules": {
     "id": "paper-17",
@@ -150,7 +207,13 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1609/aaai.v39i8.32945",
+      "https://portal.issn.org/resource/ISSN/2374-3468",
+      "https://portal.issn.org/resource/ISSN/2159-5399"
+    ],
+    "officialUrl": "https://doi.org/10.1609/aaai.v39i8.32945"
   },
   "VIP-Doc: Visual Prompts Guide Fine-Grained Document Understanding for Reader Friendly VLLM": {
     "id": "paper-18",
@@ -159,7 +222,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1016/j.eswa.2026.131508"
+    ],
+    "officialUrl": "https://doi.org/10.1016/j.eswa.2026.131508"
   },
   "Router Upcycling: Leveraging Mixture-of-Routers in Mixture-of-Experts Upcycling": {
     "id": "paper-19",
@@ -168,7 +235,14 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.3233/faia251318",
+      "https://www.worldcat.org/isbn/9781643686318",
+      "https://portal.issn.org/resource/ISSN/0922-6389",
+      "https://portal.issn.org/resource/ISSN/1879-8314"
+    ],
+    "officialUrl": "https://doi.org/10.3233/faia251318"
   },
   "RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions": {
     "id": "paper-20",
@@ -177,7 +251,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/2026.emnlp-main.1856"
+    ],
+    "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.1856"
   },
   "TextlessRAG: End-to-End Visual Document RAG by Speech Without Text": {
     "id": "paper-21",
@@ -186,7 +264,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1109/icassp55912.2026.11462642"
+    ],
+    "officialUrl": "https://doi.org/10.1109/icassp55912.2026.11462642"
   },
   "A clustering based fast detection algorithm for large scale duplicate emails": {
     "id": "paper-22",
@@ -195,7 +277,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.1109/icmlc.2010.5580695"
+    ],
+    "officialUrl": "https://doi.org/10.1109/icmlc.2010.5580695"
   },
   "A Primer in Post-Training Reasoning Data: What We Know About How It Works": {
     "id": "paper-23",
@@ -222,7 +308,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/2026.emnlp-main.1348"
+    ],
+    "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.1348"
   },
   "ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions": {
     "id": "paper-26",
@@ -231,7 +321,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/2026.emnlp-main.2658"
+    ],
+    "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.2658"
   },
   "ArborMem: Navigating Interaction States with Memory Forests": {
     "id": "paper-27",
@@ -249,7 +343,11 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.18653/2026.emnlp-industry.251"
+    ],
+    "officialUrl": "https://doi.org/10.18653/2026.emnlp-industry.251"
   },
   "External Experience Serving in Production LLM Systems: A Deployment-Oriented Study of Quality-Cost Trade-offs": {
     "id": "paper-29",
@@ -267,6 +365,10 @@
     "role": null,
     "preprintYear": null,
     "publicationYear": null,
-    "paperUrl": null
+    "paperUrl": null,
+    "officialUrls": [
+      "https://doi.org/10.48550/arxiv.2602.11717"
+    ],
+    "officialUrl": "https://doi.org/10.48550/arxiv.2602.11717"
   }
 }
