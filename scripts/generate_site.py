@@ -149,10 +149,12 @@ def venue_full(venue: str, year: object) -> str:
     return full
 
 
-def author_html(authors: str) -> str:
+def author_html(authors: str, corresponding: bool, lang: str) -> str:
     names = [name.strip() for name in authors.split(",") if name.strip()]
     sun_names = {"L Sun", "S Lin"}
-    return ", ".join("<strong>Lin Sun</strong>" if name in sun_names else esc(name) for name in names)
+    label = "通讯作者" if lang == "zh" else "Corresponding author"
+    marker = f'<sup class="corresponding-author" aria-label="{label}">*</sup>' if corresponding else ""
+    return ", ".join(f"<strong>Lin Sun</strong>{marker}" if name in sun_names else esc(name) for name in names)
 
 
 def topic_label(topic: str | None, lang: str) -> str:
@@ -177,7 +179,7 @@ def paper_rows(lang: str, papers_to_render: list[dict] | None = None) -> str:
         badges = [f'<span class="tag">{esc(topic_label(metadata.get("topic"), lang))}</span>']
         result.append(f'''<article class="paper-row" data-paper-row data-year="{esc(year)}">
           <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[{esc(venue_short(paper.get('venue', ''), year))}]</span>{''.join(badges)}</div>
-          <div class="paper-title">{title}</div><div class="paper-meta paper-authors">{author_html(paper.get('authors', ''))}</div>
+          <div class="paper-title">{title}</div><div class="paper-meta paper-authors">{author_html(paper.get('authors', ''), metadata.get('correspondingAuthor', False), lang)}</div>
           <div class="paper-meta paper-venue">{esc(venue_full(paper.get('venue', ''), year))}</div></div></article>''')
     return "\n".join(result)
 
@@ -210,20 +212,29 @@ def talk_rows(lang: str, limit: int | None = None) -> str:
     for item in rows:
         title = item.get("en") if lang == "en" and item.get("en") else item.get("title", "")
         event = item.get("eventEn") if lang == "en" and item.get("eventEn") else item.get("event", "")
-        meta = " · ".join(part for part in [event, item.get("date", ""), item.get("roleEn" if lang == "en" else "role", "")] if part)
-        result.append(f'<article class="media-item"><div>{external_link(item.get("url"), title)}</div><small>{esc(meta)}</small></article>')
+        meta = " · ".join(part for part in [item.get("roleEn" if lang == "en" else "role", ""), item.get("date", "")] if part)
+        result.append(f'<article class="media-item talk-item"><div>{external_link(item.get("url"), title)}<span class="talk-event">{esc(event)}</span></div><small>{esc(meta)}</small></article>')
     return "\n".join(result) or '<p class="empty">暂无公开演讲。</p>'
 
 
 def recent_updates(lang: str, limit: int | None = None) -> str:
     key = "zh" if lang == "zh" else "en"
-    rows = site_content.get("news", []) if limit is None else site_content.get("news", [])[:limit]
+    rows = list(site_content.get("news", []))
+    rows.extend({"title": {"zh": item["title"], "en": media_translations.get(item["url"], {}).get("en", item["title"])},
+                 "source": {"zh": item["source"], "en": "Bilibili / 360"},
+                 "date": item.get("date"), "url": item["url"]}
+                for item in published_media if item.get("kind") in VIDEO_KINDS)
+    rows.sort(key=lambda item: item.get("date") or "", reverse=True)
+    if limit is not None:
+        rows = rows[:limit]
     result = []
     for item in rows:
         target = item.get("url") or ("/" + ("en/" if lang == "en" else "") + item.get("path", "impact/"))
         title = item["title"][key]
         link = external_link(target, title) if target.startswith("http") else f'<a href="{esc(target)}">{esc(title)} ↗</a>'
-        result.append(f'<article class="media-item"><div>{link}</div><small>{esc(item.get("date", ""))}</small></article>')
+        source = item.get("source", {}).get(key, "")
+        meta = " · ".join(part for part in [source, item.get("date", "")] if part)
+        result.append(f'<article class="media-item"><div>{link}</div><small>{esc(meta)}</small></article>')
     return "\n".join(result) or '<p class="empty">暂无近期动态。</p>'
 
 
@@ -244,6 +255,21 @@ def tag_html(tags: list[str]) -> str:
     return "".join(f'<span class="tag">{esc(tag)}</span>' for tag in tags)
 
 
+def featured_papers() -> list[dict]:
+    selected = []
+    for query in site_content.get("featuredPaperQueries", []):
+        for paper in papers:
+            metadata = publication_metadata.get(paper["title"], {})
+            if (query.lower() in paper["title"].lower() and paper not in selected
+                    and (metadata.get("role") == "first-author" or metadata.get("correspondingAuthor"))):
+                selected.append(paper)
+    # Keep editorial order within each publication-status and authorship tier.
+    return sorted(selected, key=lambda paper: (
+        publication_metadata[paper["title"]].get("status") != "published",
+        publication_metadata[paper["title"]].get("role") != "first-author",
+    ))
+
+
 def home(lang: str) -> str:
     zh = lang == "zh"
     prefix = "" if zh else "en/"
@@ -252,12 +278,15 @@ def home(lang: str) -> str:
         f'<article class="card"><h3>{esc(item["title"][lang])}</h3><p>{esc(item["text"][lang])}</p></article>'
         for item in site_content["areas"]
     )
-    featured = [paper for paper in papers if any(query.lower() in paper["title"].lower() for query in site_content.get("featuredPaperQueries", []))]
+    featured = featured_papers()
+    summary = "".join(
+        f'<p class="{"hero-copy" if index == 0 else "hero-overview"}">{esc(paragraph)}</p>'
+        for index, paragraph in enumerate(profile["homeSummary"][lang])
+    )
     return f'''<section class="hero"><div class="wrap">
       <div class="eyebrow">{'研究 · 工程 · 管理' if zh else 'RESEARCH · ENGINEERING · LEADERSHIP'}</div>
       <h1>{'孙林 <span class="name-en">Lin Sun</span>' if zh else 'Lin Sun'}</h1>
-      <p class="hero-copy">{esc(profile["intro"][lang])}</p>
-      <p class="hero-overview">{esc(profile["background"][lang])}</p>
+      {summary}
       <div class="hero-actions"><a class="btn primary" href="/{prefix}about/">{'关于我' if zh else 'About me'} ↗</a>
       {external_link(site_content["scholar"], "Google Scholar", css="btn")}
       <a class="btn" href="mailto:{site_content['email']}">{site_content['email']}</a></div>
@@ -269,15 +298,24 @@ def home(lang: str) -> str:
     <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">03 / Publications</div><h2>{'精选研究成果' if zh else 'Selected publications'}</h2></div>
       <a class="paper-link" href="/{prefix}publications/">{'全部论文' if zh else 'All publications'} ↗</a></div>
       <div class="paper-list">{paper_rows(lang, featured)}</div></div></section>
-    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">04 / Media & updates</div><h2>{'公开交流与近期动态' if zh else 'Conversations & updates'}</h2></div>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">04 / Updates</div><h2>{'近期动态' if zh else 'Recent updates'}</h2></div>
       <a class="paper-link" href="/{prefix}impact/">{'影响与交流' if zh else 'Impact & talks'} ↗</a></div>
-      <h3 class="subsection-title">{'公开视频' if zh else 'Public videos'}</h3><div class="media-list">{media_rows(lang, [item for item in published_media if item.get('kind') in VIDEO_KINDS], 2)}</div>
-      <h3 class="subsection-title">{'近期动态' if zh else 'Recent updates'}</h3><div class="media-list">{recent_updates(lang, 5)}</div>
+      <div class="media-list">{recent_updates(lang, 6)}</div>
     </div></section>'''
 
 def about(lang: str) -> str:
     zh = lang == "zh"
+    prefix = "" if zh else "en/"
     profile = site_content["profile"]
+    summary = "".join(f'<p>{esc(paragraph)}</p>' for paragraph in profile["aboutSummary"][lang])
+    contributions = "".join(
+        f'<article class="leadership-entry"><h3>{esc(item["title"][lang])}</h3><p>{esc(item["text"][lang])}</p></article>'
+        for item in profile["contributions"]
+    )
+    honors = "".join(
+        f'<li>{esc(item["title"][lang])}</li>'
+        for item in site_content["recognition"] if item["group"] == "personal"
+    )
     education = "".join(
         f'<li><strong>{esc(entry["degree"][lang])}</strong><span>{esc(entry["field"][lang])}</span></li>'
         for entry in profile["educationEntries"]
@@ -285,16 +323,19 @@ def about(lang: str) -> str:
     career = "".join(f'''<article class="timeline-item">
       <div class="timeline-time">{esc(item["start"])}<br>{esc(item["end"] or ("至今" if zh else "present"))}</div>
       <div class="timeline-dot"></div><div class="timeline-card"><h3>{esc(item["org"][lang])}</h3>
-      <div class="career-role">{esc(item["role"][lang])}</div><p>{esc(item["text"][lang])}</p></div></article>'''
+      {f'<div class="career-role">{esc(item["role"][lang])}</div>' if item.get('role') else ''}<p>{esc(item["text"][lang])}</p></div></article>'''
       for item in site_content["career"])
     leadership = "".join(
         f'<article class="leadership-entry"><h3>{esc(item["title"][lang])}</h3><p>{esc(item["text"][lang])}</p></article>'
         for item in profile["leadership"]
     )
-    services = "".join(f'<li>{esc(item["title"][lang])}</li>' for item in profile.get("services", []))
+    services = "".join(
+        f'<li>{esc(item["title"][lang])}</li>' for item in profile.get("services", [])
+    )
+    funded_projects = "".join(f'<li class="funded-project">{esc(item["title"][lang])}</li>' for item in site_content.get("fundedProjects", []))
     return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">01 / About</div><h1>{'关于我' if zh else 'About me'}</h1></div></section>
     <section><div class="wrap about-intro"><article class="prose"><h2>{'个人简介' if zh else 'Profile'}</h2>
-      <p>{esc(profile["intro"][lang])}</p><p>{esc(profile["background"][lang])}</p>
+      {summary}
       <div class="inline-links"><a href="mailto:{site_content['email']}">{site_content['email']}</a>{external_link(site_content['scholar'], 'Google Scholar')}</div>
       </article><aside class="education-panel"><div class="section-kicker">{'教育经历' if zh else 'Education'}</div>
       <h3>{esc(profile["education"][lang])}</h3><ul class="education-list">{education}</ul></aside></div></section>
@@ -302,7 +343,13 @@ def about(lang: str) -> str:
       <div class="timeline">{career}</div></div><aside>
       <div class="section-head"><div><div class="section-kicker">03 / Leadership</div><h2>{'团队与组织交付' if zh else 'Teams & delivery'}</h2></div></div>{leadership}
       <div class="section-kicker service-heading">{'学术与行业服务' if zh else 'Academic & industry service'}</div><ul class="service-list">{services}</ul>
-      </aside></div></section>'''
+      </aside></div></section>
+    <section><div class="wrap about-columns"><div><div class="section-head"><div><div class="section-kicker">04 / Contributions</div><h2>{'研究与行业贡献' if zh else 'Research & industry contributions'}</h2></div></div>
+      {contributions}<div class="inline-links"><a class="paper-link" href="/{prefix}research/">{'研究与项目' if zh else 'Research & projects'} ↗</a><a class="paper-link" href="/{prefix}publications/">{'全部论文' if zh else 'All publications'} ↗</a><a class="paper-link" href="/{prefix}impact/">{'专利与标准' if zh else 'Patents & standards'} ↗</a></div>
+      </div><aside><div class="section-head"><div><div class="section-kicker">05 / Honors</div><h2>{'个人荣誉' if zh else 'Personal honors'}</h2></div></div>
+      <ul class="honors-list">{honors}</ul><p class="paper-meta">{'北京市科学技术进步二等奖：项目《大模型安全关键技术及应用》，第二完成人。' if zh else 'Beijing Science and Technology Progress Award, Second Prize: second contributor to “Key Technologies and Applications of Large-Model Safety.”'}</p>
+      <a class="paper-link" href="/{prefix}impact/">{'奖项与行业认可' if zh else 'Awards & recognition'} ↗</a></aside></div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">{'工业和信息化部' if zh else 'Ministry of Industry and Information Technology'}</div><h2>{'参与的部分国拨项目' if zh else 'Selected nationally funded projects'}</h2></div></div><ol class="funded-projects">{funded_projects}</ol></div></section>'''
 
 def project_by_slug(slug: str) -> dict:
     for item in site_content["projects"]:
@@ -323,16 +370,58 @@ def research(lang: str) -> str:
     <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Selected work</div><h2>{'项目与工程实践' if zh else 'Projects & engineering'}</h2></div></div>
       <div class="grid-3">{projects}</div></div></section>'''
 
+def project_figure(lang: str, figure: dict) -> str:
+    path = "/" + figure["path"]
+    caption = esc(figure["alt"][lang])
+    label = "查看原图" if lang == "zh" else "Open full-size image"
+    source = ""
+    if figure.get("sourceUrl"):
+        source = " · " + external_link(figure["sourceUrl"], figure["sourceLabel"][lang])
+    dimensions = f' width="{figure["width"]}" height="{figure["height"]}"' if figure.get("width") and figure.get("height") else ""
+    return f'''<figure class="project-figure"><a href="{esc(path)}" target="_blank" rel="noopener" aria-label="{esc(label)}: {caption}">
+      <img src="{esc(path)}" alt="{caption}"{dimensions} loading="lazy"></a><figcaption>{caption}{source}</figcaption></figure>'''
+
+
+def project_results(lang: str, project: dict) -> str:
+    panels = []
+    for item in project.get("resultSections", []):
+        columns = "".join(f'<th scope="col">{esc(value)}</th>' for value in item["columns"][lang])
+        rows = "".join(
+            '<tr><th scope="row">' + esc(row[0]) + '</th>'
+            + "".join(f'<td>{esc(value)}</td>' for value in row[1:]) + '</tr>'
+            for row in item["rows"]
+        )
+        figure = project_figure(lang, item["figure"]) if item.get("figure") else ""
+        panels.append(f'''<article class="project-result" id="{esc(item['id'])}"><h3>{esc(item['title'][lang])}</h3>
+          <p>{esc(item['text'][lang])}</p><div class="table-scroll" role="region" aria-label="{esc(item['title'][lang])}" tabindex="0">
+          <table><caption class="sr-only">{esc(item['title'][lang])}</caption><thead><tr>{columns}</tr></thead><tbody>{rows}</tbody></table></div>
+          <p class="result-source">{external_link(item['sourceUrl'], item['sourceLabel'][lang])}</p>{figure}</article>''')
+    if not panels:
+        return ""
+    return f'''<section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Results & evaluation</div>
+      <h2>{'结果与评测' if lang == 'zh' else 'Results & evaluation'}</h2></div></div>{''.join(panels)}</div></section>'''
+
+
 def project_detail(lang: str, slug: str) -> str:
     zh = lang == "zh"
-    key = "zh" if zh else "en"
     item = project_by_slug(slug)
-    links = "".join(f'<a class="btn" href="{esc(link["url"])}" target="_blank" rel="noopener">{esc(link["label"][key])} ↗</a>' for link in item.get("links", []))
+    links = "".join(external_link(link["url"], link["label"][lang], css="btn") for link in item.get("links", []))
     related = [paper for paper in papers if any(query.lower() in paper["title"].lower() for query in item.get("paperQueries", []))]
     related_media = [m for m in published_media if m.get("url") in item.get("relatedMedia", [])]
-    figures = "".join(f'<figure class="project-figure"><img src="/{image["path"]}" alt="{esc(image["alt"][key])}"><figcaption>{esc(image["alt"][key])}</figcaption></figure>' for image in item.get("images", []))
+    figures = "".join(project_figure(lang, figure) for figure in item.get("images", []))
     figure_section = f'<section><div class="wrap">{figures}</div></section>' if figures else ""
-    return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">Research / Project detail</div><h1>{esc(item["title"][key])}</h1><p>{esc(item["summary"][key])}</p><div class="tag-row">{tag_html(item.get("tags", []))}</div></div></section><section><div class="wrap"><div class="grid-2"><article class="card"><div class="eyebrow">{'问题' if zh else 'Problem'}</div><p>{esc(item['problem'][key])}</p></article><article class="card"><div class="eyebrow">{'个人角色' if zh else 'Personal role'}</div><p>{esc(item['role'][key])}</p></article><article class="card"><div class="eyebrow">{'方法' if zh else 'Method'}</div><p>{esc(item['approach'][key])}</p></article><article class="card"><div class="eyebrow">{'结果' if zh else 'Results'}</div><p>{esc(item['result'][key])}</p></article></div></div></section>{figure_section}<section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Related publications</div><h2>{'关联论文' if zh else 'Related papers'}</h2></div></div><div class="paper-list">{paper_rows(lang, related)}</div></div></section><section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Related coverage</div><h2>{'相关报道' if zh else 'Related coverage'}</h2></div></div><div class="media-list">{media_rows(lang, related_media)}</div><div class="hero-actions">{links}</div></div></section>'''
+    return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">Research / Project detail</div>
+      <h1>{esc(item["title"][lang])}</h1><p>{esc(item["summary"][lang])}</p><div class="tag-row">{tag_html(item.get("tags", []))}</div>
+      <div class="hero-actions">{links}</div></div></section>
+    <section><div class="wrap"><div class="grid-3">
+      <article class="card"><div class="eyebrow">{'问题' if zh else 'Problem'}</div><p>{esc(item['problem'][lang])}</p></article>
+      <article class="card"><div class="eyebrow">{'方法' if zh else 'Method'}</div><p>{esc(item['approach'][lang])}</p></article>
+      <article class="card"><div class="eyebrow">{'成果' if zh else 'Outcomes'}</div><p>{esc(item['result'][lang])}</p></article>
+      </div></div></section>{figure_section}{project_results(lang, item)}
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Related publications</div>
+      <h2>{'关联论文' if zh else 'Related papers'}</h2></div></div><div class="paper-list">{paper_rows(lang, related)}</div></div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Related coverage</div>
+      <h2>{'相关报道' if zh else 'Related coverage'}</h2></div></div><div class="media-list">{media_rows(lang, related_media)}</div></div></section>'''
 
 
 def publications(lang: str) -> str:
@@ -340,9 +429,9 @@ def publications(lang: str) -> str:
     return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">03 / Publications</div><h1>{'论文' if zh else 'Publications'}</h1><div class="hero-actions"><a class="btn" href="{site_content['scholar']}" target="_blank" rel="noopener">Google Scholar ↗</a><a class="btn" href="https://orcid.org/0009-0008-0471-9131" target="_blank" rel="noopener">ORCID ↗</a></div></div></section><section><div class="wrap">{paper_year_groups(lang)}</div></section>'''
 
 
-def recognition_html(lang: str) -> str:
+def recognition_html(lang: str, group: str) -> str:
     key = "zh" if lang == "zh" else "en"
-    return "".join(f'<article class="card"><div class="eyebrow">{esc(item["kind"][key])}</div><h3 style="margin-top:12px">{esc(item["title"][key])}</h3><p>{esc(item["detail"][key])}</p></article>' for item in site_content.get("recognition", []))
+    return "".join(f'<article class="card"><div class="eyebrow">{esc(item["kind"][key])}</div><h3>{esc(item["title"][key])}</h3><p>{esc(item["detail"][key])}</p></article>' for item in site_content.get("recognition", []) if item["group"] == group)
 
 
 def patent_html(lang: str) -> str:
@@ -352,16 +441,7 @@ def patent_html(lang: str) -> str:
         rows = []
         for item in items:
             title = item["title"] if lang == "zh" else item["titleEn"]
-            metadata = []
-            if item.get("number"):
-                metadata.append(esc(item["number"]))
-            if item.get("inventorOrder"):
-                order = item["inventorOrder"] if lang == "zh" else {"第二发明人": "Second inventor", "第三发明人": "Third inventor"}.get(item["inventorOrder"], item["inventorOrder"])
-                metadata.append(esc(order))
-            if item.get("grantDate"):
-                metadata.append(esc(item["grantDate"]))
-            detail = f'<div class="paper-meta">{" · ".join(metadata)}</div>' if metadata else ""
-            rows.append(f'<li class="patent-entry" data-patent-id="{esc(item["id"])}"><div>{esc(title)}{detail}</div></li>')
+            rows.append(f'<li class="patent-entry" data-patent-id="{esc(item["id"])}">{esc(title)}</li>')
         groups.append(f'<section class="patent-group"><h3>{esc(theme["title"][lang])}<span class="group-count">{len(items)}</span></h3><ol class="patent-list">{"".join(rows)}</ol></section>')
     return "".join(groups)
 
@@ -374,14 +454,12 @@ def impact(lang: str) -> str:
     for item in site_content["standards"]:
         identifier = item["id"] if item["id"].startswith(("GB/", "SJ/")) else ""
         reference = f'<div class="standard-code">{esc(identifier)}</div>' if identifier else ""
-        date = f'<span>{esc(item["date"])}</span>' if item.get("date") else ""
-        role = f'<span>{esc(item["role"][lang])}</span>' if item.get("role") else ""
-        metadata = f'<div class="standard-meta">{role}{date}</div>' if role or date else ""
         standards.append(f'''<article class="standard-card"><div class="section-kicker">{esc(item["kind"][lang])}</div>
-          <h3>{esc(item["title"][lang])}</h3>{reference}{metadata}</article>''')
+          <h3>{esc(item["title"][lang])}</h3>{reference}</article>''')
     return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">04 / Impact & talks</div><h1>{'影响与交流' if zh else 'Impact & talks'}</h1></div></section>
     <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Recognition</div><h2>{'奖项与行业认可' if zh else 'Awards & recognition'}</h2></div></div>
-      <div class="grid-3 recognition-grid">{recognition_html(lang)}</div></div></section>
+      <h3 class="subsection-title">{'个人荣誉' if zh else 'Personal honors'}</h3><div class="grid-3 recognition-grid" data-recognition="personal">{recognition_html(lang, 'personal')}</div>
+      <h3 class="subsection-title">{'团队工作荣誉与认可' if zh else 'Team achievements & recognition'}</h3><div class="grid-3 recognition-grid" data-recognition="team">{recognition_html(lang, 'team')}</div></div></section>
     <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Patents</div><h2>{'发明专利' if zh else 'Patents'}</h2></div></div>
       <div class="patent-groups">{patent_html(lang)}</div></div></section>
     <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">Standards & reports</div><h2>{'标准与技术报告' if zh else 'Standards & reports'}</h2></div></div>

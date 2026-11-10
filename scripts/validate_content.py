@@ -35,9 +35,11 @@ def validate(root: Path) -> list[str]:
             if not isinstance(item.get(field), dict) or not item[field].get("zh") or not item[field].get("en"):
                 issues.append(f"area {item.get('id')}: missing bilingual {field}")
     for item in site.get("profile", {}).get("services", []):
-        for field in ("title", "term", "source"):
+        for field in ("title", "source"):
             if not isinstance(item.get(field), dict) or not item[field].get("zh") or not item[field].get("en"):
                 issues.append(f"service {item.get('id')}: missing bilingual {field}")
+        if "term" not in item or (item["term"] is not None and not all(item["term"].get(lang) for lang in ("zh", "en"))):
+            issues.append(f"service {item.get('id')}: term must be bilingual or explicitly unknown")
 
     projects = site.get("projects", [])
     detailed = {item.get("id") for item in projects if item.get("detail", True)}
@@ -64,6 +66,28 @@ def validate(root: Path) -> list[str]:
                     issues.append(f"project {item.get('id')}: missing bilingual {field}")
             if "relatedMedia" not in item or "images" not in item:
                 issues.append(f"project {item.get('id')}: missing relatedMedia/images data")
+        figures = list(item.get("images", []))
+        for result in item.get("resultSections", []):
+            label = f"project {item.get('id')} result {result.get('id')}"
+            for field in ("title", "text", "columns", "sourceLabel"):
+                value = result.get(field)
+                if not isinstance(value, dict) or not value.get("zh") or not value.get("en"):
+                    issues.append(f"{label}: missing bilingual {field}")
+            columns = result.get("columns", {})
+            width = len(columns.get("zh", []))
+            if columns.get("en") and len(columns["en"]) != width:
+                issues.append(f"{label}: bilingual column counts differ")
+            if not result.get("rows") or any(len(row) != width for row in result.get("rows", [])):
+                issues.append(f"{label}: row width does not match columns")
+            if not result.get("sourceUrl", "").startswith("https://"):
+                issues.append(f"{label}: missing public result source")
+            if result.get("figure"):
+                figures.append(result["figure"])
+        for figure in figures:
+            if not (root / figure.get("path", "")).is_file():
+                issues.append(f"project {item.get('id')}: missing figure {figure.get('path')}")
+            if not all(figure.get("alt", {}).get(lang) for lang in ("zh", "en")):
+                issues.append(f"project {item.get('id')}: missing bilingual figure caption")
 
     paper_rows = scholar.get("papers", [])
     if len(paper_rows) != 30:
@@ -76,16 +100,18 @@ def validate(root: Path) -> list[str]:
             issues.append(f"publication {title}: unsupported status {item.get('status')}")
         if not item.get("evidence"):
             issues.append(f"publication {title}: missing evidence")
+        if item.get("correspondingAuthor") and not item.get("correspondingEvidence"):
+            issues.append(f"publication {title}: missing corresponding-author evidence")
 
     expected_videos = {
-        "BV1dA7Y6cEgX": "拆AI共识：Mythos被禁背后，为什么最强AI反而更危险！",
-        "BV19SKQ6HEau": "【精华版】AI越强，为什么大家反而开始担心了？｜Mythos争议背后的AI安",
+        "BV1dA7Y6cEgX": ("拆AI共识：Mythos被禁背后，为什么最强AI反而更危险！", "2026-06-25"),
+        "BV19SKQ6HEau": ("【精华版】AI越强，为什么大家反而开始担心了？｜Mythos争议背后的AI安全问题", "2026-06-29"),
     }
     video_items = [item for item in media.get("items", []) if item.get("kind") == "video" and item.get("publish")]
-    for video_id, title in expected_videos.items():
+    for video_id, (title, date) in expected_videos.items():
         found = [item for item in video_items if video_id in item.get("url", "")]
-        if len(found) != 1 or found[0].get("title") != title or found[0].get("date") is not None:
-            issues.append(f"video {video_id}: title, URL, or undated contract mismatch")
+        if len(found) != 1 or found[0].get("title") != title or found[0].get("date") != date or found[0].get("sourceDate") != date:
+            issues.append(f"video {video_id}: title, URL, or verified date mismatch")
     if len(video_items) != len(expected_videos):
         issues.append(f"media snapshot: expected {len(expected_videos)} published videos, got {len(video_items)}")
     media_items = media.get("items", [])
@@ -102,7 +128,7 @@ def validate(root: Path) -> list[str]:
             tag = match.group(0)
             if 'target="_blank"' not in tag or 'rel="noopener"' not in tag:
                 issues.append(f"{path.relative_to(root)}: external link lacks target/rel")
-        for pattern in (r"身份证", r"员工号", r"缴费", r"推荐信", r"192\.168\.", r"10\.\d{1,3}\."):
+        for pattern in (r"身份证", r"员工号", r"缴费", r"推荐信", r"涉密", r"192\.168\.", r"10\.\d{1,3}\."):
             if re.search(pattern, content, flags=re.IGNORECASE):
                 issues.append(f"{path.relative_to(root)}: private content pattern {pattern}")
 
