@@ -1,14 +1,88 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>孙林 | 个人主页</title>
-</head>
-<body>
-  <h1>孙林 · Lin Sun</h1>
-  <p>研究方向：大模型安全、RAG 与智能体。</p>
-  <h2>代表论文</h2>
-  <p>在这里添加论文和项目链接。</p>
-</body>
-</html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="孙林的研究、工程、管理与公开成果。"><meta property="og:title" content="首页 | 孙林"><meta property="og:description" content="孙林的研究、工程、管理与公开成果。"><meta property="og:type" content="website"><title>首页 | 孙林</title>
+<link rel="stylesheet" href="/assets/styles.css"></head><body>
+<header class="site-header"><div class="wrap nav">
+      <a class="brand" href="/"><strong>孙林</strong><span>LIN SUN / AI BUILDER</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="展开导航">☰</button>
+      <nav class="nav-links" id="main-navigation" data-nav><a href="/about/">关于</a><a href="/research/">研究与项目</a><a href="/publications/">论文</a><a href="/impact/">影响与交流</a></nav>
+      <div class="nav-tools"><a class="lang" href="/en/">EN</a></div>
+    </div></header><main><section class="hero"><div class="wrap">
+      <div class="eyebrow">研究 · 工程 · 管理</div>
+      <h1>孙林 <span class="name-en">Lin Sun</span></h1>
+      <p class="hero-copy">孙林，360智脑事业部算法高级研究员、基础大模型团队负责人，兼任360集团技术委员会算法分委会主席、北大–360大模型联合实验室学术委员会委员、大数据协同安全技术国家工程研究中心大模型专委会主任。研究聚焦大模型后训练、安全与可信生成、RAG与文档智能，以及智能体的记忆与经验机制。</p><p class="hero-overview">毕业于哈尔滨工业大学，2010年起从事AI研发，先后任职于腾讯、360、贝壳找房与如视。曾任贝壳中心总经理，带领百人规模跨职能团队，推动小贝助手、AI讲房等产品落地。作为第二完成人获2025年北京市科学技术进步二等奖，入选朝阳区凤凰人才，获“首都网络安全人才”称号。</p><p class="hero-overview">以第一作者或通讯作者在NeurIPS、ACL、EMNLP、AAAI等国际会议发表多篇论文，并担任审稿人。负责开源推理模型TinyR1的训练与发布。获多项发明专利授权，参与制定国家及行业标准3项。</p>
+      <div class="hero-actions"><a class="btn primary" href="/about/">关于我 ↗</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=b8yMN1MAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a class="btn" href="mailto:lincharliesun@gmail.com">lincharliesun@gmail.com</a></div>
+    </div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">01 / Research</div><h2>研究与工程方向</h2></div></div>
+      <div class="grid-3 research-overview"><article class="card"><h3>基础模型与后训练</h3><p>研究长上下文数据选择、推理路径监督和模型融合，提升模型的推理效率与泛化能力。</p></article><article class="card"><h3>安全与可信生成</h3><p>研究动态攻防、安全对齐与分层策略控制，兼顾风险防护、正常任务体验与生成可靠性。</p></article><article class="card"><h3>RAG、记忆与 Agent</h3><p>研究复杂文档中的证据损失、多文档证据分配、长期记忆和经验迁移，评估真实 Agent 工作流的效果。</p></article></div></div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">02 / Selected work</div><h2>代表项目</h2></div></div>
+      <div class="grid-3"><article class="card project-card" id="tinyr1">
+      <div class="project-meta">2025–2026</div>
+      <h3>TinyR1：推理、安全与模型融合</h3><p>围绕 32B 开源模型开展分支蒸馏、安全控制和分布感知模型融合，兼顾推理、指令遵循与安全表现。</p>
+      <div class="result"><a class="paper-link" href="/projects/tinyr1/" aria-label="TinyR1：推理、安全与模型融合 · 项目详情">项目详情 ↗</a></div></article><article class="card project-card" id="llm-safety">
+      <div class="project-meta">2024–2026</div>
+      <h3>大模型安全与可信生成</h3><p>动态攻防、闭环训练与检测—代答分离的研究和工程实践；相关项目获北京市科学技术进步二等奖。</p>
+      <div class="result"><a class="paper-link" href="/projects/llm-safety/" aria-label="大模型安全与可信生成 · 项目详情">项目详情 ↗</a></div></article><article class="card project-card" id="rag-knowledge">
+      <div class="project-meta">2024–2026</div>
+      <h3>RAG 与可信知识服务</h3><p>从工业文档 OCR 鲁棒性到多文档证据分配，构建文档理解、检索与可信生成的评测和技术体系。</p>
+      <div class="result"><a class="paper-link" href="/projects/rag-knowledge/" aria-label="RAG 与可信知识服务 · 项目详情">项目详情 ↗</a></div></article><article class="card project-card" id="memory-agents">
+      <div class="project-meta">2025–2026</div>
+      <h3>记忆、经验与 Agent 系统</h3><p>推进 Mem360 长期记忆与经验复用，围绕 Agent 工作流、记忆安全和经验服务开展研究。</p>
+      <div class="result"><a class="paper-link" href="/projects/memory-agents/" aria-label="记忆、经验与 Agent 系统 · 项目详情">项目详情 ↗</a></div></article><article class="card project-card" id="xiaobei-assistant">
+      <div class="project-meta">2017–2023</div>
+      <h3>小贝助手</h3><p>面向房产经纪场景的智能助手，结合搜索、问答与数据智能；被写入贝壳美股上市招股说明书。</p>
+      <div class="result"><a class="paper-link" href="https://client.sina.com.cn/news/2020-04-24/doc-iirczymi8125706.shtml" target="_blank" rel="noopener">公开产品报道 ↗</a></div></article><article class="card project-card" id="ai-house-tour">
+      <div class="project-meta">2017–2023</div>
+      <h3>AI 讲房</h3><p>如视 / 贝壳阶段的 AI+VR 工作，将语音与智能交互用于房产讲解和看房场景。</p>
+      <div class="result"><a class="paper-link" href="https://finance.sina.cn/2019-04-26/detail-ihvhiewr8427498.d.html?vt=4" target="_blank" rel="noopener">公开产品报道 ↗</a></div></article></div></div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">03 / Publications</div><h2>精选研究成果</h2></div>
+      <a class="paper-link" href="/publications/">全部论文 ↗</a></div>
+      <div class="paper-list"><article class="paper-row" data-paper-row data-year="2026">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[ACL 2026]</span><span class="tag">RAG 与文档智能</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/v1/2026.acl-industry.60" target="_blank" rel="noopener">When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation ↗</a></div><div class="paper-meta paper-authors"><strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, W Dexian, J Huang, L Zhang, Z Cheng, X Zhang</div>
+          <div class="paper-meta paper-venue">Annual Meeting of the Association for Computational Linguistics 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2026">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[EMNLP 2026]</span><span class="tag">RAG 与文档智能</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/2026.emnlp-main.1348" target="_blank" rel="noopener">BEAR: Budgeted Evidence Allocation for Multi-Document Reasoning ↗</a></div><div class="paper-meta paper-authors"><strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, L Zhang, J Huang, Z Cheng, X Zhang</div>
+          <div class="paper-meta paper-venue">Conference on Empirical Methods in Natural Language Processing 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2026">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[ACL 2026]</span><span class="tag">安全与对齐</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/v1/2026.acl-long.1216" target="_blank" rel="noopener">TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment ↗</a></div><div class="paper-meta paper-authors">Z Tan, W Yu, J Si, T Liu, K Guan, H Jin, J Tao, X Yuan, X Zhang, D Ma, T Yang, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup></div>
+          <div class="paper-meta paper-venue">Annual Meeting of the Association for Computational Linguistics 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2025">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[AAAI 2026]</span><span class="tag">安全与对齐</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.1609/aaai.v40i44.41130" target="_blank" rel="noopener">Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training ↗</a></div><div class="paper-meta paper-authors">J Si, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, Z Tan, X Zhang</div>
+          <div class="paper-meta paper-venue">AAAI Conference on Artificial Intelligence 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2026">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[NeurIPS 2026]</span><span class="tag">基础模型与推理</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.48550/arxiv.2602.11717" target="_blank" rel="noopener">Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging ↗</a></div><div class="paper-meta paper-authors">W Lin, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, Q Shi, A Yuan, Y Tian, Z Wang, G Zhao, X Zhang, T Yang</div>
+          <div class="paper-meta paper-venue">Conference on Neural Information Processing Systems 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2026">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[EMNLP 2026]</span><span class="tag">记忆与 Agent</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/2026.emnlp-industry.251" target="_blank" rel="noopener">When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment ↗</a></div><div class="paper-meta paper-authors">W Lin, X Zhang, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup></div>
+          <div class="paper-meta paper-venue">Conference on Empirical Methods in Natural Language Processing 2026</div></div></article>
+<article class="paper-row" data-paper-row data-year="2025">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[ACL 2025 findings]</span><span class="tag">基础模型与推理</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/v1/2025.findings-acl.991" target="_blank" rel="noopener">Longattn: Selecting long-context training data via token-level attention ↗</a></div><div class="paper-meta paper-authors">L Wu, D Zhu, G Zhao, Z Yu, J Ran, X Wong, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, S Li</div>
+          <div class="paper-meta paper-venue">Findings of the Association for Computational Linguistics: ACL 2025 19367–19380</div></div></article>
+<article class="paper-row" data-paper-row data-year="2025">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[EMNLP 2025 findings]</span><span class="tag">基础模型与推理</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://doi.org/10.18653/v1/2025.findings-emnlp.170" target="_blank" rel="noopener">Chain-of-thought matters: improving long-context language models with reasoning path supervision ↗</a></div><div class="paper-meta paper-authors">D Zhu, X Wei, G Zhao, W Wu, H Zou, J Ran, X Wang, <strong>Lin Sun</strong><sup class="corresponding-author" aria-label="通讯作者">*</sup>, X Zhang, S Li</div>
+          <div class="paper-meta paper-venue">Findings of the Association for Computational Linguistics: EMNLP 2025</div></div></article>
+<article class="paper-row" data-paper-row data-year="2025">
+          <div class="paper-body"><div class="paper-kicker"><span class="paper-short-venue">[arXiv 2025]</span><span class="tag">基础模型与推理</span></div>
+          <div class="paper-title"><a class="paper-title-link" href="https://arxiv.org/abs/2503.04872" target="_blank" rel="noopener">Tinyr1-32b-preview: Boosting accuracy with branch-merge distillation ↗</a></div><div class="paper-meta paper-authors"><strong>Lin Sun</strong>, G Zhao, X Jian, Y Wu, W Lin, Y Zhu, Q Shi, C Jia, A Yuan, Y Tian, L Zhang, J Wu, J Ran, S Hu, Z Jiang, J Zhou, W Liu, X Xiao, B Cui, T Yang, X Zhang</div>
+          <div class="paper-meta paper-venue">arXiv:2503.04872</div></div></article></div></div></section>
+    <section><div class="wrap"><div class="section-head"><div><div class="section-kicker">04 / Updates</div><h2>近期动态</h2></div>
+      <a class="paper-link" href="/impact/">影响与交流 ↗</a></div>
+      <div class="media-list"><article class="media-item"><div><a href="https://www.bilibili.com/video/BV19SKQ6HEau/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" rel="noopener">【精华版】AI越强，为什么大家反而开始担心了？｜Mythos争议背后的AI安全问题 ↗</a></div><small>Bilibili / 360公司 · 2026-06-29</small></article>
+<article class="media-item"><div><a href="https://www.bilibili.com/video/BV1dA7Y6cEgX/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" rel="noopener">拆AI共识：Mythos被禁背后，为什么最强AI反而更危险！ ↗</a></div><small>Bilibili / 360公司 · 2026-06-25</small></article>
+<article class="media-item"><div><a href="https://news.southcn.com/node_17a07e5926/e1570938be.shtml" target="_blank" rel="noopener">AI 幻觉与场景化可信治理 ↗</a></div><small>南方都市报 / 南方网 · 2026-06-17</small></article>
+<article class="media-item"><div><a href="https://doi.org/10.18653/v1/2026.acl-industry.60" target="_blank" rel="noopener">InduOCRBench 研究形成公开论文 ↗</a></div><small>ACL 2026 · 2026</small></article>
+<article class="media-item"><div><a href="/impact/#talks">分享 360 大模型安全治理实践 ↗</a></div><small>COSCon’25 · 鲸智社区 · 2025-12-07</small></article>
+<article class="media-item"><div><a href="https://cs.pku.edu.cn/info/1263/3601.htm" target="_blank" rel="noopener">TinyR1 团队发布：5% 参数量逼近 DeepSeek-R1 数学性能 ↗</a></div><small>北京大学计算机学院 · 2025-02-25</small></article></div>
+    </div></section></main><footer><div class="wrap footer-grid"><div><strong>孙林 · Lin Sun</strong><p>研究 · 工程 · 管理 · 公开交流</p></div><div class="footer-links"><a href="mailto:lincharliesun@gmail.com">lincharliesun@gmail.com</a><a href="https://github.com/linsunhome" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=b8yMN1MAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div></div></footer>
+<script src="/assets/site.js" defer></script></body></html>
