@@ -19,29 +19,8 @@ media = media_data['items']
 talks = media_data.get('talks', [])
 published_media = [item for item in media if item.get('publish')]
 public_media = [item for item in published_media if item.get('kind') in {'media-interview', 'institutional-news', 'talk-transcript', 'talk'}]
-context_media = [item for item in published_media if item.get('kind') not in {'media-interview', 'institutional-news', 'talk-transcript', 'talk', 'unclassified'}]
 media_translations = {item.get('url'): item for item in site_content.get('media', []) if item.get('url')}
 
-PROJECTS = [
-    {
-        'slug': 'llm-safety',
-        'zh': {'title': '大模型安全防护与可信生成', 'summary': '覆盖攻击生成、自动评测、安全训练、在线防护、动态运营和经验回流。', 'role': '总体技术路线、关键算法、模型训练、系统设计和落地推进。', 'result': '公开结果按来源核验；团队成果与个人角色分别标注。'},
-        'en': {'title': 'LLM safety & trustworthy generation', 'summary': 'A chain from attack generation and evaluation to safety training, online protection, operations, and experience feedback.', 'role': 'Technical direction, key methods, model training, system design, and delivery.', 'result': 'Public outcomes are presented with evidence; team outcomes and personal role remain separate.'},
-        'tags': 'TriPlay-RL · Magic Token · Safety',
-    },
-    {
-        'slug': 'rag-knowledge',
-        'zh': {'title': 'RAG 与可信知识服务', 'summary': '围绕检索增强、证据分配、OCR 鲁棒性和可信生成建立评测与系统能力。', 'role': '技术路线、系统方案、评测和业务落地推进。', 'result': '关联 BEAR、InduOCRBench、TextlessRAG 等公开研究。'},
-        'en': {'title': 'RAG & trustworthy knowledge services', 'summary': 'Evaluation and systems for retrieval augmentation, evidence allocation, OCR robustness, and grounded generation.', 'role': 'Technical direction, system design, evaluation, and delivery.', 'result': 'Linked to public work including BEAR, InduOCRBench, and TextlessRAG.'},
-        'tags': 'BEAR · InduOCRBench · TextlessRAG',
-    },
-    {
-        'slug': 'tinyr1',
-        'zh': {'title': 'TinyR1 与高效推理', 'summary': '探索小参数量推理模型、Branch-Merge Distillation、路由和推理能力增强。', 'role': '模型训练与发布，探索 Branch-Merge Distillation。', 'result': '模型版本、评测范围和公开链接在发布前逐项核验。'},
-        'en': {'title': 'TinyR1 & efficient reasoning', 'summary': 'Compact reasoning models, branch-merge distillation, routing, and efficient inference.', 'role': 'Model training and release, including branch-merge distillation.', 'result': 'Model version, evaluation scope, and public links are verified before publication.'},
-        'tags': 'TinyR1 · Distillation · Reasoning',
-    },
-]
 
 
 def esc(value: object) -> str:
@@ -77,7 +56,7 @@ def nav(lang: str, active: str) -> str:
 
 def footer(lang: str) -> str:
     text = '研究 · 工程 · 管理 · 公开交流' if lang == 'zh' else 'RESEARCH · ENGINEERING · LEADERSHIP · OPEN KNOWLEDGE'
-    return f'''<footer><div class="wrap footer-grid"><div><strong>孙林 · Lin Sun</strong><p>{text}</p></div><div class="footer-links"><a href="mailto:lincharliesun@gmail.com">lincharliesun@gmail.com</a><a href="https://scholar.google.com/citations?user=b8yMN1MAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div></div></footer>'''
+    return f'''<footer><div class="wrap footer-grid"><div><strong>{'孙林 · Lin Sun' if lang == 'zh' else 'Lin Sun'}</strong><p>{text}</p></div><div class="footer-links"><a href="mailto:lincharliesun@gmail.com">lincharliesun@gmail.com</a><a href="https://github.com/linsunhome" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=b8yMN1MAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div></div></footer>'''
 
 
 def page(lang: str, active: str, title: str, description: str, body: str) -> str:
@@ -152,14 +131,13 @@ def talk_rows(lang: str, limit: int | None = None) -> str:
 
 
 def recent_updates(lang: str, limit: int | None = None) -> str:
-    zh = lang == 'zh'
-    updates = [
-        (('2026-11-10', 'Scholar 论文快照更新', '30 条记录，保留逐篇引用数与待核验字段。'), ('2026-11-10', 'Scholar snapshot refreshed', '30 records with citation counts and verification fields.')),
-        (('2025-12-07', 'COSCon’25 鲸智社区', '《360 大模型安全治理的探索与实践》公开分享记录。'), ('2025-12-07', 'COSCon’25 · Jingzhi community', 'Public talk record: “LLM safety governance at 360.”')),
-        (('2025-05-24', '大模型与决策智能技术研讨会', '《360 大模型安全的探索与实践》报告嘉宾记录。'), ('2025-05-24', 'Workshop on large models and decision intelligence', 'Talk record: “LLM safety practice at 360.”')),
-    ]
-    if limit is not None: updates = updates[:limit]
-    return ''.join(f'<article class="media-item"><div><strong>{esc(item[0 if zh else 1][1])}</strong><div class="paper-meta">{esc(item[0 if zh else 1][2])}</div></div><small>{esc(item[0 if zh else 1][0])}</small></article>' for item in updates)
+    key = 'zh' if lang == 'zh' else 'en'
+    rows = site_content['news'] if limit is None else site_content['news'][:limit]
+    result = []
+    for item in rows:
+        target = item.get('url') or ('/' + ('en/' if lang == 'en' else '') + item['path'])
+        result.append(f'<article class="media-item"><div><a href="{esc(target)}">{esc(item["title"][key])} ↗</a><div class="paper-meta">{esc(item["text"][key])}</div></div><small>{esc(item["date"])}</small></article>')
+    return ''.join(result)
 
 
 def home(lang: str) -> str:
@@ -183,8 +161,7 @@ def home(lang: str) -> str:
     }
     projects = [('Foundation models & post-training', 'Long-context data, distillation, model merging, reasoning and efficient inference.', 'TinyR1 · Router Upcycling · Reasoning'), ('LLM safety & trustworthy generation', 'Dynamic attacks, evaluation, alignment, online protection and hallucination governance.', 'TriPlay-RL · Magic Token · Safety'), ('RAG, memory & agents', 'Evidence allocation, visual documents, long-term state, experience reuse and agent evaluation.', 'BEAR · TextlessRAG · MemAudit')]
     project_cards = ''.join(f'<article class="card"><span class="number">0{i + 1}</span><h3>{esc(title)}</h3><p>{esc(desc)}</p><div class="tag-row">' + ''.join(f'<span class="tag">{esc(tag.strip())}</span>' for tag in tags.split('·')) + '</div></article>' for i, (title, desc, tags) in enumerate(projects))
-    project_titles = [('大模型安全防护与可信生成' if zh else 'LLM safety & trustworthy generation', 'Safety & trustworthy generation', 'From attack generation and evaluation to online protection and experience feedback.'), ('RAG 与可信知识服务' if zh else 'RAG & trustworthy knowledge services', 'RAG & knowledge services', 'Retrieval, evidence, and grounded generation for complex information workflows.'), ('TinyR1 开源大模型' if zh else 'TinyR1 open reasoning models', 'Open reasoning models', 'Training and releasing compact reasoning models with branch-merge distillation.')]
-    project_cards2 = ''.join(f'<article class="card project-card"><div><div class="project-meta">{esc(meta)}</div><h3 style="margin-top:12px">{esc(title)}</h3><p>{esc(desc)}</p></div><div class="result">{("技术路线、模型训练和系统落地" if zh else "Technical direction, model training, and system delivery")}</div></article>' for title, meta, desc in project_titles)
+    project_cards2 = ''.join(f'<article class="card project-card"><div><div class="project-meta">{esc(item["period"])} · {esc(item["id"])}</div><h3 style="margin-top:12px">{esc(item["title"]["zh" if zh else "en"])}</h3><p>{esc(item["summary"]["zh" if zh else "en"])}</p></div><div class="result">{esc(item["result"]["zh" if zh else "en"])}<br><a class="paper-link" href="/{"en/" if not zh else ""}projects/{item["id"]}/">{"查看项目详情" if zh else "Read project details"} ↗</a></div></article>' for item in site_content['projects'])
     timeline = [('2010—2012', '腾讯网媒产品技术部' if zh else 'Tencent online media product technology', '汽车业务开发与推荐系统。' if zh else 'Automotive product engineering and recommendation systems.'), ('2012—2017', '360 搜索与智能语义' if zh else '360 search & intelligent semantics', '问答、语义、人机对话与大数据智能。' if zh else 'Search, question answering, semantics, dialogue, and data intelligence.'), ('2017—2023', '贝壳 / 如视' if zh else 'Beike / Rushi', '企业搜索云、数据智能、AI+VR 与跨职能团队。' if zh else 'Enterprise search, data intelligence, AI+VR, and cross-functional teams.'), ('2023—至今', '360 基础大模型' if zh else '360 foundation models', '基础模型、安全、RAG、记忆、经验系统与高效推理。' if zh else 'Foundation models, safety, RAG, memory, experience systems, and efficient reasoning.')]
     timeline_html = ''.join(f'<article class="timeline-item"><div class="timeline-time">{esc(year)}</div><div class="timeline-dot"></div><div class="timeline-card"><h3>{esc(role)}</h3><p>{esc(desc)}</p></div></article>' for year, role, desc in timeline)
     return f'''<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">{copy['eyebrow']}</div><h1>{copy['title']}</h1><p class="hero-copy">{copy['intro']}</p><div class="hero-actions"><a class="btn primary" href="/{'en/' if not zh else ''}about/">{copy['about']} ↗</a><a class="btn" href="/{'en/' if not zh else ''}publications/">{copy['papers']} ↗</a></div></div><aside class="hero-card"><div class="monogram">LS</div><p>{'研究、工程、管理与产业实践的公开记录。' if zh else 'An open record of research, engineering, leadership, and industry practice.'}</p></aside></div><div class="wrap metric-grid"><div class="metric"><strong>16</strong><span>{'年技术研发与管理' if zh else 'years in research & engineering'}</span></div><div class="metric"><strong>30</strong><span>{'条 Scholar 论文记录' if zh else 'records in the Scholar snapshot'}</span></div><div class="metric"><strong>4</strong><span>{'个职业阶段' if zh else 'career stages'}</span></div><div class="metric"><strong>14</strong><span>{'条已核对公开记录' if zh else 'reviewed public records'}</span></div></div><div class="wrap"><p class="filter-note">{'口径：16 年与 4 个阶段来自个人经历材料；30 条来自 Scholar 快照；14 条为公开媒体与团队记录中标记可发布的条目。更新：2026-11-10。' if zh else 'Scope: 16 years and four stages come from the supplied career material; 30 records from the Scholar snapshot; 14 publishable media/team records. Updated 2026-11-10.'}</p></div></section>
@@ -200,9 +177,9 @@ def home(lang: str) -> str:
 def about(lang: str) -> str:
     zh = lang == 'zh'
     career = site_content['career']
-    career_html = ''.join(f'<article class="timeline-item"><div class="timeline-time">{esc(item["start"])}—{esc(item["end"] or ("至今" if zh else "present"))}</div><div class="timeline-dot"></div><div class="timeline-card"><h3>{esc(item["org"]["zh" if zh else "en"])} · {esc(item["role"]["zh" if zh else "en"])}</h3><p>{esc(item["text"]["zh" if zh else "en"])}</p></div></article>' for item in career)
+    career_html = ''.join(f'<article class="timeline-item"><div class="timeline-time">{esc(item["start"])}—{esc(item["end"] or ("至今" if zh else "present"))}</div><div class="timeline-dot"></div><div class="timeline-card"><h3>{esc(item["org"]["zh" if zh else "en"])} · {esc(item["role"]["zh" if zh else "en"])}</h3><p>{esc(item["text"]["zh" if zh else "en"])}</p><p class="paper-meta">{esc(item["management"]["zh" if zh else "en"])}</p></div></article>' for item in career)
     profile = site_content['profile']
-    return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">01 / About</div><h1>{'关于我' if zh else 'About me'}</h1><p>{'研究、工程、团队与长期交付，构成我理解技术工作的四个角度。' if zh else 'Research, engineering, teams, and long-term delivery are four lenses through which I understand technical work.'}</p></div></section><section><div class="wrap grid-2"><div class="prose"><h2>{'个人简介' if zh else 'Profile'}</h2><p>{esc(profile['intro']['zh' if zh else 'en'])}</p><p>{'除技术路线外，我也关注团队建设、跨职能协作和组织交付，让模型能力能够在真实业务中持续运行。' if zh else 'Alongside technical direction, I care about team building, cross-functional collaboration, and organizational delivery so that model capabilities can operate sustainably in real products.'}</p></div><div class="card"><div class="eyebrow">CONTACT</div><h3 style="margin-top:14px">lincharliesun@gmail.com</h3><p>{'公开邮箱，用于研究、工程和产业交流。' if zh else 'A public inbox for research, engineering, and industry conversations.'}</p><a class="btn" href="mailto:lincharliesun@gmail.com">{'发送邮件' if zh else 'Send an email'} ↗</a></div></div></section><section><div class="wrap"><div class="section-head"><div><div class="section-kicker">02 / Career</div><h2>{'经历与组织交付' if zh else 'Experience & delivery'}</h2></div><p>{'时间线同时记录技术方向、职责变化和团队建设。' if zh else 'One timeline for technical direction, responsibility, and team building.'}</p></div><div class="timeline">{career_html}</div></div></section><section><div class="wrap grid-2"><article class="card"><div class="eyebrow">EDUCATION</div><h3 style="margin-top:14px">{esc(profile['education']['zh' if zh else 'en'])}</h3><p>{'教育背景、实验室经历与行业工作共同构成长期技术积累。' if zh else 'Education, laboratory experience, and industry work form a continuous technical practice.'}</p></article><article class="card"><div class="eyebrow">LEADERSHIP</div><h3 style="margin-top:14px">{'技术路线与团队建设' if zh else 'Technical direction & teams'}</h3><p>{'公开材料中的团队规模、职责和成果按具体来源分别说明，不用单一人数替代管理经历。' if zh else 'Team size, responsibility, and outcomes are described with their evidence; a single headcount never substitutes for the management story.'}</p></article></div></section>'''
+    return f'''<section class="page-hero"><div class="wrap"><div class="eyebrow">01 / About</div><h1>{'关于我' if zh else 'About me'}</h1><p>{'研究、工程、团队与长期交付，构成我理解技术工作的四个角度。' if zh else 'Research, engineering, teams, and long-term delivery are four lenses through which I understand technical work.'}</p></div></section><section><div class="wrap grid-2"><div class="prose"><h2>{'个人简介' if zh else 'Profile'}</h2><p>{esc(profile['intro']['zh' if zh else 'en'])}</p><p>{'除技术路线外，我也关注团队建设、跨职能协作和组织交付，让模型能力能够在真实业务中持续运行。' if zh else 'Alongside technical direction, I care about team building, cross-functional collaboration, and organizational delivery so that model capabilities can operate sustainably in real products.'}</p></div><div class="card"><div class="eyebrow">CONTACT</div><h3 style="margin-top:14px">lincharliesun@gmail.com</h3><p>{'公开邮箱，用于研究、工程和产业交流。' if zh else 'A public inbox for research, engineering, and industry conversations.'}</p><a class="btn" href="mailto:lincharliesun@gmail.com">{'发送邮件' if zh else 'Send an email'} ↗</a></div></div></section><section><div class="wrap"><div class="section-head"><div><div class="section-kicker">02 / Career</div><h2>{'经历与组织交付' if zh else 'Experience & delivery'}</h2></div><p>{'时间线同时记录技术方向、职责变化和团队建设。' if zh else 'One timeline for technical direction, responsibility, and team building.'}</p></div><div class="timeline">{career_html}</div></div></section><section><div class="wrap grid-2"><article class="card"><div class="eyebrow">EDUCATION</div><h3 style="margin-top:14px">{esc(profile['education']['zh' if zh else 'en'])}</h3><p>{'教育背景、实验室经历与行业工作共同构成长期技术积累。' if zh else 'Education, laboratory experience, and industry work form a continuous technical practice.'}</p></article><article class="card"><div class="eyebrow">LEADERSHIP</div><h3 style="margin-top:14px">{'技术路线与团队建设' if zh else 'Technical direction & teams'}</h3><p>{'公开材料中的团队规模、职责和成果按具体来源分别说明，不用单一人数替代管理经历。' if zh else 'Team size, responsibility, and outcomes are described with their evidence; a single headcount never substitutes for the management story.'}</p></article></div></section><section><div class="wrap"><article class="card"><div class="eyebrow">INDUSTRY SERVICE</div><h2 style="margin-top:14px">{'联合实验室与行业技术服务' if zh else 'Laboratory and industry service'}</h2><p>{'材料记录北大–360 大模型联合实验室委员、大数据协同安全技术国家工程研究中心大模型专委会主任等经历；具体任期和公开任命依据发布前继续核验。' if zh else 'The supplied materials record service connected with the PKU–360 joint laboratory and an LLM safety committee at a national engineering research center; tenure and public appointment evidence remain to be verified.'}</p></article></div></section>'''
 
 
 def project_by_slug(slug: str):
@@ -256,7 +233,7 @@ def write(path: Path, content: str) -> None:
 
 def main() -> None:
     # Remove generated pages only; source assets and documentation remain untouched.
-    for path in [ROOT / 'index.html', ROOT / 'en', ROOT / 'about', ROOT / 'research', ROOT / 'publications', ROOT / 'impact']:
+    for path in [ROOT / 'index.html', ROOT / 'en', ROOT / 'about', ROOT / 'research', ROOT / 'publications', ROOT / 'impact', ROOT / 'projects']:
         if path.is_file(): path.unlink()
         elif path.is_dir(): shutil.rmtree(path)
     pages = {
