@@ -219,7 +219,7 @@ def impact(lang: str) -> str:
     zh = lang == 'zh'
     key = 'zh' if zh else 'en'
     honors = [('北京市科学技术进步二等奖','Beijing Science and Technology Progress Award'),('中国人工智能学会科技成果鉴定','CAAI technology achievement appraisal'),('SafetyAI Bench 连续两次第一','Two-time SafetyAI Bench first place'),('SuperCLUE-RAG 2024.11 第一','SuperCLUE-RAG first place in 2024.11'),('360 智盾入选未来产业优秀典型案例','360 Zh Dun named a future-industry case'),('TinyR1 开源发布','TinyR1 open-source release')]
-    honor_html = ''.join(f'<article class="card"><h3>{esc(item[0] if zh else item[1])}</h3><p>{"公开材料中的奖项、评测、产品和团队成果分别标注归属与来源。" if zh else "Awards, evaluations, products, and team outcomes are presented with their attribution and evidence."}</p></article>' for item in honors)
+    honor_html = ''.join(f'<article class="card"><h3>{esc(item[0] if zh else item[1])}</h3><p>{"资料记录；来源、日期与个人/团队归属在发布前逐项核验。" if zh else "Source record; date and individual/team attribution are verified item by item before publication."}</p><div class="tag-row"><span class="tag">{"待核验" if zh else "To verify"}</span></div></article>' for item in honors)
     standards = site_content['standards']
     standard_html = ''.join(f'<div class="media-item"><div><strong>{esc(item["kind"][key])}</strong><div class="paper-meta">{esc(item["title"][key])}</div></div><small>{esc(item["role"][key])}</small></div>' for item in standards)
     patent_html = ''.join(f'<div class="media-item"><div><strong>{esc(item["title"])}</strong><div class="paper-meta">{"授权发明专利 · 编号、公告日、申请人与发明人顺序待核验" if zh else "Granted invention patent · number, grant date, applicant, and inventor order to verify"}</div></div><small>{"材料条目" if zh else "Source record"}</small></div>' for item in site_content['patents'])
