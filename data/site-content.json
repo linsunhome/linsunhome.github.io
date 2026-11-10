@@ -22,58 +22,188 @@
       "en": "Harbin Institute of Technology"
     },
     "educationDetails": {
-      "zh": "哈尔滨工业大学 · 计算机科学与技术本科（2004.09–2008.07）；计算机科学与技术（智能技术与自然语言处理方向）硕士（2008.09–2010.07）。",
-      "en": "Harbin Institute of Technology · BEng in Computer Science and Technology (2004.09–2008.07); MSc in Computer Science and Technology, intelligent technology and natural language processing (2008.09–2010.07)."
-    }
+      "zh": "哈尔滨工业大学 · 计算机科学与技术本科；计算机科学与技术（智能技术与自然语言处理方向）硕士。",
+      "en": "Harbin Institute of Technology · BEng in Computer Science and Technology; MSc in Computer Science and Technology, intelligent technology and natural language processing."
+    },
+    "services": [
+      {
+        "id": "tech-committee",
+        "title": {
+          "zh": "360 集团技术委员会算法分委会主席",
+          "en": "Chair, Algorithm Subcommittee of 360 Technology Committee"
+        },
+        "status": {
+          "zh": "当前公开身份，任期持续更新",
+          "en": "Public role; term kept current"
+        },
+        "term": {
+          "zh": "当前任期持续更新",
+          "en": "Current term kept up to date"
+        },
+        "source": {
+          "zh": "个人介绍首页资料",
+          "en": "Personal profile source"
+        }
+      },
+      {
+        "id": "pku-360-lab",
+        "title": {
+          "zh": "北大–360 大模型联合实验室委员",
+          "en": "Member, PKU–360 Joint Laboratory for Large Models"
+        },
+        "status": {
+          "zh": "公开服务经历",
+          "en": "Public service record"
+        },
+        "term": {
+          "zh": "当前公开服务经历",
+          "en": "Current public service record"
+        },
+        "source": {
+          "zh": "个人介绍首页资料",
+          "en": "Personal profile source"
+        }
+      },
+      {
+        "id": "national-center",
+        "title": {
+          "zh": "大数据协同安全技术国家工程研究中心大模型专委会",
+          "en": "Large-model committee at the National Engineering Research Center for Collaborative Security"
+        },
+        "status": {
+          "zh": "参与公开技术服务",
+          "en": "Public technical service"
+        },
+        "term": {
+          "zh": "参与公开技术服务",
+          "en": "Public technical service"
+        },
+        "source": {
+          "zh": "个人补充说明资料",
+          "en": "Personal supplementary source"
+        }
+      }
+    ]
   },
   "areas": [
     {
-      "id": "foundation",
+      "id": "pretraining-data",
       "title": {
-        "zh": "基础模型与后训练",
-        "en": "Foundation models & post-training"
+        "zh": "预训练与数据工程",
+        "en": "Pre-training & data engineering"
       },
       "text": {
-        "zh": "长上下文、数据选择、蒸馏、强化学习、模型融合与高效推理。",
-        "en": "Long-context modeling, data selection, distillation, reinforcement learning, model merging, and efficient reasoning."
+        "zh": "长上下文数据、Dense/MoE、Router Upcycling 与 Continue Training。",
+        "en": "Long-context data, Dense/MoE systems, Router Upcycling, and continued training."
+      },
+      "tags": [
+        "Long context",
+        "MoE",
+        "Data engineering"
+      ],
+      "projects": [
+        "tinyr1"
+      ],
+      "papers": [
+        "Longattn",
+        "Router Upcycling"
+      ]
+    },
+    {
+      "id": "posttraining-reasoning",
+      "title": {
+        "zh": "后训练与推理",
+        "en": "Post-training & reasoning"
+      },
+      "text": {
+        "zh": "SFT、强化学习、蒸馏、推理路径、模型融合与高效推理。",
+        "en": "SFT, reinforcement learning, distillation, reasoning paths, model merging, and efficient inference."
       },
       "tags": [
         "Reasoning",
         "Distillation",
-        "Long context"
+        "Evaluation"
+      ],
+      "projects": [
+        "tinyr1"
+      ],
+      "papers": [
+        "Tinyr1",
+        "Chain-of-thought matters",
+        "Thinking with Reasoning",
+        "Beyond Parameter Arithmetic"
       ]
     },
     {
       "id": "safety",
       "title": {
-        "zh": "安全与可信生成",
-        "en": "Safety & trustworthy generation"
+        "zh": "安全与可信治理",
+        "en": "Safety & trustworthy governance"
       },
       "text": {
-        "zh": "动态攻防、安全对齐、在线防护、幻觉治理与评测方法。",
-        "en": "Adversarial evaluation, safety alignment, online protection, hallucination governance, and evaluation methodology."
+        "zh": "动态攻防、安全对齐、闭环训练、在线防护与幻觉治理。",
+        "en": "Dynamic attacks, safety alignment, closed-loop training, online protection, and hallucination governance."
       },
       "tags": [
         "Alignment",
         "Safety",
         "Evaluation"
+      ],
+      "projects": [
+        "llm-safety"
+      ],
+      "papers": [
+        "TriPlay-RL",
+        "Efficient Switchable",
+        "Beyond Static Alignment"
       ]
     },
     {
-      "id": "knowledge",
+      "id": "rag-memory-agent",
       "title": {
         "zh": "RAG、记忆与 Agent",
         "en": "RAG, memory & agents"
       },
       "text": {
-        "zh": "文档理解、多文档证据、长期状态、经验复用与 Agent 工作流。",
-        "en": "Document understanding, multi-document evidence, long-term state, experience reuse, and agent workflows."
+        "zh": "OCR-RAG、证据分配、长期记忆、经验复用与 Agent 评测。",
+        "en": "OCR-RAG, evidence allocation, long-term memory, experience reuse, and agent evaluation."
       },
       "tags": [
         "RAG",
         "Memory",
         "Agents"
+      ],
+      "projects": [
+        "rag-knowledge",
+        "memory-agents"
+      ],
+      "papers": [
+        "When Good OCR",
+        "BEAR:",
+        "Harness-Bench",
+        "MemAudit"
       ]
+    },
+    {
+      "id": "delivery",
+      "title": {
+        "zh": "业务与组织交付",
+        "en": "Delivery & organization"
+      },
+      "text": {
+        "zh": "线上系统、产品化、跨职能协同、标准与行业服务。",
+        "en": "Production systems, productization, cross-functional delivery, standards, and industry service."
+      },
+      "tags": [
+        "Delivery",
+        "Leadership",
+        "Open research"
+      ],
+      "projects": [
+        "xiaobei-assistant",
+        "ai-house-tour"
+      ],
+      "papers": []
     }
   ],
   "career": [
@@ -111,12 +241,12 @@
         "en": "Data intelligence & AI application leadership"
       },
       "text": {
-        "zh": "涉及企业搜索云、数据智能、AI+VR 和智能应用，经历跨职能团队的搭建与管理。",
-        "en": "Work on enterprise search, data intelligence, AI+VR, and intelligent applications, with cross-functional team building and leadership."
+        "zh": "涉及企业搜索云、数据智能、AI+VR 和智能应用，代表性工作包括小贝助手与 AI 讲房，并经历跨职能团队的搭建与管理。",
+        "en": "Work on enterprise search, data intelligence, AI+VR, and intelligent applications, including Xiaobei Assistant and AI House Tour, with cross-functional team building and leadership."
       },
       "management": {
-        "zh": "技术职责跨越算法、工程和产品交付，协调不同专业背景的团队。",
-        "en": "Responsibilities spanning algorithms, engineering, and product delivery, coordinating teams with different specialties."
+        "zh": "曾带领百人规模跨职能团队，负责研究、工程、产品与组织交付。",
+        "en": "Led a cross-functional team of around one hundred people across research, engineering, product, and organizational delivery."
       }
     },
     {
@@ -132,8 +262,8 @@
         "en": "Search, semantics & dialogue"
       },
       "text": {
-        "zh": "围绕搜索问答、语义理解、人机对话与大数据智能进行研发。",
-        "en": "Research and development in question answering, semantic understanding, dialogue, and data intelligence."
+        "zh": "围绕搜索问答、语义理解、人机对话与大数据智能进行研发，材料记录从 0 到 1 搭建人机对话系统并推动广告 CTR 预估落地。",
+        "en": "Research and development in question answering, semantic understanding, dialogue, and data intelligence, including building a dialogue system from zero to one and shipping ad CTR prediction."
       },
       "management": {
         "zh": "连接自然语言处理研究和搜索产品工程。",
@@ -193,15 +323,22 @@
       "links": [
         {
           "label": {
-            "zh": "技术报告",
-            "en": "Technical report"
+            "zh": "论文",
+            "en": "Paper"
           },
           "url": "https://arxiv.org/abs/2503.04872"
         },
         {
           "label": {
-            "zh": "北京大学机构新闻",
-            "en": "PKU institutional news"
+            "zh": "Hugging Face 模型",
+            "en": "Hugging Face model"
+          },
+          "url": "https://huggingface.co/qihoo360/TinyR1-32B-Preview"
+        },
+        {
+          "label": {
+            "zh": "北京大学团队新闻",
+            "en": "PKU team news"
           },
           "url": "https://cs.pku.edu.cn/info/1263/3601.htm"
         }
@@ -212,9 +349,32 @@
         "Open research"
       ],
       "result": {
-        "zh": "TinyR1-32B-Preview 技术报告与团队发布。",
-        "en": "TinyR1-32B-Preview technical report and team release."
-      }
+        "zh": "论文实验中，数学 72.6→78.1、编程 57.2→61.6、科学 62.1→65.0；Branch-Merge 阶段为 0.5 小时/4 张 H800，重训练基线为 23 小时/32 张 H800。5% 指相对 DeepSeek-R1 671B 的参数规模，不是性能百分比。",
+        "en": "In the paper experiments, mathematics improved from 72.6 to 78.1, coding from 57.2 to 61.6, and science from 62.1 to 65.0. Branch-Merge took 0.5 hours on four H800 GPUs versus 23 hours on 32 H800 GPUs for the retraining baseline. The 5% figure refers to parameter scale relative to DeepSeek-R1 671B, not performance."
+      },
+      "kind": "project",
+      "detail": true,
+      "evidence": {
+        "zh": "公开入口：论文、Hugging Face 模型页、北京大学计算机学院团队新闻。",
+        "en": "Public evidence: the paper, Hugging Face model page, and the Peking University Computer Science news item."
+      },
+      "boundary": {
+        "zh": "TinyR1-32B-Preview、后续安全模型和不同媒体报道分开记录。",
+        "en": "TinyR1-32B-Preview, later safety models, and separate media reports are kept as distinct records."
+      },
+      "relatedMedia": [
+        "https://cs.pku.edu.cn/info/1263/3601.htm",
+        "https://mp.weixin.qq.com/s/KKUc6AGeizPELOYZayAb5w"
+      ],
+      "images": [
+        {
+          "path": "assets/projects/tinyr1-paper-figure1.png",
+          "alt": {
+            "zh": "TinyR1 Branch-Merge Distillation",
+            "en": "TinyR1 Branch-Merge Distillation"
+          }
+        }
+      ]
     },
     {
       "id": "llm-safety",
@@ -233,8 +393,8 @@
         "en": "How can protection against evolving jailbreaks, harmful content, and hallucinations preserve useful task performance?"
       },
       "role": {
-        "zh": "负责技术路线、关键算法、模型训练、系统设计与落地推进。",
-        "en": "Technical direction, methods, model training, system design, and delivery."
+        "zh": "项目第二完成人、创新点 1 和 2 技术负责人；负责总体方案、关键算法、模型训练、系统设计与落地推进。",
+        "en": "Second project member and technical lead for innovations 1 and 2; responsible for the overall design, key algorithms, model training, system design, and delivery."
       },
       "approach": {
         "zh": "攻击生成 → 自动评测 → 安全训练 → 在线防护 → 经验回流。相关研究包括 TriPlay-RL 与 Magic-Token 安全控制。",
@@ -267,9 +427,40 @@
         "Trustworthy AI"
       ],
       "result": {
-        "zh": "TriPlay-RL、Magic-Token 与内容安全方案。",
-        "en": "TriPlay-RL, Magic-Token, and content-safety systems."
-      }
+        "zh": "形成 TriPlay-RL、Magic Token、检测—代答分离和可信生成等公开技术成果；相关项目获北京市科学技术进步二等奖，CAAI 鉴定证书确认成果《大模型安全关键技术及应用》。",
+        "en": "Public work includes TriPlay-RL, Magic Token, detection–response separation, and trustworthy generation. The related project received the Beijing Science and Technology Progress Award, and a CAAI certificate records the achievement “Key Technologies and Applications of Large-Model Safety.”"
+      },
+      "kind": "project",
+      "detail": true,
+      "evidence": {
+        "zh": "论文：TriPlay-RL、Magic Token、Beyond Static Alignment；公开材料：北京市科学技术进步二等奖、CAAI 鉴定证书（鉴字[2025]第008号，2025-06-19）。",
+        "en": "Papers: TriPlay-RL, Magic Token, and Beyond Static Alignment. Public evidence: the Beijing Science and Technology Progress Award and CAAI appraisal certificate 鉴字[2025]第008号 dated 2025-06-19."
+      },
+      "boundary": {
+        "zh": "只展示公开项目、论文和鉴定材料中的结果，不展示内部线上业务指标。",
+        "en": "Only public project, paper, and appraisal evidence is shown; internal production metrics remain outside the site."
+      },
+      "relatedMedia": [
+        "https://news.southcn.com/node_17a07e5926/e1570938be.shtml",
+        "https://k.sina.com.cn/article_2674405451_9f68304b019015of2.html",
+        "https://mp.weixin.qq.com/s/Z5HIYQ8fzq9vdlXOQ-OlDw"
+      ],
+      "images": [
+        {
+          "path": "assets/projects/llm-safety-overview.png",
+          "alt": {
+            "zh": "大模型安全与可信生成框架",
+            "en": "LLM safety and trustworthy generation framework"
+          }
+        },
+        {
+          "path": "assets/projects/llm-safety-online.png",
+          "alt": {
+            "zh": "在线防护链路",
+            "en": "Online protection pipeline"
+          }
+        }
+      ]
     },
     {
       "id": "rag-knowledge",
@@ -288,8 +479,8 @@
         "en": "Retrieval and OCR quality alone do not guarantee reliable answers. How can systems allocate evidence across documents and account for document noise?"
       },
       "role": {
-        "zh": "负责技术路线、系统方案、评测与业务落地推进。",
-        "en": "Technical direction, system design, evaluation, and delivery."
+        "zh": "负责研究问题、评测体系、实验组织、结果分析、InduOCRBench 论文撰写，以及 RAG 技术路线、系统方案与落地推进。",
+        "en": "Owned the research question, evaluation system, experiment organization, result analysis, and InduOCRBench paper writing, alongside the RAG technical direction, system design, and delivery."
       },
       "approach": {
         "zh": "结合知识检索、文档结构、证据分配与生成评测。相关论文覆盖 OCR-RAG 鲁棒性、BEAR 多文档证据分配和 TextlessRAG 视觉文档问答。",
@@ -315,9 +506,38 @@
         "Evidence reasoning"
       ],
       "result": {
-        "zh": "RAG 研究与 360 智脑团队技术方案。",
-        "en": "RAG research and the 360 Zhibrain team system."
-      }
+        "zh": "InduOCRBench 覆盖 12 个行业、570 份文档、3,402 页和 11 类挑战；论文实验中视觉样式文档 OCR 准确率为 82.9%，对应 RAG 准确率为 52.8%。",
+        "en": "InduOCRBench covers 570 documents, 3,402 pages, 12 industries, and 11 challenge types. In the paper experiments, OCR accuracy for visual-style documents was 82.9%, while downstream RAG accuracy was 52.8%."
+      },
+      "kind": "project",
+      "detail": true,
+      "evidence": {
+        "zh": "论文：When Good OCR Is Not Enough、BEAR、TextlessRAG、VIP-Doc、Expand VSR；公开团队文章：360 智脑 RAG 方案。",
+        "en": "Papers: When Good OCR Is Not Enough, BEAR, TextlessRAG, VIP-Doc, and Expand VSR. Public team evidence: the 360 Zhibrain RAG article."
+      },
+      "boundary": {
+        "zh": "这些数字是论文或研究基准结果；不展示业务调用量和内部线上效果。",
+        "en": "These are paper or benchmark results; business traffic and internal production outcomes are excluded."
+      },
+      "relatedMedia": [
+        "https://mp.weixin.qq.com/s/C9ckNrC1SNWDzAh8KHri-w"
+      ],
+      "images": [
+        {
+          "path": "assets/projects/rag-trustworthy-generation.png",
+          "alt": {
+            "zh": "可信生成框架",
+            "en": "Trustworthy generation framework"
+          }
+        },
+        {
+          "path": "assets/projects/bear-paper-figure2.png",
+          "alt": {
+            "zh": "BEAR 证据分配",
+            "en": "BEAR evidence allocation"
+          }
+        }
+      ]
     },
     {
       "id": "memory-agents",
@@ -371,9 +591,127 @@
         "Evaluation"
       ],
       "result": {
-        "zh": "Agent 工作流评测、记忆安全与经验服务。",
-        "en": "Agent-workflow evaluation, memory security, and experience serving."
-      }
+        "zh": "Mem360 公开技术文章报告 LoCoMo Overall 76.46、Temporal reasoning 83.32 等结果；相关研究覆盖 Agent 工作流评测、记忆安全和经验服务。",
+        "en": "The public Mem360 technical article reports LoCoMo Overall 76.46 and Temporal reasoning 83.32, among other results. Related research covers agent-workflow evaluation, memory safety, and experience serving."
+      },
+      "kind": "project",
+      "detail": true,
+      "evidence": {
+        "zh": "公开材料：Mem360 技术文章；论文：Harness-Bench、MemAudit、ArborMem、External Experience Serving、When Do Prompt-Side Agent Playbooks Transfer。",
+        "en": "Public evidence: the Mem360 technical article. Papers: Harness-Bench, MemAudit, ArborMem, External Experience Serving, and When Do Prompt-Side Agent Playbooks Transfer."
+      },
+      "boundary": {
+        "zh": "只展示公开技术文章和论文；业务接入、搜索效果和其他业务指标不进入网站。",
+        "en": "Only the public technical article and papers are shown; business integrations, search outcomes, and other business metrics are excluded."
+      },
+      "relatedMedia": [
+        "https://mp.weixin.qq.com/s/YMqNYmVMEhUgQ5EomtCIog"
+      ],
+      "images": []
+    },
+    {
+      "id": "xiaobei-assistant",
+      "kind": "representative-work",
+      "detail": false,
+      "area": "delivery",
+      "period": "2017–2023",
+      "title": {
+        "zh": "小贝助手",
+        "en": "Xiaobei Assistant"
+      },
+      "summary": {
+        "zh": "贝壳阶段的代表性智能交互工作，作为团队与产品交付经历的一部分呈现。",
+        "en": "A representative intelligent-interaction project from the Beike period, presented as part of team and product delivery."
+      },
+      "problem": {
+        "zh": "面向房产经纪场景组织智能问答与交互能力。",
+        "en": "Organizing intelligent question answering and interaction for real-estate brokerage scenarios."
+      },
+      "role": {
+        "zh": "参与技术路线、团队协作与产品交付。",
+        "en": "Contributed to technical direction, team collaboration, and product delivery."
+      },
+      "approach": {
+        "zh": "围绕搜索、问答和数据智能组织跨职能交付。",
+        "en": "Cross-functional delivery across search, question answering, and data intelligence."
+      },
+      "result": {
+        "zh": "公开产品报道作为历史背景。",
+        "en": "Public product coverage provides historical context."
+      },
+      "evidence": {
+        "zh": "公开报道：小贝助手 2.0。",
+        "en": "Public coverage: Xiaobei Assistant 2.0."
+      },
+      "boundary": {
+        "zh": "不补写未公开的方法、效果或业务指标。",
+        "en": "Unpublished methods, outcomes, and business metrics are not added."
+      },
+      "links": [
+        {
+          "label": {
+            "zh": "公开产品报道",
+            "en": "Public product coverage"
+          },
+          "url": "https://client.sina.com.cn/news/2020-04-24/doc-iirczymi8125706.shtml"
+        }
+      ],
+      "tags": [
+        "Delivery",
+        "Product"
+      ]
+    },
+    {
+      "id": "ai-house-tour",
+      "kind": "representative-work",
+      "detail": false,
+      "area": "delivery",
+      "period": "2017–2023",
+      "title": {
+        "zh": "AI 讲房",
+        "en": "AI House Tour"
+      },
+      "summary": {
+        "zh": "如视/贝壳阶段的代表性 AI+VR 工作，作为团队与产品交付经历的一部分呈现。",
+        "en": "A representative AI+VR project from the Rushi/Beike period, presented as part of team and product delivery."
+      },
+      "problem": {
+        "zh": "把 AI 能力融入房产经纪和看房场景。",
+        "en": "Bringing AI capabilities into real-estate brokerage and property-viewing scenarios."
+      },
+      "role": {
+        "zh": "参与技术路线、团队协作与产品交付。",
+        "en": "Contributed to technical direction, team collaboration, and product delivery."
+      },
+      "approach": {
+        "zh": "围绕 AI+VR、语音和智能交互组织跨职能交付。",
+        "en": "Cross-functional delivery across AI+VR, speech, and intelligent interaction."
+      },
+      "result": {
+        "zh": "公开产品报道作为历史背景。",
+        "en": "Public product coverage provides historical context."
+      },
+      "evidence": {
+        "zh": "公开报道：AI 讲房。",
+        "en": "Public coverage: AI House Tour."
+      },
+      "boundary": {
+        "zh": "不补写未公开的方法、效果或业务指标。",
+        "en": "Unpublished methods, outcomes, and business metrics are not added."
+      },
+      "links": [
+        {
+          "label": {
+            "zh": "公开产品报道",
+            "en": "Public product coverage"
+          },
+          "url": "https://finance.sina.cn/2019-04-26/detail-ihvhiewr8427498.d.html?vt=4"
+        }
+      ],
+      "tags": [
+        "Delivery",
+        "AI+VR"
+      ]
     }
   ],
   "media": [
@@ -387,7 +725,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "Do all AI hallucinations need to be eliminated?",
-      "relationEn": "Quotes Lin Sun on scenario-based, layered governance of trustworthy AI."
+      "relationEn": "Quotes Lin Sun on scenario-based, layered governance of trustworthy AI.",
+      "id": "media-southcn-hallucination-2026",
+      "sourceDate": "2026-06-17",
+      "featured": false
     },
     {
       "kind": "institutional-news",
@@ -399,7 +740,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "Peking University and 360 introduce TinyR1",
-      "relationEn": "Institutional team news explicitly naming Lin Sun among the 360 team."
+      "relationEn": "Institutional team news explicitly naming Lin Sun among the 360 team.",
+      "id": "media-pku-tinyr1-2025",
+      "sourceDate": "2025-02-25",
+      "featured": false
     },
     {
       "kind": "talk-transcript",
@@ -411,7 +755,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "A 360 perspective on LLM hallucinations",
-      "relationEn": "Edited transcript of a technical talk identifying Lin Sun as the speaker."
+      "relationEn": "Edited transcript of a technical talk identifying Lin Sun as the speaker.",
+      "id": "media-datafun-hallucination-2024",
+      "sourceDate": "2024-09-15",
+      "featured": false
     },
     {
       "kind": "talk",
@@ -423,7 +770,10 @@
       "verification": "live-agenda-and-local-agenda",
       "checkedOn": "2026-11-10",
       "en": "Exploring safe and trustworthy LLM solutions",
-      "relationEn": "The official guest page lists Lin Sun and the session time."
+      "relationEn": "The official guest page lists Lin Sun and the session time.",
+      "id": "talk-software-summit-2024",
+      "sourceDate": "2024-09-21",
+      "featured": false
     },
     {
       "kind": "project-background",
@@ -435,7 +785,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "AI-guided property viewing with Beike Rushi VR",
-      "relationEn": "Historical product background. The article does not name Lin Sun."
+      "relationEn": "Historical product background. The article does not name Lin Sun.",
+      "id": "project-ai-house-tour-2019",
+      "sourceDate": "2019-04-26",
+      "featured": false
     },
     {
       "kind": "project-background",
@@ -447,7 +800,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "Beike product launch: Xiaobei Assistant 2.0",
-      "relationEn": "Historical product background. The article does not name Lin Sun."
+      "relationEn": "Historical product background. The article does not name Lin Sun.",
+      "id": "project-xiaobei-2020",
+      "sourceDate": "2020-04-24",
+      "featured": false
     },
     {
       "kind": "project-background",
@@ -459,7 +815,10 @@
       "verification": "live-body",
       "checkedOn": "2026-11-10",
       "en": "AI in real-estate brokerage scenarios",
-      "relationEn": "Historical product background. The article does not name Lin Sun."
+      "relationEn": "Historical product background. The article does not name Lin Sun.",
+      "id": "project-ai-real-estate-2020",
+      "sourceDate": "2020-12-21",
+      "featured": false
     },
     {
       "kind": "team-news",
@@ -471,7 +830,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "Reporting on the PKU–360 32B safety model",
-      "relationEn": "Reporting about a team model release; model version and results are separate from the TinyR1 preview."
+      "relationEn": "Reporting about a team model release; model version and results are separate from the TinyR1 preview.",
+      "id": "team-news-tinyr1-safety-2025",
+      "sourceDate": "2025-09-28",
+      "featured": false
     },
     {
       "kind": "team-news",
@@ -483,7 +845,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "Reporting on the PKU–360 TinyR1 release",
-      "relationEn": "Team release coverage; parameter and benchmark comparisons refer to the reported version and tasks."
+      "relationEn": "Team release coverage; parameter and benchmark comparisons refer to the reported version and tasks.",
+      "id": "team-news-tinyr1-2025",
+      "sourceDate": "2025-02-25",
+      "featured": false
     },
     {
       "kind": "team-technical-article",
@@ -495,7 +860,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "Inside the 360 RAG solution",
-      "relationEn": "A team technical article about the RAG system and its evaluation."
+      "relationEn": "A team technical article about the RAG system and its evaluation.",
+      "id": "team-rag-2024",
+      "sourceDate": "2024-12-19",
+      "featured": false
     },
     {
       "kind": "team-technical-article",
@@ -507,7 +875,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "Mem360: long-term memory for LLM systems",
-      "relationEn": "A team technical article about the Mem360 memory system."
+      "relationEn": "A team technical article about the Mem360 memory system.",
+      "id": "team-mem360-2025",
+      "sourceDate": "2025-09-24",
+      "featured": false
     },
     {
       "kind": "team-technical-article",
@@ -519,7 +890,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "360 LLM content safety: technical practices",
-      "relationEn": "A team technical article about the content-safety solution and evaluation."
+      "relationEn": "A team technical article about the content-safety solution and evaluation.",
+      "id": "team-safety-2025",
+      "sourceDate": "2025-01-02",
+      "featured": false
     },
     {
       "kind": "team-technical-article",
@@ -531,7 +905,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "Continued training for LLMs",
-      "relationEn": "A team technical article on the value, challenges, and practice of continued training."
+      "relationEn": "A team technical article on the value, challenges, and practice of continued training.",
+      "id": "team-continue-training-2025",
+      "sourceDate": "2025-01-27",
+      "featured": false
     },
     {
       "kind": "company-news",
@@ -543,7 +920,10 @@
       "verification": "local-pdf-and-user-supplied-url",
       "checkedOn": "2026-11-10",
       "en": "360 Zh Dun selected as a national LLM safety product",
-      "relationEn": "Company product news. This does not constitute an individual award."
+      "relationEn": "Company product news. This does not constitute an individual award.",
+      "id": "company-zhidun-2025",
+      "sourceDate": "2025-03-28",
+      "featured": false
     }
   ],
   "talks": [
@@ -557,7 +937,10 @@
       "en": "LLM safety governance at 360",
       "eventEn": "COSCon’25 · Jingzhi community",
       "roleEn": "Listed speaker",
-      "checkedOn": "2026-11-10"
+      "checkedOn": "2026-11-10",
+      "id": "talk-360",
+      "sourceDate": "2025-12-07",
+      "featured": false
     },
     {
       "title": "360大模型安全的探索与实践",
@@ -569,7 +952,10 @@
       "en": "LLM safety practice at 360",
       "eventEn": "CICC workshop on large models and decision intelligence",
       "roleEn": "Listed presenter",
-      "checkedOn": "2026-11-10"
+      "checkedOn": "2026-11-10",
+      "id": "talk-360",
+      "sourceDate": "2025-05-24",
+      "featured": false
     },
     {
       "title": "安全可信大模型解决方案的探索与实践",
@@ -581,7 +967,10 @@
       "en": "Safe and trustworthy LLM solutions",
       "eventEn": "2024 Software R&D Innovation Summit",
       "roleEn": "Listed speaker",
-      "checkedOn": "2026-11-10"
+      "checkedOn": "2026-11-10",
+      "id": "talk-",
+      "sourceDate": "2024-09-21",
+      "featured": false
     },
     {
       "title": "大模型幻觉解决方案的探索与实践",
@@ -594,57 +983,61 @@
       "en": "Exploring solutions to LLM hallucinations",
       "eventEn": "DataFunSummit 2024 · RAG forum",
       "roleEn": "Listed guest speaker",
-      "checkedOn": "2026-11-10"
+      "checkedOn": "2026-11-10",
+      "id": "talk-",
+      "sourceDate": "2024-08-03",
+      "featured": false
     }
   ],
   "standards": [
     {
-      "id": "GB/T 42131-2022",
+      "id": "GB/T 45288.2—2025",
       "kind": {
-        "zh": "国家标准",
-        "en": "National standard"
-      },
-      "title": {
-        "zh": "人工智能 知识图谱技术框架",
-        "en": "Artificial intelligence — Knowledge graph technology framework"
-      },
-      "role": {
-        "zh": "参与相关标准工作",
-        "en": "Participation reported by the author"
-      }
-    },
-    {
-      "id": "20231746-T-469",
-      "kind": {
-        "zh": "国家标准项目",
-        "en": "National standard project"
+        "zh": "已发布国家标准",
+        "en": "Published national standard"
       },
       "title": {
         "zh": "人工智能 大模型 第 2 部分：评测指标与方法",
         "en": "Artificial intelligence — Large models, Part 2: Evaluation indicators and methods"
       },
       "role": {
-        "zh": "标准项目",
-        "en": "Standards project"
+        "zh": "主要起草人",
+        "en": "Primary drafter"
+      },
+      "date": "2025-02-28"
+    },
+    {
+      "id": "GB/T 42131-2022",
+      "kind": {
+        "zh": "已发布国家标准",
+        "en": "Published national standard"
+      },
+      "title": {
+        "zh": "人工智能 知识图谱技术框架",
+        "en": "Artificial intelligence — Knowledge graph technology framework"
+      },
+      "role": {
+        "zh": "参与标准工作",
+        "en": "Standards contributor"
       }
     },
     {
       "id": "SJ/T 11914-2023",
       "kind": {
-        "zh": "行业标准",
-        "en": "Industry standard"
+        "zh": "已发布行业标准",
+        "en": "Published industry standard"
       },
       "title": {
         "zh": "虚拟现实从业人员能力要求",
         "en": "Competency requirements for virtual-reality professionals"
       },
       "role": {
-        "zh": "参与相关标准工作",
-        "en": "Participation reported by the author"
+        "zh": "参与标准工作",
+        "en": "Standards contributor"
       }
     },
     {
-      "id": "2024",
+      "id": "llm-safety-report-2024",
       "kind": {
         "zh": "技术报告",
         "en": "Technical report"
@@ -663,11 +1056,14 @@
     {
       "id": "patent-01",
       "title": "大模型安全防护方法、装置、设备及存储介质",
-      "number": null,
-      "grantDate": null,
-      "applicant": null,
-      "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "number": "CN120409549B",
+      "grantDate": "2025-11-18",
+      "applicant": "北京奇虎科技有限公司",
+      "inventorOrder": "第三发明人",
+      "verification": "certificate-checked",
+      "theme": "大模型安全与模型优化",
+      "shortTitle": "大模型安全防护",
+      "themeId": "safety-optimization"
     },
     {
       "id": "patent-02",
@@ -676,7 +1072,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "大模型优化方法、装置、设备及存储介质",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-03",
@@ -685,43 +1084,58 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "语料构建方法、装置、设备、存储介质及产品",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-04",
       "title": "风险检测方法、装置、设备、存储介质及产品",
-      "number": null,
-      "grantDate": null,
-      "applicant": null,
-      "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "number": "CN120162796B",
+      "grantDate": "2025-12-16",
+      "applicant": "北京奇虎科技有限公司",
+      "inventorOrder": "第三发明人",
+      "verification": "certificate-checked",
+      "theme": "大模型安全与模型优化",
+      "shortTitle": "风险检测",
+      "themeId": "safety-optimization"
     },
     {
       "id": "patent-05",
       "title": "知识库构建方法、装置、设备、存储介质及产品",
-      "number": null,
-      "grantDate": null,
-      "applicant": null,
-      "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "number": "CN120258106B",
+      "grantDate": "2026-01-16",
+      "applicant": "北京奇虎科技有限公司",
+      "inventorOrder": "第二发明人",
+      "verification": "certificate-checked",
+      "theme": "知识库与语料构建",
+      "shortTitle": "知识库构建",
+      "themeId": "knowledge-corpus"
     },
     {
       "id": "patent-06",
       "title": "模型优化方法、装置、设备、存储介质及产品",
-      "number": null,
-      "grantDate": null,
-      "applicant": null,
-      "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "number": "CN120257282B",
+      "grantDate": "2026-02-13",
+      "applicant": "北京奇虎科技有限公司",
+      "inventorOrder": "第二发明人",
+      "verification": "certificate-checked",
+      "theme": "大模型安全与模型优化",
+      "shortTitle": "模型优化",
+      "themeId": "safety-optimization"
     },
     {
       "id": "patent-07",
       "title": "回答生成方法、装置、设备、存储介质及产品",
-      "number": null,
-      "grantDate": null,
-      "applicant": null,
-      "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "number": "CN119760101B",
+      "grantDate": "2026-03-17",
+      "applicant": "北京奇虎科技有限公司",
+      "inventorOrder": "第三发明人",
+      "verification": "certificate-checked",
+      "theme": "搜索问答与交互",
+      "shortTitle": "回答生成",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-08",
@@ -730,7 +1144,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "基于剧本的视频展示方法、装置和存储介质",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-09",
@@ -739,7 +1156,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "数据召回方法与系统、交互方法及交互系统",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-10",
@@ -748,7 +1168,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "一种基于自然语句句法分析的智能交互方法及装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-11",
@@ -757,7 +1180,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "基于搜索获取问答专题数据的方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-12",
@@ -766,7 +1192,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "基于搜索词的问答类搜索结果呈现方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-13",
@@ -775,7 +1204,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "基于搜索的问题发布方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-14",
@@ -784,7 +1216,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "搜索结果整合方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-15",
@@ -793,7 +1228,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "基于问答的搜索结果调整方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-16",
@@ -802,7 +1240,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "提供问答对数据搜索结果的方法和装置",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-17",
@@ -811,7 +1252,10 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "一种确定网络资源点的抓取频率的装置和方法",
+      "themeId": "search-qa"
     },
     {
       "id": "patent-18",
@@ -820,43 +1264,66 @@
       "grantDate": null,
       "applicant": null,
       "inventorOrder": null,
-      "verification": "author-provided-unverified"
+      "verification": "author-provided-unverified",
+      "theme": "搜索问答与交互",
+      "shortTitle": "一种获取问答对的相关联程度的装置和方法",
+      "themeId": "search-qa"
     }
   ],
   "news": [
     {
+      "id": "news-southcn-2026",
+      "type": "media",
       "date": "2026-06-17",
       "title": {
-        "zh": "谈 AI 幻觉与场景化可信治理",
-        "en": "On hallucinations and scenario-specific trustworthy AI"
+        "zh": "南方都市报/南方网：AI 幻觉与场景化可信治理",
+        "en": "Southern Metropolis Daily: hallucinations and scenario-specific trustworthy AI"
       },
       "text": {
-        "zh": "孙林谈 AI 幻觉与场景化可信治理。",
-        "en": "Lin Sun on hallucinations and scenario-specific trustworthy AI."
+        "zh": "讨论 AI 幻觉与场景化、分层次的可信治理。",
+        "en": "A discussion of hallucinations and scenario-specific, layered trustworthy AI governance."
       },
       "url": "https://news.southcn.com/node_17a07e5926/e1570938be.shtml"
     },
     {
-      "date": "2025-12-07",
+      "id": "news-ocr-2026",
+      "type": "publication",
+      "date": "2026",
       "title": {
-        "zh": "COSCon’25 公开分享",
-        "en": "A talk at COSCon’25"
+        "zh": "InduOCRBench 研究形成公开论文",
+        "en": "InduOCRBench research published"
       },
       "text": {
-        "zh": "360 大模型安全治理。",
-        "en": "LLM safety governance at 360."
+        "zh": "围绕工业文档 RAG 效用建立 OCR 鲁棒性评测基准。",
+        "en": "A benchmark for OCR robustness in industrial-document RAG."
+      },
+      "url": "https://doi.org/10.18653/v1/2026.acl-industry.60"
+    },
+    {
+      "id": "news-coscon-2025",
+      "type": "talk",
+      "date": "2025-12-07",
+      "title": {
+        "zh": "COSCon’25：分享 360 大模型安全治理",
+        "en": "COSCon’25: LLM safety governance at 360"
+      },
+      "text": {
+        "zh": "公开分享大模型安全治理实践。",
+        "en": "A public talk on LLM safety governance."
       },
       "path": "impact/#talks"
     },
     {
+      "id": "news-tinyr1-2025",
+      "type": "team-news",
       "date": "2025-02-25",
       "title": {
-        "zh": "TinyR1 团队发布",
-        "en": "TinyR1 team release"
+        "zh": "北大计算机学院：TinyR1 团队发布",
+        "en": "PKU Computer Science: TinyR1 team release"
       },
       "text": {
-        "zh": "TinyR1 团队发布。",
-        "en": "TinyR1 team release."
+        "zh": "机构新闻列出 Lin Sun 的 TinyR1 团队发布。",
+        "en": "Institutional news names Lin Sun in the TinyR1 team release."
       },
       "url": "https://cs.pku.edu.cn/info/1263/3601.htm"
     }
@@ -867,6 +1334,162 @@
     "TriPlay-RL",
     "BEAR:",
     "Thinking with Reasoning",
-    "When Good OCR"
+    "When Good OCR",
+    "Efficient Switchable",
+    "MemAudit",
+    "ArborMem"
+  ],
+  "recognition": [
+    {
+      "id": "beijing-award",
+      "kind": {
+        "zh": "奖项",
+        "en": "Award"
+      },
+      "title": {
+        "zh": "北京市科学技术进步二等奖",
+        "en": "Beijing Science and Technology Progress Award, Second Prize"
+      },
+      "detail": {
+        "zh": "项目《大模型安全关键技术及应用》获 2025 年北京市科学技术进步二等奖；孙林作为第二完成人参与。授奖编号：2025-J-02-2-04。",
+        "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project member. Award no. 2025-J-02-2-04."
+      }
+    },
+    {
+      "id": "caai-appraisal",
+      "kind": {
+        "zh": "鉴定",
+        "en": "Appraisal"
+      },
+      "title": {
+        "zh": "中国人工智能学会科技成果鉴定",
+        "en": "CAAI technology achievement appraisal"
+      },
+      "detail": {
+        "zh": "成果《大模型安全关键技术及应用》获鉴定证书，编号“鉴字[2025]第008号”，鉴定日期 2025-06-19。",
+        "en": "The achievement “Key Technologies and Applications of Large-Model Safety” received certificate 鉴字[2025]第008号 dated 2025-06-19."
+      }
+    },
+    {
+      "id": "phoenix-talent",
+      "kind": {
+        "zh": "人才与行业认可",
+        "en": "Talent and industry recognition"
+      },
+      "title": {
+        "zh": "北京市朝阳区凤凰人才（2025）",
+        "en": "Chaoyang Phoenix Talent (2025)"
+      },
+      "detail": {
+        "zh": "北京市朝阳区凤凰人才（2025）公开称谓。",
+        "en": "Publicly recorded designation: Chaoyang Phoenix Talent (2025)."
+      }
+    },
+    {
+      "id": "tiny-open",
+      "kind": {
+        "zh": "开源研究",
+        "en": "Open research"
+      },
+      "title": {
+        "zh": "TinyR1 开源模型与论文",
+        "en": "TinyR1 open model and paper"
+      },
+      "detail": {
+        "zh": "TinyR1-32B-Preview 的论文、模型页面和团队新闻。",
+        "en": "The TinyR1-32B-Preview paper, model page, and team news."
+      }
+    },
+    {
+      "id": "safetyai-bench",
+      "kind": {
+        "zh": "团队评测",
+        "en": "Team evaluation"
+      },
+      "title": {
+        "zh": "SafetyAI Bench 连续两次第一",
+        "en": "Two-time SafetyAI Bench first place"
+      },
+      "detail": {
+        "zh": "360 大模型安全团队在中国信通院 SafetyAI Bench 测评中连续两个季度取得第一名。",
+        "en": "The 360 LLM safety team ranked first in two consecutive quarterly SafetyAI Bench evaluations."
+      }
+    },
+    {
+      "id": "superclue-rag",
+      "kind": {
+        "zh": "团队评测",
+        "en": "Team evaluation"
+      },
+      "title": {
+        "zh": "SuperCLUE-RAG 2024.11 第一",
+        "en": "SuperCLUE-RAG first place, November 2024"
+      },
+      "detail": {
+        "zh": "360 智脑 RAG 团队技术方案在 2024 年 11 月 SuperCLUE-RAG 榜单中取得第一名。",
+        "en": "The 360 Zhibrain RAG team solution ranked first on the November 2024 SuperCLUE-RAG leaderboard."
+      }
+    },
+    {
+      "id": "zhidun-case",
+      "kind": {
+        "zh": "产品案例",
+        "en": "Product case"
+      },
+      "title": {
+        "zh": "360 智盾入选国家大模型安全标志性产品",
+        "en": "360 Zh Dun selected as a national LLM safety product"
+      },
+      "detail": {
+        "zh": "360 智盾作为公司大模型安全产品入选公开典型案例。",
+        "en": "360 Zh Dun, a company LLM safety product, was selected as a public case."
+      }
+    }
+  ],
+  "patentThemes": [
+    {
+      "id": "safety-optimization",
+      "title": {
+        "zh": "大模型安全与模型优化",
+        "en": "LLM safety & model optimization"
+      },
+      "text": {
+        "zh": "安全防护、风险检测、模型优化与回答生成。",
+        "en": "Safety protection, risk detection, model optimization, and answer generation."
+      }
+    },
+    {
+      "id": "knowledge-corpus",
+      "title": {
+        "zh": "知识库与语料构建",
+        "en": "Knowledge bases & corpora"
+      },
+      "text": {
+        "zh": "知识库构建、语料构建与数据组织。",
+        "en": "Knowledge-base construction, corpus building, and data organization."
+      }
+    },
+    {
+      "id": "search-qa",
+      "title": {
+        "zh": "搜索问答与交互",
+        "en": "Search, QA & interaction"
+      },
+      "text": {
+        "zh": "问答专题数据、搜索结果整合与交互调整。",
+        "en": "QA data, search-result integration, and interaction adjustment."
+      }
+    },
+    {
+      "id": "multimedia",
+      "title": {
+        "zh": "智能交互与多媒体",
+        "en": "Intelligent interaction & multimedia"
+      },
+      "text": {
+        "zh": "自然语句交互、剧本视频和多媒体智能应用。",
+        "en": "Natural-language interaction, scripted video, and multimedia applications."
+      }
+    }
   ]
 }

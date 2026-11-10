@@ -8,6 +8,8 @@
 
 ```bash
 python3 scripts/generate_site.py
+python3 scripts/validate_content.py
+python3 -m unittest discover -s tests -p 'test*.py' -v
 python3 -m http.server 8000
 ```
 
@@ -18,6 +20,7 @@ python3 -m http.server 8000
 - 论文快照：`data/scholar-2026-11-10.json`
 - 媒体与活动：`data/media-links-2026-11-10.json`
 - 生成脚本：`scripts/generate_site.py`
+- 内容校验：`scripts/validate_content.py`
 - 样式与交互：`assets/styles.css`、`assets/site.js`
 
 更新内容数据后重新运行生成脚本。公开内容必须遵守 [spec.md](spec.md) 中的来源核验、成果归属和隐私边界。
