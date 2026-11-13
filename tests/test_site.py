@@ -103,13 +103,20 @@ class SiteContractTests(unittest.TestCase):
             "vrSwSleVqwAlf6eIsek4Tw",
             "yXL76JxIxfwLnoAe7NKlzA",
             "JEg-hzqZ4LXmOE86coulSA",
-            "OzI5PLmHSn7iYpoAEMKhXw",
             "xE0kPC213_HhWju-PEmJnA",
+            "insun.hit.edu.cn/2026/0528/c8177a392557/page.htm",
+            "www.51cto.com/article/569521.html",
+            "www.51cto.com/article/577010.html",
         ):
             self.assertIn(url, impact)
+        self.assertNotIn("OzI5PLmHSn7iYpoAEMKhXw", impact)
+        self.assertEqual(impact.count("2674405451_9f68304b019015of2"), 1)
+        self.assertEqual(impact.count("8814552?sId=77498"), 1)
         self.assertIn("1VHKu0oviv-h945GFVklog", home)
         self.assertIn("www.51cto.com/article/598236.html", home)
         self.assertIn("www.ciozj.com/doc/148015", home)
+        self.assertIn("www.51cto.com/article/598236.html", impact)
+        self.assertIn("www.ciozj.com/doc/148015", impact)
         self.assertEqual(impact.count('class="patent-group"'), 4)
         self.assertEqual(impact.count('class="patent-entry"'), 18)
         self.assertIn("一种获取问答对的相关联程度的装置和方法", impact)

@@ -13,6 +13,9 @@
 | 历史项目报道 | 2019-04-26 | 贝壳如视VR推出AI讲房，重新定义看房标准 | TechWeb / 新浪财经 | 团队/产品背景，正文未提孙林 | [页面](https://finance.sina.cn/2019-04-26/detail-ihvhiewr8427498.d.html?vt=4) |
 | 历史项目报道 | 2020-04-24 | 贝壳找房2020新品发布——小贝助手2.0 | 新浪新闻 | 团队/产品背景，正文未提孙林 | [页面](https://client.sina.com.cn/news/2020-04-24/doc-iirczymi8125706.shtml) |
 | 历史项目报道 | 2020-12-21 | AI技术首次场景化应用房产经纪行业 | Tech星球 / 36氪 | 团队/产品背景，正文未提孙林 | [页面](https://36kr.com/p/1020195199091463) |
+| 媒体专访 | 2018-04-02 | WOT2018孙林：链家探索人工智能技术应用的道与术 | 51CTO | 会前专访，直接记录孙林关于 AI 落地、数据与业务场景的观点 | [页面](https://www.51cto.com/article/569521.html) |
+| 会议报道 | 2018-06-25 | WOT2018孙林：技术改变行业 AI在贝壳找房业务中的应用实践 | 51CTO | 现场报道，记录孙林演讲及贝壳找房 AI 实践 | [页面](https://www.51cto.com/article/577010.html) |
+| 机构新闻 | 2026-05-28 | ICASSP2026：TextlessRAG：首个全去文本化语音视觉文档RAG框架 | 哈尔滨工业大学 | 机构新闻列出孙林为 TextlessRAG 论文作者 | [页面](https://insun.hit.edu.cn/2026/0528/c8177a392557/page.htm) |
 
 ## 用户提供标题、并由本地 PDF 核对的链接
 
@@ -41,7 +44,6 @@
 
 以下 10 条本次均只读到了微信环境验证页或 51CTO 脚本验证页，未取得文章标题和正文。即使返回 HTTP 200，也不作为核验成功。
 
-- [51CTO · 待核验](https://www.51cto.com/article/569521.html)
 - [51CTO · 待核验](https://wot.51cto.com/act/wot2019/ai/page/guest?guest_id=902)
 - [微信公众平台 · 待核验](https://mp.weixin.qq.com/s/IBuUUze2oRghibX23-FiUQ)
 - [微信公众平台 · 待核验](https://mp.weixin.qq.com/s/vrSwSleVqwAlf6eIsek4Tw)
@@ -50,7 +52,12 @@
 - [微信公众平台 · 待核验](https://mp.weixin.qq.com/s/OzI5PLmHSn7iYpoAEMKhXw)
 - [微信公众平台 · 待核验](https://mp.weixin.qq.com/s/xE0kPC213_HhWju-PEmJnA)
 - [微信公众平台 · 待核验](https://mp.weixin.qq.com/s/1VHKu0oviv-h945GFVklog)
-- [51CTO · 待核验](https://www.51cto.com/article/598236.html)
+
+## 页面去重记录
+
+- DataFunTalk 微信入口与新浪看点正文为同一整理内容；公开页面统一使用新浪看点链接。
+- 2024 软件研发创新科技峰会链接只保留在“公开演讲与技术分享”，不再重复放入“媒体观点与公开视频”。
+- TinyR1 北大机构新闻作为主入口；同一发布内容的新智元转载保留在团队文章区，便于区分机构新闻与媒体转载。
 
 ## 本地材料逐项记录
 

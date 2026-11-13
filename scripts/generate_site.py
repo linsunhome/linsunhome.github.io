@@ -21,7 +21,7 @@ talks = media_data.get("talks", [])
 published_media = [item for item in media if item.get("publish") and item.get("title")]
 media_translations = {item.get("url"): item for item in site_content.get("media", []) if item.get("url")}
 
-MEDIA_KINDS = {"media-interview", "institutional-news", "talk-transcript", "talk"}
+MEDIA_KINDS = {"media-interview", "institutional-news", "talk-transcript"}
 TEAM_KINDS = {"team-news", "team-technical-article", "company-news"}
 PROJECT_KINDS = {"project-background"}
 VIDEO_KINDS = {"video"}
@@ -447,7 +447,7 @@ def patent_html(lang: str) -> str:
 
 def impact(lang: str) -> str:
     zh = lang == "zh"
-    personal_media = [item for item in published_media if item.get("kind") in MEDIA_KINDS]
+    personal_media = [item for item in published_media if item.get("kind") in MEDIA_KINDS or item.get("mediaSection")]
     videos = [item for item in published_media if item.get("kind") in VIDEO_KINDS][:2]
     team_media = [item for item in published_media if item.get("kind") in TEAM_KINDS]
     standards = []
