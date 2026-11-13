@@ -1255,6 +1255,20 @@
             "en": "Public product coverage"
           },
           "url": "https://finance.sina.cn/2019-04-26/detail-ihvhiewr8427498.d.html?vt=4"
+        },
+        {
+          "label": {
+            "zh": "4D看房主题分享报道",
+            "en": "4D property viewing talk report"
+          },
+          "url": "https://www.51cto.com/article/598236.html"
+        },
+        {
+          "label": {
+            "zh": "4D看房 PDF 文档索引",
+            "en": "4D property viewing PDF index"
+          },
+          "url": "https://www.ciozj.com/doc/148015"
         }
       ],
       "tags": [
@@ -1577,6 +1591,36 @@
       "relationEn": "Public Xiaobei Assistant case study describing AI, VR, and speech interaction in real-estate services.",
       "id": "project-xiaobei-4d-vr-2022",
       "sourceDate": "2022-01-19",
+      "featured": false
+    },
+    {
+      "kind": "media-interview",
+      "title": "WOT2019 报道：4D看房分享",
+      "source": "51CTO",
+      "date": "2019-06-21",
+      "url": "https://www.51cto.com/article/598236.html",
+      "relation": "51CTO 峰会报道明确记录孙林作《4D看房：写稿机器人和VR的美丽邂逅》主题分享。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "WOT2019 report: 4D property viewing talk",
+      "relationEn": "51CTO coverage explicitly records Lin Sun’s talk “4D property viewing: a writing robot meets VR.”",
+      "id": "media-4d-house-viewing-51cto-2019",
+      "sourceDate": "2019-06-21",
+      "featured": false
+    },
+    {
+      "kind": "project-background",
+      "title": "4D看房分享 PDF 文档索引",
+      "source": "CIO之家",
+      "date": null,
+      "url": "https://www.ciozj.com/doc/148015",
+      "relation": "CIO之家收录的同主题 PDF 文档索引，与 51CTO 峰会报道对应。",
+      "verification": "live-page-preview",
+      "checkedOn": "2026-11-13",
+      "en": "4D property viewing PDF index",
+      "relationEn": "CIOAge index for a PDF on the same talk, corresponding to the 51CTO conference report.",
+      "id": "project-4d-house-viewing-cio-pdf",
+      "sourceDate": null,
       "featured": false
     }
   ],

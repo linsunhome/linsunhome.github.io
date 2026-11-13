@@ -386,17 +386,18 @@
     },
     {
       "url": "https://www.51cto.com/article/598236.html",
-      "title": null,
+      "kind": "media-interview",
+      "title": "探索AI通用技术 WOT2019全球人工智能技术峰会精彩继续",
       "source": "51CTO",
-      "kind": "unclassified",
-      "date": null,
-      "year": null,
-      "status": "verification-page-no-content",
-      "liveLinkVerified": false,
-      "checkedOn": "2026-11-10",
-      "publish": false,
-      "id": "unclassified-10309",
-      "sourceDate": null,
+      "date": "2019-06-21",
+      "year": 2019,
+      "relation": "51CTO 峰会报道明确记录：孙林根据贝壳找房 AI 实践，作《4D看房：写稿机器人和VR的美丽邂逅》主题分享。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "liveLinkVerified": true,
+      "publish": true,
+      "id": "media-4d-house-viewing-51cto-2019",
+      "sourceDate": "2019-06-21",
       "featured": false
     },
     {
@@ -432,6 +433,22 @@
       "featured": true,
       "sourceDate": "2026-06-29",
       "liveLinkVerified": true
+    },
+    {
+      "url": "https://www.ciozj.com/doc/148015",
+      "kind": "project-background",
+      "title": "4D看房：写稿机器和VR的美丽邂逅（PDF文档）",
+      "source": "CIO之家",
+      "date": null,
+      "year": null,
+      "relation": "CIO之家收录的同主题 28 页 PDF 文档索引；与 51CTO 峰会报道对应。下载需登录、积分或付费。",
+      "verification": "live-page-preview",
+      "checkedOn": "2026-11-13",
+      "liveLinkVerified": true,
+      "publish": true,
+      "id": "project-4d-house-viewing-cio-pdf",
+      "sourceDate": null,
+      "featured": false
     }
   ],
   "talks": [
