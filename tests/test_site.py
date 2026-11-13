@@ -98,6 +98,16 @@ class SiteContractTests(unittest.TestCase):
         self.assertNotIn("第三发明人", impact)
         self.assertIn("GB/T 45288.2", impact)
         self.assertEqual(impact.count("BV1"), 2)
+        for url in (
+            "IBuUUze2oRghibX23-FiUQ",
+            "vrSwSleVqwAlf6eIsek4Tw",
+            "yXL76JxIxfwLnoAe7NKlzA",
+            "JEg-hzqZ4LXmOE86coulSA",
+            "OzI5PLmHSn7iYpoAEMKhXw",
+            "xE0kPC213_HhWju-PEmJnA",
+        ):
+            self.assertIn(url, impact)
+        self.assertIn("1VHKu0oviv-h945GFVklog", home)
         self.assertEqual(impact.count('class="patent-group"'), 4)
         self.assertEqual(impact.count('class="patent-entry"'), 18)
         self.assertIn("一种获取问答对的相关联程度的装置和方法", impact)

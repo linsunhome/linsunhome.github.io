@@ -781,7 +781,11 @@
       "relatedMedia": [
         "https://news.southcn.com/node_17a07e5926/e1570938be.shtml",
         "https://k.sina.com.cn/article_2674405451_9f68304b019015of2.html",
-        "https://mp.weixin.qq.com/s/Z5HIYQ8fzq9vdlXOQ-OlDw"
+        "https://mp.weixin.qq.com/s/Z5HIYQ8fzq9vdlXOQ-OlDw",
+        "https://mp.weixin.qq.com/s/vrSwSleVqwAlf6eIsek4Tw",
+        "https://mp.weixin.qq.com/s/JEg-hzqZ4LXmOE86coulSA",
+        "https://mp.weixin.qq.com/s/OzI5PLmHSn7iYpoAEMKhXw",
+        "https://mp.weixin.qq.com/s/xE0kPC213_HhWju-PEmJnA"
       ],
       "images": [
         {
@@ -1113,6 +1117,13 @@
             "en": "Mem360 team article"
           },
           "url": "https://mp.weixin.qq.com/s/YMqNYmVMEhUgQ5EomtCIog"
+        },
+        {
+          "label": {
+            "zh": "Harness-Bench 技术文章",
+            "en": "Harness-Bench technical article"
+          },
+          "url": "https://mp.weixin.qq.com/s/IBuUUze2oRghibX23-FiUQ"
         }
       ],
       "tags": [
@@ -1135,7 +1146,8 @@
         "en": "Only the public technical article and papers are shown; business integrations, search outcomes, and other business metrics are excluded."
       },
       "relatedMedia": [
-        "https://mp.weixin.qq.com/s/YMqNYmVMEhUgQ5EomtCIog"
+        "https://mp.weixin.qq.com/s/YMqNYmVMEhUgQ5EomtCIog",
+        "https://mp.weixin.qq.com/s/IBuUUze2oRghibX23-FiUQ"
       ],
       "images": []
     },
@@ -1184,6 +1196,13 @@
             "en": "Public product coverage"
           },
           "url": "https://client.sina.com.cn/news/2020-04-24/doc-iirczymi8125706.shtml"
+        },
+        {
+          "label": {
+            "zh": "小贝助手公开案例",
+            "en": "Xiaobei Assistant case"
+          },
+          "url": "https://mp.weixin.qq.com/s/1VHKu0oviv-h945GFVklog"
         }
       ],
       "tags": [
@@ -1453,6 +1472,111 @@
       "relationEn": "Company product news. This does not constitute an individual award.",
       "id": "company-zhidun-2025",
       "sourceDate": "2025-03-28",
+      "featured": false
+    },
+    {
+      "kind": "team-technical-article",
+      "title": "Harness-Bench：企业选 Agent 到底在选什么",
+      "source": "360智脑",
+      "date": "2026-10-23",
+      "url": "https://mp.weixin.qq.com/s/IBuUUze2oRghibX23-FiUQ",
+      "relation": "360智脑团队技术文章，介绍 Harness-Bench 对模型与 Harness 组合的评测结果。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "Harness-Bench: what enterprises choose when they choose an agent",
+      "relationEn": "A 360 Zhibrain technical article presenting Harness-Bench results for model–Harness combinations.",
+      "id": "team-harness-bench-2026",
+      "sourceDate": "2026-10-23",
+      "featured": false
+    },
+    {
+      "kind": "team-technical-article",
+      "title": "Magic Token：一种可切换的大模型安全对齐新范式",
+      "source": "360智脑",
+      "date": "2025-12-23",
+      "url": "https://mp.weixin.qq.com/s/vrSwSleVqwAlf6eIsek4Tw",
+      "relation": "360智脑团队技术文章，介绍 Magic-Token 安全控制方案及其论文工作。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "Magic Token: a switchable paradigm for LLM safety alignment",
+      "relationEn": "A 360 Zhibrain technical article about Magic-Token safety control and the related paper.",
+      "id": "team-magic-token-2025",
+      "sourceDate": "2025-12-23",
+      "featured": false
+    },
+    {
+      "kind": "team-news",
+      "title": "鲸智社区一周年庆祝活动圆满落幕！",
+      "source": "AI鲸智社区",
+      "date": "2025-12-15",
+      "url": "https://mp.weixin.qq.com/s/yXL76JxIxfwLnoAe7NKlzA",
+      "relation": "活动报道明确提及孙林作《360大模型安全治理的探索与实践》分享，并参与 AI 开源与安全治理圆桌。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "Zhizhi Community first-anniversary event",
+      "relationEn": "Event coverage naming Lin Sun as a speaker on 360 LLM safety governance and a roundtable participant.",
+      "id": "team-zhizhi-community-2025",
+      "sourceDate": "2025-12-15",
+      "featured": false
+    },
+    {
+      "kind": "media-interview",
+      "title": "AI幻觉应彻底消灭？专家：管住高风险场景，留出创新空间",
+      "source": "隐私护卫队",
+      "date": "2026-06-14",
+      "url": "https://mp.weixin.qq.com/s/JEg-hzqZ4LXmOE86coulSA",
+      "relation": "直接采访并引用孙林关于 AI 幻觉、分层治理与责任边界的观点。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "Should AI hallucinations be eliminated?",
+      "relationEn": "An interview quoting Lin Sun on AI hallucinations, layered governance, and responsibility boundaries.",
+      "id": "media-privacy-guard-hallucination-2026",
+      "sourceDate": "2026-06-14",
+      "featured": false
+    },
+    {
+      "kind": "talk-transcript",
+      "title": "360视角：大模型幻觉问题及其解决方案的深度探索与实践",
+      "source": "DataFunTalk",
+      "date": "2024-09-15",
+      "url": "https://mp.weixin.qq.com/s/OzI5PLmHSn7iYpoAEMKhXw",
+      "relation": "整理孙林关于大模型幻觉、可信生成与 RAG 的技术分享。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "A 360 perspective on LLM hallucinations",
+      "relationEn": "An edited transcript of Lin Sun’s technical talk on hallucinations, trustworthy generation, and RAG.",
+      "id": "talk-datafun-hallucination-wechat-2024",
+      "sourceDate": "2024-09-15",
+      "featured": false
+    },
+    {
+      "kind": "company-news",
+      "title": "中国科协创新战略研究院调研三六零",
+      "source": "360黑板报",
+      "date": "2024-07-03",
+      "url": "https://mp.weixin.qq.com/s/xE0kPC213_HhWju-PEmJnA",
+      "relation": "公司新闻提及孙林参加中国科协创新战略研究院调研及大模型安全相关交流。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "CAST Institute visits 360",
+      "relationEn": "Company news naming Lin Sun in a CAST Institute visit and discussions on LLM safety.",
+      "id": "company-cast-research-visit-2024",
+      "sourceDate": "2024-07-03",
+      "featured": false
+    },
+    {
+      "kind": "project-background",
+      "title": "AI案例展示|贝壳找房：小贝助手",
+      "source": "中关村视听产业技术创新联盟",
+      "date": "2022-01-19",
+      "url": "https://mp.weixin.qq.com/s/1VHKu0oviv-h945GFVklog",
+      "relation": "小贝助手公开产品案例；文章介绍 AI 与 VR、语音交互在房产服务场景中的应用。",
+      "verification": "live-body",
+      "checkedOn": "2026-11-13",
+      "en": "AI case study: Beike Xiaobei Assistant",
+      "relationEn": "Public Xiaobei Assistant case study describing AI, VR, and speech interaction in real-estate services.",
+      "id": "project-xiaobei-4d-vr-2022",
+      "sourceDate": "2022-01-19",
       "featured": false
     }
   ],

@@ -447,7 +447,7 @@ def patent_html(lang: str) -> str:
 
 def impact(lang: str) -> str:
     zh = lang == "zh"
-    personal_media = [item for item in published_media if item.get("kind") in MEDIA_KINDS][:2]
+    personal_media = [item for item in published_media if item.get("kind") in MEDIA_KINDS]
     videos = [item for item in published_media if item.get("kind") in VIDEO_KINDS][:2]
     team_media = [item for item in published_media if item.get("kind") in TEAM_KINDS]
     standards = []
