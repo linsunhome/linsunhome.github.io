@@ -72,7 +72,9 @@
     "officialUrl": "https://arxiv.org/abs/2503.04872",
     "evidence": [
       "https://arxiv.org/abs/2503.04872"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "Longattn: Selecting long-context training data via token-level attention": {
     "id": "paper-06",
@@ -119,7 +121,9 @@
     "paperUrl": "https://arxiv.org/abs/2605.23723",
     "evidence": [
       "https://arxiv.org/abs/2605.23723"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "Uncertainty under the curve: A sequence-level entropy area metric for reasoning llm": {
     "id": "paper-09",
@@ -135,7 +139,9 @@
     "officialUrl": "https://doi.org/10.48550/arxiv.2508.20384",
     "evidence": [
       "https://doi.org/10.48550/arxiv.2508.20384"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "Large Language Models Badly Generalize across Option Length, Problem Types, and Irrelevant Noun Replacements": {
     "id": "paper-10",
@@ -204,7 +210,9 @@
     "officialUrl": "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e",
     "evidence": [
       "https://www.base-search.net/Record/f0f8ac32732d099572ffc9d678c5e8768a4b7ffd2c560c7e42e509489d13b12e"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "When Good OCR Is Not Enough: Benchmarking OCR Robustness for Retrieval-Augmented Generation": {
     "id": "paper-14",
@@ -238,7 +246,9 @@
     "officialUrl": "https://doi.org/10.18653/v1/2026.acl-industry.154",
     "evidence": [
       "https://doi.org/10.18653/v1/2026.acl-industry.154"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "Efficient Switchable Safety Control in LLMs via Magic-Token-Guided Co-Training": {
     "id": "paper-16",
@@ -421,7 +431,9 @@
     "officialUrl": "https://doi.org/10.18653/2026.emnlp-main.2658",
     "evidence": [
       "https://doi.org/10.18653/2026.emnlp-main.2658"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "ArborMem: Navigating Interaction States with Memory Forests": {
     "id": "paper-27",
@@ -463,7 +475,9 @@
     "paperUrl": "https://arxiv.org/abs/2606.11806",
     "evidence": [
       "https://arxiv.org/abs/2606.11806"
-    ]
+    ],
+    "correspondingAuthor": true,
+    "correspondingEvidence": "Author-confirmed corresponding-author status (2026-11-11)"
   },
   "Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging": {
     "id": "paper-30",

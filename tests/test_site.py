@@ -61,6 +61,7 @@ class SiteContractTests(unittest.TestCase):
         for route in ("publications/index.html", "en/publications/index.html"):
             content = (ROOT / route).read_text()
             self.assertEqual(content.count('class="paper-row"'), 30, route)
+            self.assertEqual(content.count('class="corresponding-author"'), 18, route)
             self.assertNotIn('class="paper-summary"', content)
             for badge in ("共同作者", "第一作者", "已发表", "Co-author", "First author", "Published"):
                 self.assertNotIn(f'>{badge}</span>', content)
@@ -70,7 +71,17 @@ class SiteContractTests(unittest.TestCase):
             label = "通讯作者" if route.startswith("publications/") else "Corresponding author"
             self.assertIn(f'Lin Sun</strong><sup class="corresponding-author" aria-label="{label}">*</sup>', triplay)
             preview = content.split("Tinyr1-32b-preview:", 1)[1].split("</article>", 1)[0]
-            self.assertNotIn('class="corresponding-author"', preview)
+            self.assertIn('class="corresponding-author"', preview)
+            for title in (
+                "MemAudit: Post-hoc Auditing of Poisoned Agent Memory",
+                "Thinking with Reasoning Skills: Fewer Tokens, More Accuracy",
+                "ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions",
+                "External Experience Serving in Production LLM Systems",
+                "Uncertainty under the curve: A sequence-level entropy area metric",
+                "Evaluation is all you need: Strategic overclaiming of llm reasoning capabilities",
+            ):
+                snippet = content.split(title, 1)[1].split("</article>", 1)[0]
+                self.assertIn('class="corresponding-author"', snippet, title)
         home = (ROOT / "index.html").read_text()
         self.assertEqual(home.count('class="paper-row"'), 9)
         selected_titles = re.findall(r'class="paper-title-link"[^>]*>(.*?)</a>', home)
@@ -106,8 +117,11 @@ class SiteContractTests(unittest.TestCase):
         for text in ("凤凰人才", "首都网络安全人才", "发明专利", "国家及行业标准"):
             self.assertIn(text, home)
         self.assertEqual(about.count('class="funded-project"'), 4)
-        for fact in ("第五届中国人工智能大赛", "雄安网络安全技术应用大赛", "首都网络安全人才", "大模型安全护栏能力检测"):
+        for fact in ("第五届中国人工智能大赛", "雄安网络安全技术应用大赛", "首都网络安全人才", "大模型安全护栏能力检测", "全国工人先锋号", "国际先进水平", "国际领先水平"):
             self.assertIn(fact, impact)
+        self.assertIn("北京市朝阳区凤凰人才", impact)
+        self.assertNotIn("凤凰人才（2025）", impact)
+        self.assertNotIn("下载量超过", impact)
         for route in routes:
             self.assertNotIn("涉密", (ROOT / route).read_text())
             self.assertNotIn("鉴字", (ROOT / route).read_text())
@@ -118,6 +132,9 @@ class SiteContractTests(unittest.TestCase):
             self.assertIn("89.2", tiny)
             self.assertIn("Beyond Parameter Arithmetic", tiny)
             self.assertIn("https://huggingface.co/qihoo360/TinyR1-32B\"", tiny)
+            self.assertIn("https://huggingface.co/qihoo360/TinyR1-32B-Preview\"", tiny)
+            self.assertIn("https://huggingface.co/qihoo360/TinyR1-8B-Safety\"", tiny)
+            self.assertNotIn("下载量", tiny)
             self.assertIn("tinyr1-branch-merge.png", tiny)
             self.assertNotIn("tinyr1-paper-figure1.png", tiny)
             self.assertEqual(rag.count('<table'), 2)

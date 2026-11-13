@@ -173,8 +173,8 @@
       }
     ],
     "honors": {
-      "zh": "作为第二完成人参与的《大模型安全关键技术及应用》项目获 2025 年北京市科学技术进步二等奖；入选北京市朝阳区凤凰人才，获“首都网络安全人才”称号。担任大数据协同安全技术国家工程研究中心大模型专委会主任，并为 ACL、EMNLP、AAAI 等会议审稿人。",
-      "en": "As the second contributor to “Key Technologies and Applications of Large-Model Safety,” he received the 2025 Beijing Science and Technology Progress Award, Second Prize. He was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent. He directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data and reviews for conferences including ACL, EMNLP, and AAAI."
+      "zh": "《大模型安全关键技术及应用》项目获 2025 年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目；入选北京市朝阳区凤凰人才，获“首都网络安全人才”称号。担任大数据协同安全技术国家工程研究中心大模型专委会主任，并为 ACL、EMNLP、AAAI 等会议审稿人。",
+      "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor. He was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent. He directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data and reviews for conferences including ACL, EMNLP, and AAAI."
     },
     "researchOutput": {
       "zh": "以第一作者或通讯作者发表的代表论文包括 InduOCRBench（ACL）、BEAR（EMNLP）、TriPlay-RL（ACL）和 Magic Token（AAAI），并以第一作者发布 TinyR1 技术报告与开源模型。发明专利涉及大模型安全、知识库与语料构建、搜索问答和智能交互；参与大模型评测、知识图谱技术框架、虚拟现实从业人员能力要求等国家及行业标准工作，以及《大模型安全研究报告（2024 年）》编写。",
@@ -183,12 +183,12 @@
     "homeSummary": {
       "zh": [
         "孙林，360智脑事业部算法高级研究员、基础大模型团队负责人，兼任360集团技术委员会算法分委会主席、北大–360大模型联合实验室学术委员会委员、大数据协同安全技术国家工程研究中心大模型专委会主任。研究聚焦大模型后训练、安全与可信生成、RAG与文档智能，以及智能体的记忆与经验机制。",
-        "毕业于哈尔滨工业大学，2010年起从事AI研发，先后任职于腾讯、360、贝壳找房与如视。曾任贝壳中心总经理，带领百人规模跨职能团队，推动小贝助手、AI讲房等产品落地。作为第二完成人获2025年北京市科学技术进步二等奖，入选朝阳区凤凰人才，获“首都网络安全人才”称号。",
+        "毕业于哈尔滨工业大学，2010年起从事AI研发，先后任职于腾讯、360、贝壳找房与如视。曾任贝壳中心总经理，带领百人规模跨职能团队，推动小贝助手、AI讲房等产品落地。《大模型安全关键技术及应用》项目获2025年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目；入选朝阳区凤凰人才，获“首都网络安全人才”称号。",
         "以第一作者或通讯作者在NeurIPS、ACL、EMNLP、AAAI等国际会议发表多篇论文，并担任审稿人。负责开源推理模型TinyR1的训练与发布。获多项发明专利授权，参与制定国家及行业标准3项。"
       ],
       "en": [
         "Lin Sun is a senior algorithm researcher and foundation-model team lead in 360’s Zhibrain Division. He also chairs the Algorithm Subcommittee of the 360 Technology Committee, serves on the Academic Committee of the PKU–360 Joint Laboratory for Large Models, and directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data. His research focuses on LLM post-training, safety and trustworthy generation, RAG and document intelligence, and memory and experience mechanisms for agents.",
-        "A graduate of Harbin Institute of Technology, he has worked in AI R&D since 2010 at Tencent, 360, Beike, and Rushi. As a center general manager at Beike, he led a cross-functional team of around one hundred people and delivered products including Xiaobei Assistant and AI House Tour. As the second contributor, he received the 2025 Beijing Science and Technology Progress Award, Second Prize, and was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent.",
+        "A graduate of Harbin Institute of Technology, he has worked in AI R&D since 2010 at Tencent, 360, Beike, and Rushi. As a center general manager at Beike, he led a cross-functional team of around one hundred people and delivered products including Xiaobei Assistant and AI House Tour. The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor. He was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent.",
         "He has published multiple first-author or corresponding-author papers at international conferences including NeurIPS, ACL, EMNLP, and AAAI, and serves as a conference reviewer. He led the training and release of the open reasoning model TinyR1, holds multiple granted invention patents, and contributed to three national and industry standards."
       ]
     },
@@ -412,6 +412,13 @@
         },
         {
           "label": {
+            "zh": "TinyR1-8B-Safety 模型",
+            "en": "TinyR1-8B-Safety model"
+          },
+          "url": "https://huggingface.co/qihoo360/TinyR1-8B-Safety"
+        },
+        {
+          "label": {
             "zh": "北京大学团队新闻",
             "en": "PKU team news"
           },
@@ -431,8 +438,8 @@
         "Open research"
       ],
       "result": {
-        "zh": "TinyR1 获国家自然科学基金委员会报道，曾进入 Hugging Face Trending Top 5，下载量超过 1 万次。Preview 的 32B 参数约为 DeepSeek-R1 671B 的 5%，AIME 2024 得分为 78.1，对照 DeepSeek-R1 的 79.8。",
-        "en": "TinyR1 received coverage from the National Natural Science Foundation of China, reached the Hugging Face Trending Top 5, and exceeded 10,000 downloads. Preview uses 32B parameters, about 5% of DeepSeek-R1’s 671B, with an AIME 2024 score of 78.1 versus 79.8 for DeepSeek-R1."
+        "zh": "TinyR1 获国家自然科学基金委员会报道，曾进入 Hugging Face Trending Top 5。Preview 的 32B 参数约为 DeepSeek-R1 671B 的 5%，AIME 2024 得分为 78.1，对照 DeepSeek-R1 的 79.8。",
+        "en": "TinyR1 received coverage from the National Natural Science Foundation of China and reached the Hugging Face Trending Top 5. Preview uses 32B parameters, about 5% of DeepSeek-R1’s 671B, with an AIME 2024 score of 78.1 versus 79.8."
       },
       "kind": "project",
       "detail": true,
@@ -1904,8 +1911,8 @@
         "en": "Beijing Science and Technology Progress Award, Second Prize"
       },
       "detail": {
-        "zh": "项目《大模型安全关键技术及应用》获 2025 年北京市科学技术进步二等奖；孙林作为第二完成人参与。",
-        "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project member."
+        "zh": "项目《大模型安全关键技术及应用》获 2025 年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目。",
+        "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor."
       },
       "group": "personal"
     },
@@ -1920,8 +1927,8 @@
         "en": "CAAI technology achievement appraisal"
       },
       "detail": {
-        "zh": "成果《大模型安全关键技术及应用》通过中国人工智能学会科技成果鉴定。",
-        "en": "“Key Technologies and Applications of Large-Model Safety” passed the technology achievement appraisal of the Chinese Association for Artificial Intelligence."
+        "zh": "成果《大模型安全关键技术及应用》通过中国人工智能学会科技成果鉴定，整体技术达到国际先进水平，其中检测—代答分离技术达到国际领先水平。",
+        "en": "“Key Technologies and Applications of Large-Model Safety” passed the technology achievement appraisal of the Chinese Association for Artificial Intelligence. The overall technology reached an internationally advanced level, while the detection–response separation technology reached an internationally leading level."
       },
       "group": "team"
     },
@@ -1932,12 +1939,12 @@
         "en": "Talent and industry recognition"
       },
       "title": {
-        "zh": "北京市朝阳区凤凰人才（2025）",
-        "en": "Chaoyang Phoenix Talent (2025)"
+        "zh": "北京市朝阳区凤凰人才",
+        "en": "Chaoyang Phoenix Talent"
       },
       "detail": {
-        "zh": "2025 年入选北京市朝阳区凤凰人才。",
-        "en": "Selected for the Chaoyang Phoenix Talent program in 2025."
+        "zh": "入选北京市朝阳区凤凰人才。",
+        "en": "Selected for the Chaoyang Phoenix Talent program."
       },
       "group": "personal"
     },
@@ -1952,8 +1959,8 @@
         "en": "TinyR1 open model and paper"
       },
       "detail": {
-        "zh": "TinyR1 以约 5% 的参数规模取得接近 DeepSeek-R1 的数学表现，获国家自然科学基金委员会报道，曾进入 Hugging Face Trending Top 5，下载量超过 1 万次。",
-        "en": "TinyR1 achieved mathematical performance close to DeepSeek-R1 at about 5% of its parameter scale, received coverage from the National Natural Science Foundation of China, reached the Hugging Face Trending Top 5, and exceeded 10,000 downloads."
+        "zh": "TinyR1 以约 5% 的参数规模取得接近 DeepSeek-R1 的数学表现，获国家自然科学基金委员会报道，曾进入 Hugging Face Trending Top 5。",
+        "en": "TinyR1 achieved mathematical performance close to DeepSeek-R1 at about 5% of its parameter scale, received coverage from the National Natural Science Foundation of China, and reached the Hugging Face Trending Top 5."
       },
       "group": "team"
     },
@@ -2002,6 +2009,22 @@
       "detail": {
         "zh": "360 智盾作为公司大模型安全产品入选公开典型案例。",
         "en": "360 Zh Dun, a company LLM safety product, was selected as a public case."
+      },
+      "group": "team"
+    },
+    {
+      "id": "zhibrain-workers-pioneer",
+      "kind": {
+        "zh": "团队荣誉",
+        "en": "Team honor"
+      },
+      "title": {
+        "zh": "全国工人先锋号",
+        "en": "National Worker Pioneer"
+      },
+      "detail": {
+        "zh": "360 智脑事业部获全国工人先锋号称号。",
+        "en": "360 Zhibrain Division received the National Worker Pioneer honor."
       },
       "group": "team"
     },
