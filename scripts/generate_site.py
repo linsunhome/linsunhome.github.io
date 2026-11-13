@@ -11,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+SITE_URL = "https://linsunhome.github.io"
 
 papers = json.loads((DATA / "scholar-2026-11-10.json").read_text())["papers"]
 media_data = json.loads((DATA / "media-links-2026-11-10.json").read_text())
@@ -73,11 +74,12 @@ def footer(lang: str) -> str:
     return f'''<footer><div class="wrap footer-grid"><div><strong>{'孙林 · Lin Sun' if lang == 'zh' else 'Lin Sun'}</strong><p>{text}</p></div><div class="footer-links"><a href="mailto:lincharliesun@gmail.com">lincharliesun@gmail.com</a><a href="https://github.com/linsunhome" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=b8yMN1MAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div></div></footer>'''
 
 
-def page(lang: str, active: str, title: str, description: str, body: str) -> str:
+def page(lang: str, active: str, title: str, description: str, body: str, canonical_path: str | None = None) -> str:
+    canonical = f"{SITE_URL}{canonical_path or ('/en/' if lang == 'en' else '/') }"
     return f'''<!doctype html>
 <html lang="{'zh-CN' if lang == 'zh' else 'en'}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{esc(description)}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><title>{esc(title)}</title>
+<meta name="description" content="{esc(description)}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{esc(canonical)}"><link rel="canonical" href="{esc(canonical)}"><title>{esc(title)}</title>
 <link rel="stylesheet" href="/assets/styles.css"></head><body>
 {nav(lang, active)}<main>{body}</main>{footer(lang)}
 <script src="/assets/site.js" defer></script></body></html>'''
@@ -476,6 +478,22 @@ def write(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def public_url(route: str, lang: str) -> str:
+    prefix = "/en" if lang == "en" else ""
+    suffix = f"/{route}/" if route else "/"
+    return f"{SITE_URL}{prefix}{suffix}"
+
+
+def write_crawl_files(page_routes: list[tuple[str, str]]) -> None:
+    urls = [public_url(route, lang) for lang, route in page_routes]
+    sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" \
+        "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n" \
+        + "".join(f"  <url><loc>{esc(url)}</loc></url>\n" for url in urls) \
+        + "</urlset>\n"
+    write(ROOT / "sitemap.xml", sitemap)
+    write(ROOT / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+
+
 def main() -> None:
     for path in [ROOT / "index.html", ROOT / "en", ROOT / "about", ROOT / "research", ROOT / "publications", ROOT / "impact", ROOT / "projects"]:
         if path.is_file():
@@ -495,7 +513,9 @@ def main() -> None:
     for lang, entries in pages.items():
         for route, (title, description, renderer) in entries.items():
             path = ROOT / ("en" if lang == "en" else "") / route / "index.html" if route else ROOT / ("en/index.html" if lang == "en" else "index.html")
-            write(path, page(lang, route or "home", f'{title} | {"Lin Sun" if lang == "en" else "孙林"}', description, renderer(lang)))
+            canonical_path = public_url(route, lang).removeprefix(SITE_URL)
+            write(path, page(lang, route or "home", f'{title} | {"Lin Sun" if lang == "en" else "孙林"}', description, renderer(lang), canonical_path))
+    write_crawl_files([(lang, route) for lang, entries in pages.items() for route in entries])
     write(ROOT / "404.html", page("zh", "home", "页面未找到 | 孙林", "页面未找到。", '<section class="page-hero"><div class="wrap"><div class="eyebrow">404</div><h1>页面未找到</h1><p>请返回首页继续浏览研究、项目与公开交流。</p><div class="hero-actions"><a class="btn primary" href="/">返回首页 ↗</a><a class="btn" href="/en/">English home ↗</a></div></div></section>'))
     print(f"Generated {sum(len(v) for v in pages.values())} pages from {len(papers)} papers and {len(published_media)} published media items.")
 

@@ -56,8 +56,21 @@ class SiteContractTests(unittest.TestCase):
             "projects/memory-agents/index.html",
             "404.html",
         ]
+        robots = (ROOT / "robots.txt").read_text()
+        self.assertIn("User-agent: *", robots)
+        self.assertIn("Allow: /", robots)
+        self.assertIn("Sitemap: https://linsunhome.github.io/sitemap.xml", robots)
+        sitemap = (ROOT / "sitemap.xml").read_text()
+        for route in routes[:-1]:
+            expected = "https://linsunhome.github.io/" + route.removesuffix("index.html")
+            self.assertIn(f"<loc>{expected}</loc>", sitemap)
         for route in routes:
             self.assertTrue((ROOT / route).exists(), route)
+            if route != "404.html":
+                content = (ROOT / route).read_text()
+                expected = "https://linsunhome.github.io/" + route.removesuffix("index.html")
+                self.assertIn(f'<link rel="canonical" href="{expected}">', content)
+                self.assertIn(f'<meta property="og:url" content="{expected}">', content)
         for route in ("publications/index.html", "en/publications/index.html"):
             content = (ROOT / route).read_text()
             self.assertEqual(content.count('class="paper-row"'), 30, route)
