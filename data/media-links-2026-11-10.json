@@ -7,6 +7,23 @@
   ],
   "items": [
     {
+      "id": "media-chaoyang-beijing-awards-2025",
+      "kind": "institutional-news",
+      "title": "祝贺！朝阳区24名“凤凰人才”获2025年度北京市科学技术奖！",
+      "source": "人才朝阳",
+      "year": 2026,
+      "date": "2026-11-24",
+      "sourceDate": "2026-11-24",
+      "url": "https://mp.weixin.qq.com/s/VeuOzpS06h_PDxW_oGIapw",
+      "status": "live-content-reviewed",
+      "relation": "文末获奖名单表格第26项《大模型安全关键技术及应用》列于科学技术进步奖二等奖，主要完成人一栏明确列出孙林；该表不提供完整完成人排序。",
+      "verification": "live-body-and-award-table-image",
+      "checkedOn": "2026-11-25",
+      "liveLinkVerified": true,
+      "publish": true,
+      "featured": false
+    },
+    {
       "kind": "media-interview",
       "title": "所有AI幻觉都该被消灭？专家建议开展场景化、分层次的可信AI治理",
       "source": "南方都市报 / 南方网",

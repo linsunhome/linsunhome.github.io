@@ -1,5 +1,5 @@
 {
-  "updatedOn": "2026-11-10",
+  "updatedOn": "2026-11-25",
   "siteUrl": "https://linsunhome.github.io",
   "email": "lincharliesun@gmail.com",
   "github": "https://github.com/linsunhome",
@@ -173,8 +173,8 @@
       }
     ],
     "honors": {
-      "zh": "《大模型安全关键技术及应用》项目获 2025 年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目；入选北京市朝阳区凤凰人才，获“首都网络安全人才”称号。担任大数据协同安全技术国家工程研究中心大模型专委会主任，并为 ACL、EMNLP、AAAI 等会议审稿人。",
-      "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor. He was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent. He directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data and reviews for conferences including ACL, EMNLP, and AAAI."
+      "zh": "北京市科学技术进步二等奖第二完成人：《大模型安全关键技术及应用》；入选北京市朝阳区凤凰人才，获“首都网络安全人才”称号。担任大数据协同安全技术国家工程研究中心大模型专委会主任，并为 ACL、EMNLP、AAAI 等会议审稿人。",
+      "en": "Second project contributor for “Key Technologies and Applications of Large-Model Safety,” a Beijing Science and Technology Progress Award, Second Prize recipient. Selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent. He directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data and reviews for conferences including ACL, EMNLP, and AAAI."
     },
     "researchOutput": {
       "zh": "以第一作者或通讯作者发表的代表论文包括 InduOCRBench（ACL）、BEAR（EMNLP）、TriPlay-RL（ACL）和 Magic Token（AAAI），并以第一作者发布 TinyR1 技术报告与开源模型。发明专利涉及大模型安全、知识库与语料构建、搜索问答和智能交互；参与大模型评测、知识图谱技术框架、虚拟现实从业人员能力要求等国家及行业标准工作，以及《大模型安全研究报告（2024 年）》编写。",
@@ -183,12 +183,12 @@
     "homeSummary": {
       "zh": [
         "孙林，360智脑事业部算法高级研究员、基础大模型团队负责人，兼任360集团技术委员会算法分委会主席、北大–360大模型联合实验室学术委员会委员、大数据协同安全技术国家工程研究中心大模型专委会主任。研究聚焦大模型后训练、安全与可信生成、RAG与文档智能，以及智能体的记忆与经验机制。",
-        "毕业于哈尔滨工业大学，2010年起从事AI研发，先后任职于腾讯、360、贝壳找房与如视。曾任贝壳中心总经理，带领百人规模跨职能团队，推动小贝助手、AI讲房等产品落地。《大模型安全关键技术及应用》项目获2025年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目；入选朝阳区凤凰人才，获“首都网络安全人才”称号。",
+        "毕业于哈尔滨工业大学，2010年起从事AI研发，先后任职于腾讯、360、贝壳找房与如视。曾任贝壳中心总经理，带领百人规模跨职能团队，推动小贝助手、AI讲房等产品落地。北京市科学技术进步二等奖第二完成人：《大模型安全关键技术及应用》；入选朝阳区凤凰人才，获“首都网络安全人才”称号。",
         "以第一作者或通讯作者在NeurIPS、ACL、EMNLP、AAAI等国际会议发表多篇论文，并担任审稿人。负责开源推理模型TinyR1的训练与发布。获多项发明专利授权，参与制定国家及行业标准3项。"
       ],
       "en": [
         "Lin Sun is a senior algorithm researcher and foundation-model team lead in 360’s Zhibrain Division. He also chairs the Algorithm Subcommittee of the 360 Technology Committee, serves on the Academic Committee of the PKU–360 Joint Laboratory for Large Models, and directs the Large-Model Committee at the National Engineering Research Center for Collaborative Security of Big Data. His research focuses on LLM post-training, safety and trustworthy generation, RAG and document intelligence, and memory and experience mechanisms for agents.",
-        "A graduate of Harbin Institute of Technology, he has worked in AI R&D since 2010 at Tencent, 360, Beike, and Rushi. As a center general manager at Beike, he led a cross-functional team of around one hundred people and delivered products including Xiaobei Assistant and AI House Tour. The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor. He was selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent.",
+        "A graduate of Harbin Institute of Technology, he has worked in AI R&D since 2010 at Tencent, 360, Beike, and Rushi. As a center general manager at Beike, he led a cross-functional team of around one hundred people and delivered products including Xiaobei Assistant and AI House Tour. Second project contributor for “Key Technologies and Applications of Large-Model Safety,” a Beijing Science and Technology Progress Award, Second Prize recipient; selected for the Chaoyang Phoenix Talent program and named a Capital Cybersecurity Talent.",
         "He has published multiple first-author or corresponding-author papers at international conferences including NeurIPS, ACL, EMNLP, and AAAI, and serves as a conference reviewer. He led the training and release of the open reasoning model TinyR1, holds multiple granted invention patents, and contributed to three national and industry standards."
       ]
     },
@@ -723,8 +723,8 @@
       "area": "safety",
       "period": "2024–2026",
       "summary": {
-        "zh": "动态攻防、闭环训练与检测—代答分离的研究和工程实践；相关项目获北京市科学技术进步二等奖。",
-        "en": "Research and engineering across dynamic attack–defense, closed-loop training, and detection–response separation; the related project received the Beijing Science and Technology Progress Award, Second Prize."
+        "zh": "动态攻防、闭环训练与检测—代答分离的研究和工程实践。",
+        "en": "Research and engineering across dynamic attack–defense, closed-loop training, and detection–response separation."
       },
       "problem": {
         "zh": "面对持续变化的越狱攻击、风险内容和幻觉问题，如何兼顾防护效果与正常任务体验？",
@@ -765,8 +765,8 @@
         "Trustworthy AI"
       ],
       "result": {
-        "zh": "形成 TriPlay-RL、Magic Token、检测—代答分离和可信生成等技术成果；相关项目获北京市科学技术进步二等奖。成果《大模型安全关键技术及应用》于 2025 年 6 月 19 日通过 CAAI 科技成果鉴定。",
-        "en": "The work includes TriPlay-RL, Magic Token, detection–response separation, and trustworthy generation. The related project received the Beijing Science and Technology Progress Award, Second Prize. “Key Technologies and Applications of Large-Model Safety” passed a CAAI technology achievement appraisal on June 19, 2025."
+        "zh": "形成 TriPlay-RL、Magic Token、检测—代答分离和可信生成等技术成果；《大模型安全关键技术及应用》获北京市科学技术进步二等奖，并于 2025 年 6 月 19 日通过 CAAI 科技成果鉴定。",
+        "en": "The work includes TriPlay-RL, Magic Token, detection–response separation, and trustworthy generation. “Key Technologies and Applications of Large-Model Safety” received the Beijing Science and Technology Progress Award, Second Prize, and passed a CAAI technology achievement appraisal on June 19, 2025."
       },
       "kind": "project",
       "detail": true,
@@ -779,6 +779,7 @@
         "en": "Only public project, paper, and appraisal evidence is shown; internal production metrics remain outside the site."
       },
       "relatedMedia": [
+        "https://mp.weixin.qq.com/s/VeuOzpS06h_PDxW_oGIapw",
         "https://news.southcn.com/node_17a07e5926/e1570938be.shtml",
         "https://k.sina.com.cn/article_2674405451_9f68304b019015of2.html",
         "https://mp.weixin.qq.com/s/Z5HIYQ8fzq9vdlXOQ-OlDw",
@@ -1278,6 +1279,21 @@
     }
   ],
   "media": [
+    {
+      "id": "media-chaoyang-beijing-awards-2025",
+      "kind": "institutional-news",
+      "title": "祝贺！朝阳区24名“凤凰人才”获2025年度北京市科学技术奖！",
+      "source": "人才朝阳",
+      "date": "2026-11-24",
+      "sourceDate": "2026-11-24",
+      "url": "https://mp.weixin.qq.com/s/VeuOzpS06h_PDxW_oGIapw",
+      "relation": "文末获奖名单表格第26项《大模型安全关键技术及应用》列于科学技术进步奖二等奖，主要完成人一栏明确列出孙林；该表不提供完整完成人排序。",
+      "verification": "live-body-and-award-table-image",
+      "checkedOn": "2026-11-25",
+      "featured": false,
+      "en": "Congratulations! 24 Chaoyang Phoenix Talents receive the 2025 Beijing Science and Technology Awards",
+      "relationEn": "Row 26 of the award table lists “Key Technologies and Applications of Large-Model Safety” under the Science and Technology Progress Award, Second Prize, and explicitly names Lin Sun among the main contributors; the table does not establish the full contributor order."
+    },
     {
       "kind": "media-interview",
       "title": "所有AI幻觉都该被消灭？专家建议开展场景化、分层次的可信AI治理",
@@ -2030,6 +2046,24 @@
   ],
   "news": [
     {
+      "id": "news-beijing-award-coverage-2026",
+      "type": "media",
+      "date": "2026-11-24",
+      "title": {
+        "zh": "2025年度北京市科学技术奖公布：孙林列入《大模型安全关键技术及应用》项目主要完成人",
+        "en": "2025 Beijing Science and Technology Awards announced: Lin Sun named among the main contributors to “Key Technologies and Applications of Large-Model Safety”"
+      },
+      "text": {
+        "zh": "《大模型安全关键技术及应用》获2025年度北京市科学技术进步二等奖，报道所附名单列出孙林为主要完成人之一。",
+        "en": "The report names Lin Sun among the main contributors to “Key Technologies and Applications of Large-Model Safety,” a Second Prize project in the 2025 Beijing Science and Technology Progress Awards."
+      },
+      "url": "https://mp.weixin.qq.com/s/VeuOzpS06h_PDxW_oGIapw",
+      "source": {
+        "zh": "人才朝阳",
+        "en": "Talent Chaoyang"
+      }
+    },
+    {
       "id": "news-southcn-2026",
       "type": "media",
       "date": "2026-06-17",
@@ -2125,8 +2159,8 @@
         "en": "Beijing Science and Technology Progress Award, Second Prize"
       },
       "detail": {
-        "zh": "项目《大模型安全关键技术及应用》获 2025 年北京市科学技术进步二等奖，孙林作为第二完成人参与该项目。",
-        "en": "The project “Key Technologies and Applications of Large-Model Safety” received the 2025 Beijing Science and Technology Progress Award, Second Prize; Lin Sun participated as the second project contributor."
+        "zh": "第二完成人，《大模型安全关键技术及应用》。",
+        "en": "Second project contributor, “Key Technologies and Applications of Large-Model Safety.”"
       },
       "group": "personal"
     },
